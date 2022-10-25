@@ -1,0 +1,112 @@
+<script lang="ts" setup>
+import p from './../../package.json'
+import { IApp } from '~/utils/app'
+const app = useState<IApp>('app')
+
+const { t } = useLang()  
+export interface IMenuItem {
+  type: 'link' | 'button'
+  text: string
+  href?: any
+  route?: any
+}
+const menus = computed((): IMenuItem[] => [
+{ type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
+{ type: 'link', text: t('pages.treatment.nav'), route: { name: 'treatment' } },
+{ type: 'link', text: t('pages.invisalign.nav'), route: { name: 'invisalign' } },
+{ type: 'link', text: t('pages.teeth_whitening.nav'), route: { name: 'teeth_whitening' } },
+{ type: 'link', text: t('pages.porcelain_tiles.nav'), route: { name: 'porcelain_tiles' } },
+{ type: 'link', text: t('pages.case.nav'), route: { name: 'case' } },
+{ type: 'link', text: t('pages.fees.nav'), route: { name: 'fees' } },
+{ type: 'link', text: t('pages.contact.nav'), route: { name: 'contact' } },
+ 
+])
+
+
+</script>
+
+<template>
+  <footer class="border-t lg:border-gray-900/10 dark:border-gray-50/[0.2] bg-pink">
+    <div class="foot_logo ">
+      <div class="text-center sm:py-15">
+      <img class="m-auto" src="https://img.cmereye.com/i/2022/09/26/6331b5379b7d0.png" alt="" srcset="">
+<p class="text-white mt-4 sm:mt-0 text-xl sm:text-lg ">希瑪微笑矯齒，微笑生活有你</p></div>
+    </div>
+
+    <section
+      class="max-w-8xl mx-auto px-4 lg:px-8 flex-1 flex w-full space-x-20"
+    >
+      <div class="w-full py-4 text-center md:text-left">
+      
+        <div class="text-xs text-white dark:text-white foot_nav hidden ">
+          
+ 
+
+
+          <span
+                v-for="(item, i) in menus"
+                :key="i"
+                class="mx-2 sm:mr-4  "
+                :class="{
+                  'pb-4 sm:pb-2 mb-2 text-sm':
+                    item.type === 'link',
+                }"
+              >
+                <Anchor
+                  v-if="item.type === 'link'"
+                  :to="item.route ? item.route : undefined"
+                  :href="item.href ? item.href : undefined"
+                  class="flex-1 hover:text-green  "
+                  >{{ item.text }}</Anchor
+                >
+                <Button
+                  v-else-if="item.type === 'button'"
+                  :text="item.text"
+                  size="xs"
+                  class="flex-1 font-extrabold capitalize"
+                  :to="item.route ? item.route : undefined"
+                  :href="item.href ? item.href : undefined"
+                />
+              </span>
+
+          
+          <div
+            class="flex flex-col md:flex-row space-x-2 items-center md:float-right"
+          >
+            <span class="text-center md:text-right flex ">
+             <a href="http://"  target="_blank" rel="noopener noreferrer"><img class="mr-4" src="https://img.cmereye.com/i/2022/09/27/FB.svg" alt="" srcset=""></a>
+               <a href="http://" target="_blank" rel="noopener noreferrer"> <img class="mr-4" src="https://img.cmereye.com/i/2022/09/27/IG.svg" alt="" srcset=""></a>
+               <a href="http://" target="_blank" rel="noopener noreferrer"> <img src="https://img.cmereye.com/i/2022/09/27/YT.svg" alt="" srcset=""></a>
+              
+               
+            </span>
+         
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <div class="fixed_button  sm:flex hidden">
+      <a href="tel:9512 8192" class="bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+       <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/6334083bf1b5a.png" alt="電話預約" ></div>
+       <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">電話預約</p><p class="leading-none   text-2xl text-pink">9512 8192</p> </div>  
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="bg-white fixed_button_info justify-end items-center  transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+       <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/633407e1049ed.png" alt="WhatsApp" ></div>
+       <div class="fixed_text flex-row "><p class="leading-none text-primary text-2xl text-green">WhatsApp</p> <span class="text-primary text-md  ">&nbsp;預約</span> </div>  
+      </a>
+
+ 
+    </div>
+
+
+
+    
+  </footer>
+  
+
+
+</template>
+
+
+ 

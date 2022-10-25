@@ -1,0 +1,101 @@
+components:
+  language_switcher:
+    change_language: 選擇語言
+  theme_switcher:
+    theme: 主題
+    change_theme: 主題更換
+pages:
+  index:
+    title: cmer []nuxt 3[]中港組
+  404:
+    title: 頁面丟失
+  about:
+    nav: 關於我們
+    title: 模板簡介
+    description: 這是一個模板簡介
+  treatment:
+    nav: 切合你生活的療程
+    title: 單頁模板
+    description: 這是一個單頁模板
+    just_blank_page_with_title: 這是一個單頁模板ma ?
+  orthodontic:
+    nav: 隱適美矯齒
+    title: 隱適美矯齒
+    description: 這是一個隱適美矯齒簡介
+  teeth_whitening:
+    nav: 牙齒美白
+    title: 模板簡介
+    description: 這是一個模板簡介
+  porcelain_tiles:
+    nav: 瓷貼片
+    title: 模板簡介
+    description: 這是一個模板簡介
+  case:
+    nav: 個案分享
+    title: 模板簡介
+    description: 這是一個模板簡介
+  fees:
+    nav: 收費詳情
+    title: 模板簡介
+    description: 這是一個模板簡介
+  contact:
+    nav: 聯絡我們
+    title: 模板簡介
+    description: 這是一個模板簡介
+    
+  test:
+    nav: 內容模塊
+    title: 內容模塊
+    description: 這是一個內容模塊模板
+    counter: 計數
+    increment: increment
+    decrement: decrement
+    reset: reset
+    identity: identity
+    full_name: fullName
+  post:
+    nav: 列表模板
+    title: 列表模板
+    description: 這是一個列表模塊模板
+  setting:
+    nav: 頁面設置
+    title: 設置
+    description: 這是一個頁面設置模板 
+    sections:
+      validate_username:
+        title: validate github profile
+        description: type your github username and click the button to validate.
+        footer: Learn more about
+        footer_button: validate
+        footer_link: github users api
+      bot_id:
+        title: bot id
+        description: This is your bot ID.
+        footer: Used when interacting with the bot.
+      protection_spam:
+        title: spam protection
+        description: toggle enable to remove the red border
+        footer: if enable we will secure your comments from spam
+      advanced_enable_advanced:
+        title: enable advanced settings
+        description: you can enable advanced settings to change the settings
+      advanced_dir_listing:
+        title: directory listing
+        description: if no index file is present within a directory, the directory contents will be displayed.
+  dashboard:
+    nav: 後臺頁面
+    title: CMER後臺
+    index:
+      nav: 首頁設置
+      title: 首頁細節
+banners:
+  
+  booking: tel:95128192
+  number: '95128192'
+  text: 立即預約
+  desc: 牙齒是否整齊，不只影響日常清潔牙齒效果，亦影響外觀，以及你的自信。隱適美全方位矯齒療程，可滿足你不同類型、一般至複雜的牙齒矯正追求，讓我們伴你展開微笑矯齒之旅！
+others:
+  learn_more: 了解更多
+  copy: 複製
+  enabled: 啟用
+  disabled: 禁用

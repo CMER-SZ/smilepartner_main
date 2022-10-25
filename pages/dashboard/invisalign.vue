@@ -1,0 +1,467 @@
+<script lang="ts" setup>
+  import { capitalize } from '~/utils/str'
+  import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+   
+  // composable
+  const { t } = useLang()
+  
+  // compiler macro
+  definePageMeta({
+    layout: 'page',
+  })
+  useHead(() => ({
+    title: capitalize(t('pages.invisalign.title')),
+    meta: [
+      {
+        name: 'description',
+        content: t('pages.invisalign.description'),
+      },
+    ], 
+  })) 
+  
+  </script>
+  
+  <template>
+    
+    <div class="page_body_header z-0">
+    <div class="page_body_header_banner">
+      <img class="page_body_header_banner_img sm:invisible" src="https://img.cmereye.com/i/2022/09/27/633271306fae1.jpg"  srcset="https://img.cmereye.com/i/2022/09/27/633271306fae1.jpg 400w, https://img.cmereye.com/i/2022/09/27/633271306fae1.jpg 640w, https://img.cmereye.com/i/2022/09/22/632c2c39558fe.jpg" />
+      <div class="page_body_header_fixed">
+        <div class=" head_booking inline-block float-right"> <a :href=" $t('banners.booking')" target="_blank" class="head_button"><p class="md:pt-1 text-primary"> {{ $t('banners.invisalign_text')  }} </p> <span class="text-green md:text-3xl sm:ml-3">  {{ $t('banners.number')  }} </span> </a> </div>
+         
+         <div class="head_banner_text justify-self-center">
+          <div class="head_banner_text_p">
+          <div class="head_banner_img">
+          <img class=" m-auto" src="https://img.cmereye.com/i/2022/09/23/632d74a9e2ad7.png" alt="" srcset="">
+        </div>
+        <h2 class="text-pink text-center text-4xl mb-6"  >希瑪微笑矯齒</h2>
+        <p>{{ $t('banners.invisalign_desc')  }} </p>
+         </div> 
+        </div>
+</div> </div> 
+</div>
+
+
+      <slot name="header">
+        <PageNavbar /> 
+      </slot>
+           
+   
+    <div class ="page_orthodontic pb-20 sm:py-38">
+      <div class="     " >  
+    <div class ="orthodontic_title   step_title  text-center sm:text-center mb-20 py-10 z-10">
+       <h2 class="text-primary font-normal  text-xl md:text-2xl  inline-block relative">隱適美矯齒過程</h2>
+    </div>
+  
+    <div class="orthodontic_step page_container">
+      
+      <!-- <div class="  flex_between_items_start">
+     <div class=" sm:w-6/13">
+      <div class="sticky_step">
+      <h4 class="py-5 text-lg font-normal ">諮詢並檢查個人牙齒狀況</h4>
+      <p class="text-md ">牙醫與患者諮詢和溝通之後，會先為牙齒拍照、照X光片，以及做口腔內掃瞄或牙模套印，以建立牙齒資料，之後就會詳細講解令患者明白整個療程過程及效果。</p>
+
+    </div><div class="sticky_step">
+      <h4 class="py-5 text-lg font-normal ">訂制矯齒計劃</h4>
+      <p class="text-md">經牙醫專業診斷，為患者度身訂造3D矯齒治療方案。</p>
+    </div><div class="sticky_step">
+      <h4 class="py-5 text-lg font-normal ">訂製牙套並開始療程</h4>
+      <p class="text-md">隱適美會將牙醫治療方案製作成一系列沿牙齦剪裁的專屬牙箍，再寄至牙醫診所。之後就會聯絡患者到診所試戴及評估效果。</p>
+    </div> 
+     </div>
+     <div class="sm:w-6/13">
+        <img src="https://img.cmereye.com/i/2022/09/27/63325fb6cdf6e.jpg" class="w-full mb-10" alt="">
+        <img src="https://img.cmereye.com/i/2022/09/27/63325fb6521da.jpg" class="w-full mb-10" alt="">
+        <img src="https://img.cmereye.com/i/2022/09/27/63325fb5dff4d.jpg" class="w-full" alt="">
+        
+     </div>
+      </div>  -->
+
+      
+  
+
+
+
+      <div class="  flex_between_items_start">
+     <div class=" sm:w-6/13">
+     <h4 class="py-5 text-lg font-normal ">諮詢並檢查個人牙齒狀況</h4>
+      <p class="text-md ">牙醫與患者諮詢和溝通之後，會先為牙齒拍照、照X光片，以及做口腔內掃瞄或牙模套印，以建立牙齒資料，之後就會詳細講解令患者明白整個療程過程及效果。</p>
+     </div>
+     <div class="sm:w-6/13">
+         <img src="https://img.cmereye.com/i/2022/09/27/63325fb6cdf6e.jpg" class="w-full  " alt="">
+
+     </div>
+      </div>
+
+      <div class="  flex_between_items_start">
+     <div class=" sm:w-6/13">
+      <h4 class="py-5 text-lg font-normal ">訂制矯齒計劃</h4>
+      <p class="text-md">經牙醫專業診斷，為患者度身訂造3D矯齒治療方案。</p>
+    
+     </div>
+     <div class="sm:w-6/13">
+           <img src="https://img.cmereye.com/i/2022/09/27/63325fb6521da.jpg" class="w-full " alt=""> 
+     </div>
+      </div>
+  
+      <div class="  flex_between_items_start">
+     <div class=" sm:w-6/13">
+      <h4 class="py-5 text-lg font-normal ">訂製牙套並開始療程</h4>
+      <p class="text-md">隱適美會將牙醫治療方案製作成一系列沿牙齦剪裁的專屬牙箍，再寄至牙醫診所。之後就會聯絡患者到診所試戴及評估效果。</p>
+     </div>
+     <div class="sm:w-6/13">
+        <img src="https://img.cmereye.com/i/2022/09/27/63325fb5dff4d.jpg" class="w-full" alt=""> 
+   
+     </div>
+      </div>
+  
+  
+    </div>
+    </div>
+    
+    <div class="orthodontic_condition">
+     
+  <div class="page_container">
+    <div class ="orthodontic_title  text-left sm:text-center my-20">
+       <h2 class="text-primary font-normal text-xl md:text-2xl  inline-block relative">你有以下情況嗎？</h2>
+    </div>
+    <p class="sm:mb-20 mb-4 text-primary text-center font-bold text-base tracking-widest-2x">隱適美能伴你矯正以 <span class="text-2xl text-green">展露自信笑容</span></p>
+    <div class="orthodontic_pic_scroll"> 
+  <div class="orthodontic_pic grid grid-cols-4  sm:flex sm:gap-0">
+     <div  class="text-center  ">
+      <img   src="https://static.cmereye.com/imgs/2022/09/740b1b8b89cf5b02.jpg" alt="">
+     </div>
+     <div  class="text-center">
+      <img    src="https://static.cmereye.com/imgs/2022/09/0be93ac8bb7767dc.jpg" alt="">
+     </div>
+     <div  class="text-center">
+      <img class=" "  src="https://static.cmereye.com/imgs/2022/09/01a51e8b05c043fc.jpg" alt="">
+     </div>
+     
+     <div  class="text-center">
+      <img class=" "    src="https://static.cmereye.com/imgs/2022/09/682634db00b9874c.jpg" alt="">
+     </div>
+     <div  class="text-center">
+      <img class=" "    src="https://static.cmereye.com/imgs/2022/09/579ae24e57592617.jpg" alt="">
+     </div>
+     <div  class="text-center">
+      <img class=" "    src="https://static.cmereye.com/imgs/2022/09/01f77a4acaf0ed44.jpg" alt="">
+     </div>
+     <div  class="text-center">
+      <img class=" "    src="https://static.cmereye.com/imgs/2022/09/264a2b69f5567fa3.jpg" alt="">
+     </div>
+  </div> 
+
+
+  </div>
+
+  
+
+</div>
+  
+    </div>
+  
+  
+  <div class="orthodontic_compete pb-28">
+    <div class="page_container">
+      <div class ="orthodontic_title  text-left sm:text-center  my-24 mb-14  sm:my-28">
+       <h2 class="text-primary font-normal text-xl md:text-2xl  inline-block relative"> 隱適美VS其他透明牙箍大比拼！ </h2>
+    </div>
+    <div class="orthodontic_table_scroll">
+    <div class="orthodontic_table grid grid-cols-10">
+        <div><img src="https://img.cmereye.com/i/2022/09/26/633187b4536a0.png" alt="" srcset=""> </div>
+        <div> </div>
+        <div>其他隱形牙箍</div>
+        <div>利用具專利復合層物料製造牙箍，配以U型剪裁貼合牙齦，度身訂造，較為舒適</div>
+        <div>舒適度</div>
+        <div>物料為無乳膠或醫用塑料，牙箍剪裁較平面</div>
+        <div>輕微、中度至複雜的個案</div>
+        <div>適用個案</div>
+        <div>處理輕微至中度複雜的個案</div>
+        <div>由註冊牙醫評估及設計療程。每6至8星期覆診，定期跟進矯齒效果及進度</div>
+        <div>療程跟進</div>
+        <div>獲註冊牙醫最少3次會診，當中註冊牙醫僅初次面診，甚至沒有註冊牙醫診症及跟進</div>
+        <div>收集及擁有來自全球隱適美使用者資料庫，超過1200萬大數據不斷更新及調整矯正技術，提高成效及舒適度</div>
+        <div>數據支援</div>
+        <div>未有收集資料庫或使用者數據甚少</div>
+        <div>配合SmartForce 專利附件粒粒，能精細移動牙齒及控制牙腳移動，令療程更加有效</div>
+        <div>移動附件及預測技術</div>
+        <div>少量或沒有</div> 
+  </div>
+  </div> 
+  
+    </div> 
+  </div>  
+  
+  <div class="orthodontic_faq pb-20">
+    <div class="page_container">
+  <div class="flex">
+  
+      <div class ="orthodontic_title  text-left sm:text-center  sm:my-16  sm:my-28">
+       <h2 class="text-primary font-normal text-xl md:text-2xl  inline-block relative"> 常見問題 </h2>
+    </div>
+  
+     
+   
+    <div class="w-full sm:px-4 pt-10 sm:pt-20">
+      <div class="mx-auto w-full   rounded-2xl p-2 orthodontic_faq_list">
+      
+  
+        <Disclosure v-slot="{ open }" > 
+          <div :class=" open ? 'border-t-1 border-b-1 py-6 border-pink'  : 'border-t-1 border-b-1 py-6 border-primary' "   >
+          <DisclosureButton  class="flex w-full justify-between  px-4 py-2 text-left text-lg font-medium    focus:outline-none  "  >
+            <span   :class=" open ? 'text-pink' : 'text-primary' " >需要整天配戴隱形牙箍嗎？</span>
+           
+          </DisclosureButton>
+          <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
+            建議用家必須每天配戴隱形牙箍 20 至 22 小時才能確保療程成效。
+  
+  
+          </DisclosurePanel>
+        </div>
+        </Disclosure>
+  
+        <Disclosure v-slot="{ open }"  > 
+          <div :class=" open ? 'border-t-1 border-b-1 py-6 border-pink'  : 'border-t-1 border-b-1 py-6 border-primary' "   >
+          <DisclosureButton  class="flex w-full justify-between  px-4 py-2 text-left text-lg font-medium    focus:outline-none  "  >
+            <span   :class=" open ? 'text-pink' : 'text-primary' " >隱形牙箍療程多久？</span>
+           
+          </DisclosureButton>
+          <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
+            視乎個別患者的矯齒複雜程度、牙齒移動速度，隱適美隱形牙箍療程時間因人而異。一般而言，最快大約3個月就可以見到矯齒成效，而整個療程就平均需要1年至2年，如個案較為複雜，就可能需2年或以上。
+  
+          </DisclosurePanel>
+        </div>
+        </Disclosure>
+     
+        <Disclosure v-slot="{ open }"  > 
+          <div :class=" open ? 'border-t-1 border-b-1 py-6 border-pink'  : 'border-t-1 border-b-1 py-6 border-primary' "   >
+          <DisclosureButton  class="flex w-full justify-between  px-4 py-2 text-left text-lg font-medium    focus:outline-none  "  >
+            <span   :class=" open ? 'text-pink' : 'text-primary' " >隱形牙箍有沒有年齡限制？</span>
+           
+          </DisclosureButton>
+          <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
+            隱適美隱形牙箍療程並無年齡限制，只要經牙醫評估後個案適合便能進行療程。
+  
+          </DisclosurePanel>
+        </div>
+        </Disclosure>
+        <Disclosure v-slot="{ open }"  > 
+          <div :class=" open ? 'border-t-1 border-b-1 py-6 border-pink'  : 'border-t-1 border-b-1 py-6 border-primary' "   >
+          <DisclosureButton  class="flex w-full justify-between  px-4 py-2 text-left text-lg font-medium    focus:outline-none  "  >
+            <span   :class=" open ? 'text-pink' : 'text-primary' " >戴隱形牙箍要戒口？</span>
+           
+          </DisclosureButton>
+          <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
+            隱適美隱形牙箍用家可以在進食之前，除下牙箍，除非牙醫有特別指示，否則的話在日常飲食上無特別限制。
+          </DisclosurePanel>
+        </div>
+        </Disclosure>
+        <Disclosure v-slot="{ open }"  > 
+          <div :class=" open ? 'border-t-1 border-b-1 py-6 border-pink'  : 'border-t-1 border-b-1 py-6 border-primary' "   >
+          <DisclosureButton  class="flex w-full justify-between  px-4 py-2 text-left text-lg font-medium    focus:outline-none  "  >
+            <span   :class=" open ? 'text-pink' : 'text-primary' " >戴上隱形牙箍會有痛楚嗎？</span>
+           
+          </DisclosureButton>
+          <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
+            隱適美牙箍以漸進緩和的矯正力道移動你的牙齒，相比其他矯正療程引起的痛楚較低。而某些使用者會於剛戴上新牙箍數天內或會感到緊繃的感覺，此為牙齒移動的跡象，不適感亦會於數天後消失。
+          </DisclosurePanel>
+        </div>
+        </Disclosure>
+  
+  
+   
+  
+  
+  
+  
+  
+      </div>
+    </div>
+  </div>
+  
+  
+  
+   
+  
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="orthodontic_form page_container py-20">
+  <p class="text-center text-lg text-primary font-normal tracking-widest-2x">填寫你的資料，</p>
+  <h4 class="text-center text-xl text-pink font-normal tracking-widest-2x mb-4 sm:mb-20">展開專屬牙齒美容旅程！</h4>
+    
+  
+  
+  <form action="https://formspree.io/f/xjvzrvny" method="POST">
+            <div class="overflow-hidden   sm:rounded-md">
+              <div class="  px-4 py-5 sm:p-6 max-w-5xl">
+                <div class="grid grid-cols-6 gap-10">
+                  <div class="col-span-6 sm:col-span-3">
+                    <label for="first-name" class="block text-md font-medium text-gray-700">姓名：</label>
+                    <input type="text" name="Name" id="first-name" autocomplete="given-name" class="h-8 pl-2 mt-1 block  w-full border-gray-300 border-1 sm:text-sm text-primary" />
+                  </div>
+  
+                  <div class="col-span-6 sm:col-span-3 sm:pl-20">
+                    <label for="last-name" class="block text-md font-medium text-gray-700">稱呼：</label>
+                    <div class="mt-2  justify-start flex ">
+                    <div class="flex items-center">
+                      <input id="push-everything" data-name="man" name="man"  type="radio" class="h-4 w-4 border-gray-300 border-1 text-green focus:ring-green focus:outline-none " />
+                      <label for="push-everything" class="ml-3  block text-md font-medium text-gray-700">先生</label>
+                    </div>
+                    <div class="flex items-center ml-4">
+                      <input id="push-email" data-name="lady"  name="lady" type="radio" class="h-4 w-4 border-gray-300  text-green focus:ring-green focus:outline-none" />
+                      <label for="push-email" class="ml-3  block text-md font-medium text-gray-700">女士</label>
+                    </div>
+                    <div class="flex items-center  ml-4">
+                      <input id="push-nothing" data-name="miss" name="miss"   type="radio" class="h-4 w-4 border-gray-300  text-green focus:ring-green focus:outline-none" />
+                      <label for="push-nothing" class="ml-3  block text-md font-medium text-gray-700">小姐</label>
+                    </div>
+                  </div> 
+               </div>
+  
+                  <div class="col-span-6 sm:col-span-6">
+                    <label for="email-address" class=" block text-md font-medium text-gray-700">電話號碼：</label>
+                    <input type="text" name="Tel" id="tel" autocomplete="tel" class="h-8 pl-2  mt-1 block  w-full border-gray-300 border-1  text-primary  sm:text-sm" />
+                  </div>
+  
+                  <div class="col-span-6 sm:col-span-6">
+                    <label for="email-address" class=" block text-md font-medium text-gray-700">電郵地址：</label>
+                    <input type="text" name="Email" id="email-address" autocomplete="email" class="h-8 pl-2  mt-1 block  w-full border-gray-300 border-1  text-primary  sm:text-sm" />
+                  </div>
+  
+                  <div class="col-span-6 sm:col-span-6 form_selcet_service">
+                    <label for="service" class="block text-md font-medium text-gray-700 mb-6 sm:mb-0">服務選擇：</label>
+                    <div class="mt-2  justify-start flex  flex-wrap">
+                    <div class="flex items-center">
+                      <input id="push-Invisalign" name="隱適美" type="radio" class="h-4 w-4 border-gray-300 border-1 text-indigo-100 focus:ring-indigo-100" />
+                      <label for="push-Invisalign" class="ml-3  block text-md font-medium text-gray-700">Invisalign 
+                       <br  class="sm:hidden" /> 隱適美 </label>
+                    </div>
+                    <div class="flex items-center ml-6">
+                      <input id="push-Go" name="隱適美‧易" type="radio" class="h-4 w-4 border-gray-300  text-green focus:ring-green focus:outline-none" />
+                      <label for="push-Go" class="ml-3  block text-md font-medium text-gray-700">Invisalign Go  <br  class="sm:hidden" />隱適美‧易
+  </label>
+                    </div>
+                    <div class="flex items-center  ml-6">
+                      <input id="push-First" name="隱適美兒童專線" type="radio" class="h-4 w-4 border-gray-300  text-green focus:ring-green focus:outline-none" />
+                      <label for="push-First" class="ml-3  block text-md font-medium text-gray-700">Invisalign First  <br  class="sm:hidden" />隱適美兒童專線</label>
+                    </div>
+                    <div class="flex items-center  ml-6">
+                      <input id="push-notific2ations" name="牙齒美白" type="radio" class="h-4 w-4 border-gray-300  text-green focus:ring-green focus:outline-none" />
+                      <label for="push-notific2ations" class="ml-3  block text-md font-medium text-gray-700">  牙齒美白</label>
+                    </div>
+                    <div class="flex items-center  ml-6">
+                      <input id="push-notific3ations" name="瓷貼片" type="radio" class="h-4 w-4 border-gray-300  text-green focus:ring-green focus:outline-none" />
+                      <label for="push-notific3ations" class="ml-3  block text-md font-medium text-gray-700"> 瓷貼片</label>
+                    </div>
+                  </div>
+  
+  
+  
+                  </div>
+   
+             
+   
+   
+                </div>
+              </div>
+              <div class="px-4 sm:mt-20 text-center sm:px-6">
+                <button type="submit" class="inline-flex justify-center border  text-pink py-2 px-30 text-xl font-medium  border-gray-300 hover:bg-pink hover:text-white focus:outline-none focus:ring-2   focus:ring-offset-2">提 交</button>
+              </div>
+            </div>
+          </form>
+  
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  </div>
+  
+  
+  
+  
+    
+    
+  </template>
+  
+  <style lang="scss" scoped>
+    .orthodontic_faq .flex .orthodontic_title {width: 64px;margin-right: 140px;}
+    .orthodontic_faq .flex .orthodontic_title h2{writing-mode:vertical-lr;padding-left: 20px;padding-top: 20px;line-height: 30px;letter-spacing: 0.2em;}
+    .orthodontic_faq .flex .orthodontic_title h2::before{left: 0;top: -50px; transform: rotateY(180deg);}
+   .orthodontic_faq_list .py-6{position: relative; z-index: 2; margin-top: -1px;transition: all .3s ease-in-out;} 
+   .orthodontic_faq_list .py-6:hover{border-color: #ECB3AC;z-index: 3;}
+   .orthodontic_faq_list .py-6:hover span{color: #ECB3AC;}
+    .orthodontic_faq_list .border-pink, .orthodontic_faq_list .py-6:hover{z-index: 3;padding-left: 64px;}
+    .orthodontic_faq_list .py-6::before{width: 0;height: 30px; transition: all .3s ease-in;left: 0; position: absolute;content: '';    margin-top: 18px; left: 25px;background-image: url(https://img.cmereye.com/i/2022/09/26/6331a9659c644.png);background-repeat: no-repeat;background-size: 100% auto;}
+    .orthodontic_faq_list .border-pink::before, .orthodontic_faq_list .py-6:hover::before{width: 30px;height: 30px;left: 0; position: absolute;content: '';    margin-top: 18px; left: 25px;background-image: url(https://img.cmereye.com/i/2022/09/26/6331a9659c644.png);background-repeat: no-repeat;background-size: 100% auto;}
+   .orthodontic_faq{background-image: url(https://img.cmereye.com/i/2022/09/26/63318e7a7c60a.jpg);background-size:cover ; background-position: center;background-repeat: no-repeat;    background-attachment: fixed;} 
+    .orthodontic_table{max-width: 940px;margin: auto;}
+     .orthodontic_table>div{height: 125px;display: flex;justify-content: center;align-items: center;padding: 0 23px;font-family: 'Songti TC'; font-style: normal; font-weight: 400; font-size: 15px; line-height: 21px; text-align: justify; /* grey */ color: #666666;position: relative;}
+    .orthodontic_table>div:nth-child(1),  .orthodontic_table>div:nth-child(2),.orthodontic_table>div:nth-child(3){height: 50px;text-align: center;vertical-align: middle;display: flex;align-items: center;justify-content: center;color: #fff;}
+  .orthodontic_table>div:nth-child(1){background: #ECB3AC;}
+  .orthodontic_table>div:nth-child(2){background: #fff;}
+  .orthodontic_table>div:nth-child(3){background: #AACE79;}
+  .orthodontic_table>div:nth-child(6n+4),.orthodontic_table>div:nth-child(4){background: rgb(251, 240, 238);}
+  .orthodontic_table>div:nth-child(6n+7),.orthodontic_table>div:nth-child(7){background: rgb(248, 228, 224);}
+  
+  .orthodontic_table>div:nth-child(6n+6){background: rgb(238, 245, 228);}
+  .orthodontic_table>div:nth-child(6n+9){background: rgb(224, 237, 206);}
+   
+  .orthodontic_table>div:nth-child(3n+1){grid-column: span 4 / span 4;}
+  .orthodontic_table>div:nth-child(3n+2){grid-column: span 2 / span 2;font-size: 18px;}
+  .orthodontic_table>div:nth-child(3n+3){grid-column: span 4 / span 4;}
+  .orthodontic_table>div:nth-child(6n+8)::before{width: 80px;height: 1px;left: 0;right: 0;top: 0;margin: auto; background-color: #ECB3AC;position: absolute;content: ''}
+  .orthodontic_table>div:nth-child(17)::before{width: 80px;height: 1px;left: 0;right: 0;bottom: 0;margin: auto; background-color: #ECB3AC;position: absolute;content: ''}
+  .orthodontic_table>div:nth-child(6n+5)::after{width: 80px;height: 1px;left: 0;right: 0;top: 0;margin: auto; background-color: #AACE79;position: absolute;content: ''}
+  
+  
+  // tailwind base 
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  // tailwind
+  @layer base {
+  .orthodontic_pic .text-center{ @apply  transition duration-500  ease-in-out transform  hover:scale-105 } 
+  
+  } 
+  
+  
+  
+   
+    .orthodontic_pic .text-center{position: relative;}
+    .orthodontic_pic .text-center::before{position: absolute;content: '';width: 165px; height: 55px;background-color: #ECB3AC;left: 0;right:0;margin: auto;top: -10px; -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 55% 75%, 50% 100%, 45% 76%, 0% 75%); clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 55% 75%, 50% 100%, 45% 75%, 0% 75%);}
+    .orthodontic_pic .text-center::after{position: absolute;color: #fff;top:0px;left: 0;right: 0;margin: auto;z-index: 99;}
+    .orthodontic_pic .text-center:nth-child(1):after{content: '咬合過深';}
+    .orthodontic_pic .text-center:nth-child(2):after{content: '倒  及';}
+    .orthodontic_pic .text-center:nth-child(3):after{content: '錯咬/反咬合';}
+    .orthodontic_pic .text-center:nth-child(4):after{content: '牙縫過大';}
+    .orthodontic_pic .text-center:nth-child(5):after{content: '開  咬';}
+    .orthodontic_pic .text-center:nth-child(6):after{content: '齒列擠擁';}
+    .orthodontic_pic .text-center:nth-child(7):after{content: '前排齒列擠擁';}
+  .orthodontic_pic{display: flex;flex-wrap: wrap;justify-content: center;align-items: center;}
+  .orthodontic_pic>div{ width: calc((100% - 0px) / 3);margin-bottom: 70px;}
+  .orthodontic_pic>div img{margin: auto;}
+  .orthodontic_condition{background-image: url(https://img.cmereye.com/i/2022/09/26/6331701920fdd.jpg);background-size: 100% auto;background-position: top ;background-repeat: no-repeat;} 
+  .page_orthodontic{background-color: #fff;position: relative;z-index: 9;}
+  .page_orthodontic  .flex_between_items_start h4{position: relative;}
+  .page_orthodontic  .flex_between_items_start h4::before{position: absolute;content: ''; font-style: normal; font-weight: 400; font-size: 16px; line-height: 22px; /* pink */ color: #ECB3AC;left: -70px;margin-top: 2px;font-family: 'initial'; }
+  // .page_orthodontic  .flex_between_items_start .sticky_step:nth-child(1) h4::before{content: 'Step 1';}
+  // .page_orthodontic  .flex_between_items_start .sticky_step:nth-child(2) h4::before{content: 'Step 2';}
+  // .page_orthodontic  .flex_between_items_start .sticky_step:nth-child(3) h4::before{content: 'Step 3';}
+    .page_orthodontic  .flex_between_items_start:nth-child(1)>div h4::before{content: 'Step 1';}
+  .page_orthodontic  .flex_between_items_start:nth-child(2)>div h4::before{content: 'Step 2';}
+  .page_orthodontic  .flex_between_items_start:nth-child(3)>div h4::before{content: 'Step 3';}
+  
+ 
+   
+  
+  </style>
+  
