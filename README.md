@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# smilepartner_main
+=======
+>>>>>>> 31def53 (commit)
 # Nuxt 3  CMER 前端起始模板
 具有许多有用功能的 Nuxt 3 入门模板或样板。集成 TailwindCSS 3 。
 
@@ -225,4 +231,9 @@ export default defineNuxtConfig({
 并且当 Postmerge 时，它​​会运行“yarn”来自动安装新的依赖项。配置在 `/path/to/.husky/post-merge`
 
 ## 许可证
+<<<<<<< HEAD
 由于项目来自于网络资源整合，而该项目在 MIT 许可下获得许可，版权所有 (c) 2022 Alfian Dwi Nugraha。有关详细信息，请参阅 [LICENSE](LICENSE.md) 文件.
+=======
+由于项目来自于网络资源整合，而该项目在 MIT 许可下获得许可，版权所有 (c) 2022 Alfian Dwi Nugraha。有关详细信息，请参阅 [LICENSE](LICENSE.md) 文件.
+>>>>>>> 7637074 (commit)
+>>>>>>> 31def53 (commit)

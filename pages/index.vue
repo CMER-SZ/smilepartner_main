@@ -84,6 +84,9 @@ useHead(() => ({
               />
             </div>
             <h2 class="text-pink text-center text-4xl mb-6">希瑪微笑矯齒</h2>
+            <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="text-pink text-center flex justify-center mb-4">
+              <img src="https://static.cmereye.com/imgs/2022/10/d73465bed88552d2.png" alt="">
+            </a>
             <p>{{ $t('banners.invisalign_desc') }}</p>
           </div>
         </div>
@@ -132,9 +135,13 @@ useHead(() => ({
     </div><div class="sticky_step">
       <h4 class="py-5 text-lg font-normal ">訂制矯齒計劃</h4>
       <p class="text-md">經牙醫專業診斷，為患者度身訂造3D矯齒治療方案。</p>
-    </div><div class="sticky_step">
+    </div>
+    <div class="sticky_step">
       <h4 class="py-5 text-lg font-normal ">訂製牙套並開始療程</h4>
       <p class="text-md">隱適美會將牙醫治療方案製作成一系列沿牙齦剪裁的專屬牙箍，再寄至牙醫診所。之後就會聯絡患者到診所試戴及評估效果。</p>
+    </div> 
+    <div class="sticky_step">
+      <p class="text-md"></p>
     </div> 
      </div>
      <div class="sm:w-6/13">
