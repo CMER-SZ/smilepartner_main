@@ -52,7 +52,7 @@ export default defineNuxtConfig({
     },
   },
 
-  // css
+  //  css 
   css: [
     'virtual:windi-base.css',
     'virtual:windi-components.css',
