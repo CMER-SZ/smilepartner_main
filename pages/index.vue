@@ -106,7 +106,9 @@ useHead(() => ({
           step_title
           text-center
           sm:text-center
-          mb-20
+          sm:mb-20
+          mb-5
+          mt-5
           py-10
           z-10
         "
