@@ -111,6 +111,10 @@ footer .fixed_button .fixed_button_info:hover>.fixed_text{display: flex;align-it
 
 @media screen and(max-width:768px){
   footer .fixed_button{position: fixed;right: 10px;z-index: 999; top: 149vw;bottom: 0;margin: auto;justify-content: center;flex-flow: column;align-items: flex-end;}
+  footer .fixed_button .fixed_button_info:hover{padding: 0;}   
+  footer .fixed_button .fixed_button_info:hover > .fixed_text{display: none;}
+// footer .fixed_button .fixed_button_info:nth-child(2):hover{display: none;}   
+// footer .fixed_button .fixed_button_info:hover>.fixed_text{display: none;}
   //  mb strat 
 .pcShow{display: none !important;}
 .page_container{padding-left: 15px;padding-right: 15px;}  
