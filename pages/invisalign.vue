@@ -684,7 +684,7 @@ useHead(() => ({
         展開專屬牙齒美容旅程！
       </h4>
 
-      <form action="https://formspree.io/f/xjvzrvny" method="POST">
+      <form action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm" method="POST">
         <div class="overflow-hidden sm:rounded-md">
           <div class="px-4 py-5 sm:p-6 max-w-5xl">
             <div class="grid grid-cols-6 gap-10">
