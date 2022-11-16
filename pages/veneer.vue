@@ -85,9 +85,9 @@ useHead(() => ({
               />
             </div>
             <h2 class="text-pink text-center text-4xl mb-6">希瑪微笑矯齒</h2>
-            <div class="flex items-center">
+            <div class="flex items-center justify-center my-4">
               <p class="p-fast pcShow">即日<br>特快</p> 
-              <img class="m-auto  my-10" src="https://static.cmereye.com/imgs/2022/11/6c599297d15d53bb.png" alt="">
+              <img class="" src="https://static.cmereye.com/imgs/2022/11/6c599297d15d53bb.png" alt="">
             </div>
             
               <p>{{ $t('banners.porcelain_desc') }}</p>
@@ -1307,7 +1307,7 @@ useHead(() => ({
   }
   // 即日特快全瓷牙貼片 顶部小圆
  .p-fast{
-    position: absolute;
+    position: unset;
     left: 19%;
     height: 100px;
     width: 100px;
