@@ -86,7 +86,7 @@ useHead(() => ({
             </div>
             <h2 class="text-pink text-center text-4xl mb-6">希瑪微笑矯齒</h2>
             <div class="flex items-center justify-center my-4">
-              <p class="p-fast pcShow">即日<br>特快</p> 
+              <p class="p-fast">即日<br>特快</p> 
               <img class="" src="https://static.cmereye.com/imgs/2022/11/6c599297d15d53bb.png" alt="">
             </div>
             
@@ -1387,16 +1387,16 @@ useHead(() => ({
 }
 @media screen and(max-width:768px) {
   
-  .p-fast{
-    position: absolute;
+  .page_body_header_banner .head_banner_text .p-fast{
+    position: unset;
     left: 19%;
-    height: 100px;
-    width: 100px;
+    height: 17vw;
+    width: 17vw;
     font-family: "Songti TC";
     font-style: normal;
-    font-weight: 500;
-    font-size: 29px;
-    line-height: 37px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -1404,7 +1404,7 @@ useHead(() => ({
     background: #fff;
     border-radius: 50%;
     justify-content: center;
-    box-shadow: 0px 0px 3.36508px 3px rgba(226, 163, 156, 0.3);
+    box-shadow: 0px 0px 3.36508px 3px rgb(226 163 156 / 30%);
  }
   .orthodontic_box img{
     max-width: 20vw;
