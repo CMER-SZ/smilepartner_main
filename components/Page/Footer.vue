@@ -61,14 +61,15 @@ const menus = computed((): IMenuItem[] => [
               navigation
               :loop="true"
               :scrollbar="{ draggable: true }" >
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/accf3784a847f0ee.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/cdb5c83594d0d5fd.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/b8967d9a0fdaf4c6.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/0aee34f9376340d3.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/0900aa7509830015.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/5aa9d38acfe639db.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/af2717536b4e0930.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/ea9f1391a551e5c6.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/7055a93f76072419.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/89d022005e8b03e6.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/d4e4b782e854920e.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/1e42918e9f67454b.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/588589915e7b81c6.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/f743d8dbbdf29778.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/8ed41047df5de982.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/d822c1644e615863.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/ef651d3ee55bc6b7.jpg" alt=""></swiper-slide>
           </swiper>
     </div>
     <div class="footer_img mbShow">
@@ -83,14 +84,15 @@ const menus = computed((): IMenuItem[] => [
               navigation
               :loop="true"
               :scrollbar="{ draggable: true }" >
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/accf3784a847f0ee.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/cdb5c83594d0d5fd.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/b8967d9a0fdaf4c6.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/0aee34f9376340d3.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/0900aa7509830015.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/5aa9d38acfe639db.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/af2717536b4e0930.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/ea9f1391a551e5c6.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/7055a93f76072419.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/89d022005e8b03e6.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/d4e4b782e854920e.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/1e42918e9f67454b.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/588589915e7b81c6.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/f743d8dbbdf29778.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/8ed41047df5de982.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/d822c1644e615863.jpg" alt=""></swiper-slide>
+              <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/ef651d3ee55bc6b7.jpg" alt=""></swiper-slide>
           </swiper>
     </div>
     <div class="foot_logo ">
@@ -201,7 +203,7 @@ const menus = computed((): IMenuItem[] => [
       color: #FFFFFF;
     }
     img{
-      max-width: 338px
+      // max-width: 338px
     }
   }
 }
