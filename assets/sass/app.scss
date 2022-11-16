@@ -126,7 +126,7 @@ footer .fixed_button .fixed_button_info:hover>.fixed_text{display: flex;align-it
     img{max-width: 65px;max-height: 65px;margin-right: 10px;}
   }
 }  
-.header{background: unset;position: sticky;z-index: 9999;backdrop-filter: unset;}
+.header{background: unset;position: sticky;z-index: 9999;backdrop-filter: unset !important;}
 .header.sticky{backdrop-filter: unset;background: unset;position: sticky;}
 .header::after{transform: rotate(180deg); -webkit-transform: rotate(180deg); background-image: url(https://static.cmereye.com/imgs/2022/10/cef6d1b4fe6fc071.png);   background-repeat: repeat-x; background-position: center bottom; background-size: auto 110%; height: 110%; width: 100%; position: absolute; z-index: -1; left: 0px; bottom: 0px; animation-name: wave1; animation-duration: 20s; animation-timing-function: linear; animation-iteration-count: infinite; -webkit-animation-name: wave1; -webkit-animation-duration: 20s; -webkit-animation-timing-function: linear; -webkit-animation-iteration-count: infinite; transform: rotate(180deg); -webkit-transform: rotate(180deg);}
 .header::before{transform: rotate(180deg); -webkit-transform: rotate(180deg); background-image: url(https://static.cmereye.com/imgs/2022/10/ef56c8ce03f5e816.png);   background-repeat: repeat-x; background-position: center bottom; background-size: auto 110%; height: 110%; width: 100%; position: absolute; z-index: -2; left: 0px; bottom: 0px; animation-name: wave2; animation-duration: 20s; animation-timing-function: linear; animation-iteration-count: infinite; -webkit-animation-name: wave2; -webkit-animation-duration: 20s; -webkit-animation-timing-function: linear; -webkit-animation-iteration-count: infinite; transform: rotate(180deg); -webkit-transform: rotate(180deg);}
