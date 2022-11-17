@@ -38,7 +38,9 @@ export default defineNuxtConfig({
       noscript: [
         // <noscript>Javascript is required</noscript>
         { children: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59MMG6F"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>` }
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+        body:true
+       }
       ],
       script: [
         {
