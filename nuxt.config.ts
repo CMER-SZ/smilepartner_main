@@ -43,14 +43,15 @@ export default defineNuxtConfig({
       script: [
         {
           async: "async",
-          src:'https://www.googletagmanager.com/gtag/js?id=G-B4J9QK7BQ1'
+          src:'https://www.googletagmanager.com/gtag/js?id=G-2G80LM1R8F'
         },
         {
           children: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'GTM-59MMG6F');
+
+          gtag('config', 'G-2G80LM1R8F');
           `,
           type: 'text/javascript',
         },
