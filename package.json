@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "swiper": "^8.4.4",
-    "vue-awesome-swiper": "^5.0.1"
+    "vue-awesome-swiper": "^5.0.1",
+    "vue-gtm": "^3.5.0"
   }
 }

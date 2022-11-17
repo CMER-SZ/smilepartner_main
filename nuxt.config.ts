@@ -3,19 +3,21 @@ import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
+
 declare module '@nuxt/schema' {
   interface NuxtConfig {
     intlify?: IntlifyModuleOptions
   }
 }
 
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   // server side rendering mode
   ssr: true,
-
+  
   // app
   app: {
+    
+
     head: {
       title: 'CMER Smile Line ',
       titleTemplate: '%s | 希瑪微笑矯齒',
@@ -33,43 +35,43 @@ export default defineNuxtConfig({
         },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      noscript: [
+        // <noscript>Javascript is required</noscript>
+        { children: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59MMG6F"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>` }
+      ],
       script: [
         {
           async: "async",
           src:'https://www.googletagmanager.com/gtag/js?id=G-B4J9QK7BQ1'
         },
         {
-          innerHTML: `
+          children: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
-          gtag('config', 'G-B4J9QK7BQ1');
+          gtag('config', 'GTM-59MMG6F');
           `,
           type: 'text/javascript',
         },
         // {
-        //   innerHTML: `
-        //   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59MMG6F"
-        //   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        //   `,
-        //   type: 'text/javascript',
+        //   src:
+        //     "./plugins/gtm.js",
         //   body:true
         // },
-        // {
-        //   innerHTML: `
-        //   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        //   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        //   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        //   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        //   })(window,document,'script','dataLayer','GTM-59MMG6F');
-        //   `,
-        //   type: 'text/javascript',
-        // },
+        {
+          children: `
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-59MMG6F');
+          `,
+          type: 'text/javascript',
+        },
       ]
     },
   },
-
   // css
   css: [
     'virtual:windi-base.css',
@@ -80,7 +82,7 @@ export default defineNuxtConfig({
   ],
 
   // plugins
-  plugins: ['~/plugins/navbar.ts'],
+  plugins: ['~/plugins/navbar.ts',],
 
   // build
   build: {
@@ -118,6 +120,7 @@ export default defineNuxtConfig({
           }),
         ],
       }),
+      
     ],
   },
 
@@ -160,3 +163,4 @@ export default defineNuxtConfig({
     },
   },
 })
+
