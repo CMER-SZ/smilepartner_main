@@ -49,7 +49,7 @@ const menus = computed((): IMenuItem[] => [
 
 <template>
   <footer class="border-t lg:border-gray-900/10 dark:border-gray-50/[0.2] bg-pink">
-    <div class="footer_img pcShow">
+    <!-- <div class="footer_img pcShow">
           <p class="">優美、舒適診所環境</p> 
             <swiper 
               ref="mySwiper" 
@@ -94,7 +94,7 @@ const menus = computed((): IMenuItem[] => [
               <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/d822c1644e615863.jpg" alt=""></swiper-slide>
               <swiper-slide><img src="https://static.cmereye.com/imgs/2022/11/ef651d3ee55bc6b7.jpg" alt=""></swiper-slide>
           </swiper>
-    </div>
+    </div> -->
     <div class="foot_logo ">
       <div class="text-center sm:pt-24">
         <a href="https://cmermedical.com/">

@@ -16,8 +16,6 @@ export default defineNuxtConfig({
   
   // app
   app: {
-    
-
     head: {
       title: 'CMER Smile Line ',
       titleTemplate: '%s | 希瑪微笑矯齒',
