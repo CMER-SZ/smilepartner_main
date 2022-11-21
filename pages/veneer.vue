@@ -2017,6 +2017,7 @@ const clearInfo = () =>{
     margin-bottom: 2vw;
     display: flex;
     align-items: center;
+    width: auto;
   }
   .continue_box {
     h4{
