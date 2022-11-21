@@ -688,7 +688,7 @@ const clearInfo = () =>{
               :options="swiperOption" 
               :pagination="{ clickable: true }"
               :loop="true"
-              :slides-per-view="1"
+              :slides-per-view="1.1"
               :space-between="50"
               navigation
               :scrollbar="{ draggable: true }" >
@@ -728,7 +728,7 @@ const clearInfo = () =>{
                   </div>
                </div> 
               </swiper-slide>
-              <swiper-slide>
+              <!-- <swiper-slide>
                 <div class="orthodontic_pic pic-three" >
                 <div class="text-center">
                   <img
@@ -745,7 +745,7 @@ const clearInfo = () =>{
                   />
                 </div>
                 </div>
-              </swiper-slide>
+              </swiper-slide> -->
               <swiper-slide>
                 <div class="orthodontic_pic pic-four" >
                   <div class="text-center">
@@ -980,7 +980,7 @@ const clearInfo = () =>{
               :options="tableswiperOption" 
               :pagination="{ clickable: true }"
               :slides-per-view="1"
-              :space-between="50"
+              :space-between="20"
               navigation
               :scrollbar="{ draggable: true }" >
               <swiper-slide>
@@ -1027,11 +1027,11 @@ const clearInfo = () =>{
             <div>沒有保養</div> -->
     
           </div>
-          
+          <p class="mt-6 text-center">^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br>
+              *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。</p>
               </swiper-slide>
               <swiper-slide></swiper-slide>
-              <p class="mt-6 text-center">^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br>
-              *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。</p>
+              
           </swiper>
           
         </div>
@@ -1212,7 +1212,6 @@ const clearInfo = () =>{
               </div>
             </div>
             <swiper
-              
               class="thumbs-swiper"
               :modules="modules"
               :space-between="10"
@@ -1558,7 +1557,7 @@ const clearInfo = () =>{
   content: '牙齒排列不整齊';
 }
 .orthodontic_pic .text-center:nth-child(2):after {
-  content: '牙齒變色';
+  content: '四環素牙';
 }
 .orthodontic_pic .text-center:nth-child(3):after {
   content: '牙齒出現磨損';
@@ -2068,6 +2067,18 @@ const clearInfo = () =>{
 .orthodontic_table>div:nth-child(20){order: 20;
     background: rgb(224, 237, 206); } 
   .orthodontic_table>div:nth-child(21){order: 21;grid-column: span 2/span 2; } 
+  .orthodontic_table > div:nth-child(2), 
+.orthodontic_table > div:nth-child(5),
+.orthodontic_table > div:nth-child(9),
+.orthodontic_table > div:nth-child(13),
+.orthodontic_table > div:nth-child(17),
+.orthodontic_table > div:nth-child(21)
+{
+  grid-column: span 2 / span 2 !important;
+  font-size: 16px;
+  background-color: #fff;
+  padding: 0;
+}
   .orthodontic_table>div:nth-child(21)::after{
     width: 95px;
     height: 1px;
@@ -2091,7 +2102,7 @@ const clearInfo = () =>{
 
 
   .orthodontic_table {
-    width: 148vw;
+    width: 142vw;
   margin: auto;
 }
 .orthodontic_swiper{
@@ -2120,7 +2131,7 @@ const clearInfo = () =>{
     background-color: #ECB3AC;
     
 }
-::v-deep .swiper-pagination-bullet:nth-child(4)::after{
+::v-deep .swiper-pagination-bullet:nth-child(3)::after{
   height: 0px;
 }
 ::v-deep .swiper-pagination-bullet-active{
@@ -2132,7 +2143,7 @@ const clearInfo = () =>{
 .orthodontic_table_swiper{
 
   ::v-deep .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
-    bottom: 82px;
+    bottom: -2px;
     left: 49px;
     width: 100%;
     // top: 161vw;
@@ -2233,7 +2244,7 @@ const clearInfo = () =>{
   content: '牙齒出現磨損';
 }
 .pic-two .text-center:nth-child(2):after {
-  content: '牙齒過小';
+  content: '牙齒縫隙過大';
 }
 .pic-three  .text-center:nth-child(1):after {
   content: '四環素牙';
@@ -2242,7 +2253,7 @@ const clearInfo = () =>{
   content: '齒列擠擁';
 }
 .pic-four .text-center:nth-child(1):after {
-  content: '牙齒縫隙過大';
+  content: '牙齒過小';
 }
 .orthodontic_pic {
   display: flex;

@@ -3,8 +3,8 @@ import { capitalize } from '~/utils/str'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import form from '../composables/form/form.vue'
 import { Autoplay, Pagination, Navigation, Scrollbar } from 'swiper'
+import form from '../composables/form/form.vue'
 import 'swiper/css/pagination' // 轮播图底面的小圆点
 const modules = [Autoplay, Pagination, Navigation, Scrollbar]
 const swiperOption = {
