@@ -55,10 +55,10 @@ const toggleOptions = (show?: boolean) => {
     ref="navbar"
     class="header ease-in-out backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50   dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-slate-900/[0.5]"
   >
-  <div class="page_container sm:hidden"><div class=" mx-4 lg:mx-0"><div class="relative flex items-center"><div class="head_banner_text_p"><div class="head_banner_img"><img class="m-auto" src="https://img.cmereye.com/i/2022/09/23/632d74a9e2ad7.png" alt="" srcset=""></div><h2 class="text-pink text-center text-xl sm:text-4xl mb-6">希瑪微笑矯齒</h2></div></div></div></div>
+  <div class="page_container items-center sm:hidden"><div class="items-center mx-4 lg:mx-0"><div class="relative flex items-center"><div class="head_banner_text_p"><div class="head_banner_img"><img class="m-auto" src="https://static.cmereye.com/imgs/2022/11/7447887ded65164a.png" alt="" srcset=""></div></div></div></div></div>
   
-    <!-- <div class="page_container">
-      <div class="py-3   mx-4 lg:mx-0">
+    <div class="page_container">
+      <!-- <div class="py-3   mx-4 lg:mx-0">
         <div class="relative flex items-center">
 
           <div
@@ -78,25 +78,25 @@ const toggleOptions = (show?: boolean) => {
                 <IconUil:times v-else />
               </span>
             </button>
-          </div>
+          </div> -->
+            <!-- :to="{ name: 'index' }" -->
      
-          <slot name="title">
-          
+          <!-- <slot name="title">
             <NuxtLink
               tag="a"
-              class="head_logo mr-3 flex-none overflow-hidden md:w-auto text-md font-bold text-gray-900 dark:text-gray-200"
-              :to="{ name: 'index' }"
+              class="head_logo mr-3 flex-none overflow-hidden md:w-auto text-md font-bold text-gray-900 dark:text-gray-200 pcShow"
+              
             >
 
-            <img src="https://img.cmereye.com/i/2022/09/26/logo.svg" alt="" srcset="">
+            <img src="https://static.cmereye.com/imgs/2022/11/6b84ec3a95b78ad9.jpg" alt="" srcset="">
               <span class="sr-only">home</span>
               <span class="flex items-center text-left md:text-center  justify-center">
               {{app.name}} <br> {{app.cn_name}}
               </span>
             </NuxtLink>
-          </slot>
+          </slot> -->
   
-          <slot name="menu" />
+          <!-- <slot name="menu" />
 
           <div
             v-if="$slots['options']"
@@ -126,8 +126,8 @@ const toggleOptions = (show?: boolean) => {
             </button>
           </div>
         </div>
-      </div>
-    </div> -->
+      </div> -->
+    </div>
 
 
 

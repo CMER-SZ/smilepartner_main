@@ -311,7 +311,7 @@ const clearInfo = () =>{
       <iframe  id="my" name="my" style="display:none"></iframe>
       <form action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm" method="POST" @submit="checkForm" target="my">
         <div class="overflow-hidden sm:rounded-md">
-          <div class="px-4 py-5 sm:p-6 max-w-5xl">
+          <div class="px-4 py-5 sm:p-6 max-w-5xl form_width">
             <div class="grid grid-cols-6 gap-10">
               <div class="col-span-6 sm:col-span-3">
                 <label
@@ -1687,7 +1687,10 @@ const clearInfo = () =>{
   height: 50px;
   background: url(https://static.cmereye.com/imgs/2022/11/5f2b9d4f44128741.png) no-repeat;
 }
-@media screen and(min-width:768px) {
+@media screen and(min-width:768px) {、
+  .form_width{
+  padding: 20px 130px;
+ }
   .tab-control .active{
     span{
       color: #ECB3AC !important;
