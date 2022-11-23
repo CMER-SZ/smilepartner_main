@@ -303,7 +303,7 @@ const clearInfo = () =>{
           font-normal
           tracking-widest-2x
           mb-4
-          sm:mb-20
+          sm:mb-12
         "
       >
         展開專屬牙齒美容旅程！
@@ -472,7 +472,7 @@ const clearInfo = () =>{
               </div>
             </div>
           </div>
-          <div class="px-4 sm:mt-20 text-center sm:px-6">
+          <div class="px-4 sm:mt-12 text-center sm:px-6 mt-2">
             <button
               type="submit"
               class="
@@ -1687,7 +1687,7 @@ const clearInfo = () =>{
   height: 50px;
   background: url(https://static.cmereye.com/imgs/2022/11/5f2b9d4f44128741.png) no-repeat;
 }
-@media screen and(min-width:768px) {、
+@media screen and(min-width:768px) {
   .form_width{
   padding: 20px 130px;
  }
