@@ -109,8 +109,8 @@ useHead(() => ({
           sm:text-center
           sm:mb-10
           mb-5
-          mt-5
-          py-10
+          pt-7
+          pb-10
           z-10
         "
       >
