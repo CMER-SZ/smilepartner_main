@@ -107,7 +107,7 @@ useHead(() => ({
           step_title
           text-center
           sm:text-center
-          sm:mb-20
+          sm:mb-10
           mb-5
           mt-5
           py-10
@@ -381,7 +381,7 @@ useHead(() => ({
             sm:text-center
             my-24
             mb-14
-            sm:my-28
+            sm:my-24
           "
         >
           <h2

@@ -43,7 +43,21 @@ const menus = computed((): IMenuItem[] => [
 { type: 'link', text: t('pages.contact.nav'), route: { name: 'contact' } },
  
 ])
-
+const setTop = () => {
+  let s =document.documentElement.scrollTop;
+// 定时器 每10ms执行一次
+let timer=window.setInterval(function (){
+            // 每次走50
+            s-=50;
+            //  到顶部后清除定时器  必须清定时器  不然就死循环了
+            if (s<0){
+                window.clearInterval(timer);
+            }
+            window.scrollTo(0,s);
+        },10);                
+     
+  
+}
 
 </script>
 
@@ -158,20 +172,46 @@ const menus = computed((): IMenuItem[] => [
       </div>
     </section> 
 
-    <div class="fixed_button  sm:flex ">
-      <a href="tel:9512 8192" class="bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+    <div class="fixed_button  sm:flex pcShow">
+      <a href="tel:9512 8192" class=" bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
        <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/6334083bf1b5a.png" alt="電話預約" ></div>
        <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">電話預約</p><p class="leading-none   text-2xl text-pink">9512 8192</p> </div>  
       </a>
-      <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="bg-white fixed_button_info justify-end items-center  transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+      <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="pcShow bg-white fixed_button_info justify-end items-center  transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
        <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/633407e1049ed.png" alt="WhatsApp" ></div>
        <div class="fixed_text flex-row "><p class="leading-none text-primary text-2xl text-green">WhatsApp</p> <span class="text-primary text-md  ">&nbsp;預約</span> </div>  
       </a>
-
- 
+      <a href="#yyform" class=" bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+       <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/16386373ca307530.png" alt="填表預約" ></div>
+       <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">填表預約</p> </div>  
+      </a>
+      <a @click="setTop()" class=" bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md set-top"> 
+       <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/fdb210114f23d899.png" alt="返回頂部" ></div>
+       <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">返回頂部</p> </div>  
+      </a>
     </div>
 
-
+    <div class="mbShow flex mb-buttom-box"> 
+      <a href="tel:9512 8192" class="bg-white fixed_button_info items-center justify-center "> 
+       <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/6334083bf1b5a.png" alt="電話預約" ></div>
+       <div class="fixed_text flex-col pt-2"><p class="text-primary text-md leading-none ">電話預約</p></div>  
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="bg-white fixed_button_info justify-end items-center  "> 
+       <div class="fixed_img pt-1"><img src="https://static.cmereye.com/imgs/2022/11/4f6f2c4e1008ef29.png" alt="WhatsApp" ></div>
+       <div class="fixed_text flex-row pt-1"><p class="text-primary text-md">WhatsApp預約</p> </div>  
+      </a>
+      <a href="#yyform" class="bg-white fixed_button_info items-center justify-center"> 
+       <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/16386373ca307530.png" alt="填表預約" ></div>
+       <div class="fixed_text flex-col pt-2"><p class="text-primary text-md leading-none">填表預約</p> </div>  
+      </a>
+    </div>
+    <div class="fixed_button  sm:flex mbShow" style="top: 174vw;top: auto;
+    bottom: 90px;">
+      <a  @click="setTop()" class="bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md set-top"> 
+       <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/fdb210114f23d899.png" alt="返回頂部" ></div>
+       <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">返回頂部</p> </div> 
+      </a> 
+    </div>
 
     
   </footer>
@@ -181,6 +221,9 @@ const menus = computed((): IMenuItem[] => [
 </template>
 <style lang="scss"  scoped>
 @media screen and(min-width:768px) {
+  .set-top{
+    cursor: pointer;
+  }
   ::v-deep .swiper-pagination{
     display:none;
   }
@@ -209,6 +252,25 @@ const menus = computed((): IMenuItem[] => [
 }
 
 @media screen and(max-width:768px) {
+  .mb-buttom-box{
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    border-radius: 20px;
+    z-index: 9999;
+    width: 90%;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    box-shadow: 1px 0px 10px -4px;
+    a{
+      padding: 5px 14px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
   ::v-deep .swiper-pagination{
     display:none;
   }
