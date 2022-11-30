@@ -1246,6 +1246,9 @@ const clearInfo = () =>{
   content: 'Step 3';
 }
 @media screen and(min-width:768px) {
+  .head_button{
+    border: 1px solid #CDCDCD !important;
+  }
   .xinyongka{
     font-family: 'Songti TC';
     font-style: normal;
