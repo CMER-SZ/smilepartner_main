@@ -122,7 +122,7 @@ const clearInfo = () =>{
               <img src="https://static.cmereye.com/imgs/2022/10/d73465bed88552d2.png" alt="">
             </a>
             <p>{{ $t('banners.invisalign_desc') }}</p>
-            <div class=" text-center mbShow"  style="margin-top: 55vw;display: flex;flex-direction: column;">
+            <div class=" text-center mbShow"  style="margin-top: 47vw;display: flex;flex-direction: column;">
           <a :href="$t('banners.booking')" target="_blank" class="head_button"
             ><p class="pt-1 text-primary" style="position: unset;padding:0;">
               {{ $t('banners.invisalign_text') }}
@@ -1304,7 +1304,7 @@ const clearInfo = () =>{
     height: 25.7vw !important;
   }
   .page_body_header_banner{
-    height: 203vw;
+    height: 200vw;
   }
   .orthodontic_table {
     width: 148vw;

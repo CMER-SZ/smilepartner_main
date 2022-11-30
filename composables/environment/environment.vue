@@ -41,7 +41,7 @@ let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
 </script>
 
 <template>
-   <div class="orthodontic_compete1 md:pb-80 pb-20">
+   <div class="orthodontic_compete1 md:pb-80 pb-20 md:mb-20">
       <div class="page_container">
         <div
           class="
@@ -115,7 +115,7 @@ let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
               <img :src="index" />
             </swiper-slide>
           </swiper>
-          <span class="text-center" style="display: flex;justify-content: center;">*瓷貼片服務由尖沙咀診所提供</span>
+          <span class="text-center address-env" style="display: flex;justify-content: center;">*瓷貼片服務由尖沙咀診所提供</span>
           </div>
           
         </div>
@@ -130,6 +130,17 @@ let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
 
 <style lang="scss" scoped>
 @media screen and(min-width:768px) {
+  .address-env{
+    font-family: 'Songti TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    padding-top: 10px;
+    /* Teeth Grey */
+
+    color: #666666;
+  }
   .tab-control .active{
     span{
       color: #ECB3AC !important;
@@ -209,6 +220,17 @@ let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
  }
 }
 @media screen and(max-width:768px) {
+  .address-env{
+    font-family: 'Songti TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    padding-top: 15px;
+    /* Teeth Grey */
+
+    color: #666666;
+  }
   .slide {
 
 img {
