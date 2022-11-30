@@ -41,14 +41,14 @@ let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
 </script>
 
 <template>
-   <div class="orthodontic_compete1 md:pb-80">
+   <div class="orthodontic_compete1 md:pb-80 pb-20">
       <div class="page_container">
         <div
           class="
             orthodontic_title
             text-left
             sm:text-center
-            my-24
+            my-20
             md:mb-14
             sm:my-28
           "

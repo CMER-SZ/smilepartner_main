@@ -185,7 +185,7 @@ let timer=window.setInterval(function (){
        <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/16386373ca307530.png" alt="填表預約" ></div>
        <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">填表預約</p> </div>  
       </a>
-      <a @click="setTop()" class=" bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md set-top"> 
+      <a @click="setTop()" class="mt-12 bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md set-top"> 
        <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/fdb210114f23d899.png" alt="返回頂部" ></div>
        <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">返回頂部</p> </div>  
       </a>

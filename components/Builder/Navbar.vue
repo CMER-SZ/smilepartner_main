@@ -11,10 +11,12 @@ const showOptions = useState<boolean>('navbar.showOptions', () => false)
 let timer: NodeJS.Timer
 onMounted(() => {
   if (!navbar.value) return
-
+  const offsetTop = navbar.value.offsetTop
+  
   // scroll
-  const { onScroll } = useSticky(navbar.value , 1000)
-  console.log(onScroll);
+  const { onScroll } = useSticky(navbar.value , offsetTop)
+  console.log(navbar.value);
+  
   
   setTimeout(() => onScroll(), 50)
 
@@ -79,22 +81,22 @@ const toggleOptions = (show?: boolean) => {
               </span>
             </button>
           </div> -->
-            <!-- :to="{ name: 'index' }" -->
      
-          <!-- <slot name="title">
+          <slot name="title">
+
             <NuxtLink
               tag="a"
               class="head_logo mr-3 flex-none overflow-hidden md:w-auto text-md font-bold text-gray-900 dark:text-gray-200 pcShow"
               
             >
 
-            <img src="https://static.cmereye.com/imgs/2022/11/6b84ec3a95b78ad9.jpg" alt="" srcset="">
+            <img src="https://static.cmereye.com/imgs/2022/11/90ac07fbab954283.png" alt="" srcset="">
               <span class="sr-only">home</span>
-              <span class="flex items-center text-left md:text-center  justify-center">
+              <!-- <span class="flex items-center text-left md:text-center  justify-center">
               {{app.name}} <br> {{app.cn_name}}
-              </span>
+              </span> -->
             </NuxtLink>
-          </slot> -->
+          </slot>
   
           <!-- <slot name="menu" />
 

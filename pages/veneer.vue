@@ -3,7 +3,7 @@ import { capitalize } from '~/utils/str'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import form from '../composables/form/form.vue'
 import 'swiper/css'
-import type { Ref } from 'vue'
+import  { Ref } from 'vue'
 // import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import SwiperClass, { Autoplay, Pagination, Navigation, Scrollbar,Thumbs } from 'swiper'
 import 'swiper/css/pagination' // 轮播图底面的小圆点

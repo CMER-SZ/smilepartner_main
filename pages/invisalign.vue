@@ -5,6 +5,7 @@ import 'swiper/css'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import { Autoplay, Pagination, Navigation, Scrollbar } from 'swiper'
 import form from '../composables/form/form.vue'
+import environment from '../composables/environment/environment.vue'
 import 'swiper/css/pagination' // 轮播图底面的小圆点
 const modules = [Autoplay, Pagination, Navigation, Scrollbar]
 const swiperOption = {
@@ -19,6 +20,7 @@ const swiperOption = {
     prevEl: '.swiper-button-prev',
   },
 }
+
 const tableswiperOption = {
   slidesPerView: "1.1",
   // 显示分页
@@ -48,6 +50,35 @@ useHead(() => ({
     },
   ],
 }))
+let reForm = reactive({
+  smilepartnerName: '',
+  sex:'',
+  Tel:'',
+  Email:'',
+  smilepartner_select: '經系統分析,該表單來自隱適美·限定體驗價頁面,来源地址：https://smilepartner.hk/invisalign'
+})
+
+const checkForm = (e) => {
+  if(reForm.smilepartnerName === '' || reForm.sex === '' || reForm.Tel === '' || reForm.Email === '' ){
+   
+    alert("請完善信息！")
+    e.preventDefault();
+  }else{
+    alert("提交成功！")
+    setTimeout(()=>{
+      clearInfo()
+    },500)
+    return true
+  }
+}
+const clearInfo = () =>{
+    reForm.smilepartnerName = ''
+    reForm.sex = ''
+    reForm.Tel = ''
+    reForm.Email = ''
+    // reForm.smilepartner_select = ''
+}
+
 </script>
   
   <template>
@@ -63,7 +94,7 @@ useHead(() => ({
         "
       />
       <div class="page_body_header_fixed">
-        <div class="head_booking inline-block float-right">
+        <div class="head_booking inline-block float-right text-center">
           <a :href="$t('banners.booking')" target="_blank" class="head_button"
             ><p class="md:pt-1 text-primary">
               {{ $t('banners.invisalign_text') }}
@@ -72,6 +103,7 @@ useHead(() => ({
               {{ $t('banners.number') }}
             </span>
           </a>
+          <span>指定信用卡可享免息分期</span>
         </div>
 
         <div class="head_banner_text justify-self-center">
@@ -79,7 +111,7 @@ useHead(() => ({
             <div class="head_banner_img">
               <img
                 class="m-auto"
-                src="https://img.cmereye.com/i/2022/09/23/632d74a9e2ad7.png"
+                src="https://static.cmereye.com/imgs/2022/11/9094aac5df24575e.png"
                 alt=""
                 srcset=""
               />
@@ -89,7 +121,19 @@ useHead(() => ({
               <img src="https://static.cmereye.com/imgs/2022/10/d73465bed88552d2.png" alt="">
             </a>
             <p>{{ $t('banners.invisalign_desc') }}</p>
+            <div class=" text-center mbShow"  style="margin-top: 55vw;display: flex;flex-direction: column;">
+          <a :href="$t('banners.booking')" target="_blank" class="head_button"
+            ><p class="pt-1 text-primary" style="position: unset;padding:0;">
+              {{ $t('banners.invisalign_text') }}
+            </p>
+            <span class="text-green text-2xl ml-5">
+              {{ $t('banners.number') }}
+            </span>
+          </a>
+          <span class="pt-4">指定信用卡可享免息分期</span>
+        </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -99,18 +143,19 @@ useHead(() => ({
     <PageNavbar />
   </slot>
 
-  <div class="page_orthodontic pb-20 ">
+  <div class="page_orthodontic ">
     <div class="">
-      <div
+      
+
+      <div class="orthodontic_step page_container">
+        <div
         class="
-          orthodontic_title
+        orthodontic_title
           step_title
-          text-center
+          md:text-center
           sm:text-center
-          sm:mb-10
-          mb-5
-          pt-7
-          pb-10
+          mt-5
+          py-14
           z-10
         "
       >
@@ -127,8 +172,6 @@ useHead(() => ({
           隱適美矯齒過程
         </h2>
       </div>
-
-      <div class="orthodontic_step page_container">
         <!-- <div class="  flex_between_items_start">
      <div class=" sm:w-6/13">
       <div class="sticky_step">
@@ -372,7 +415,243 @@ useHead(() => ({
       </div>
     </div>
 
-    <div class="orthodontic_compete pb-28">
+    <div class="orthodontic_form_background" id="yyform">
+      <div class="orthodontic_form page_container py-20">
+      <p
+        class="text-center text-lg text-primary font-normal tracking-widest-2x"
+      >
+        填寫你的資料，
+      </p>
+      <h4
+        class="
+          text-center text-xl text-pink
+          font-normal
+          tracking-widest-2x
+          mb-4
+          sm:mb-12
+          
+        "
+      >
+        展開專屬牙齒美容旅程！
+      </h4>
+      <iframe  id="my" name="my" style="display:none"></iframe>
+      <form action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm" method="POST" @submit="checkForm" target="my">
+        <div class="overflow-hidden sm:rounded-md">
+          <div class=" py-5  max-w-3xl md:px-20 form_width">
+            <div class="grid grid-cols-6 gap-10">
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="first-name"
+                  class="block text-md font-medium text-gray-700"
+                  >姓名：</label
+                >
+                <input
+                  type="text"
+                  name="smilepartner_name"
+                  v-model="reForm.smilepartnerName"
+                  id="first-name"
+                  autocomplete="off"
+                  class="
+                    h-8
+                    pl-2
+                    mt-1
+                    block
+                    w-full
+                    border-gray-300 border-1
+                    sm:text-sm
+                    text-primary
+                  "
+                />
+              </div>
+
+              <div class="col-span-6 sm:col-span-3 ">
+                <label
+                  for="last-name"
+                  class="block text-md font-medium text-gray-700"
+                  >稱呼：</label
+                >
+                <div class="mt-2 justify-start flex">
+                  <div class="flex items-center">
+                    <input
+                      id="push-everything"
+                      
+                      data-name="man"
+                      name="sex"
+                      v-model="reForm.sex"
+                      value="先生"
+                      type="radio"
+                      class="
+                        h-4
+                        w-4
+                        border-gray-300 border-1
+                        text-green
+                        focus:ring-green focus:outline-none
+                      "
+                    />
+                    <label
+                      for="push-everything"
+                      class="ml-3 block text-md font-medium text-gray-700"
+                      >先生</label
+                    >
+                  </div>
+                  <div class="flex items-center ml-4">
+                    <input
+                      id="push-email"
+                      data-name="lady"
+                      name="sex"
+                      v-model="reForm.sex"
+                      value="女士"
+                      type="radio"
+                      class="
+                        h-4
+                        w-4
+                        border-gray-300
+                        text-green
+                        focus:ring-green focus:outline-none
+                      "
+                    />
+                    <label
+                      for="push-email"
+                      class="ml-3 block text-md font-medium text-gray-700"
+                      >女士</label
+                    >
+                  </div>
+                  <div class="flex items-center ml-4">
+                    <input
+                      id="push-nothing"
+                      data-name="miss"
+                      name="sex"
+                      v-model="reForm.sex"
+                      value="小姐"
+                      type="radio"
+                      class="
+                        h-4
+                        w-4
+                        border-gray-300
+                        text-green
+                        focus:ring-green focus:outline-none
+                      "
+                    />
+                    <label
+                      for="push-nothing"
+                      class="ml-3 block text-md font-medium text-gray-700"
+                      >小姐</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="email-address"
+                  class="block text-md font-medium text-gray-700"
+                  >電話號碼：</label
+                >
+                <input
+                  type="text"
+                  name="Tel"
+                  v-model="reForm.Tel"
+                  id="tel"
+                  autocomplete="off"
+                  class="
+                    h-8
+                    pl-2
+                    mt-1
+                    block
+                    w-full
+                    border-gray-300 border-1
+                    text-primary
+                    sm:text-sm
+                  "
+                />
+              </div>
+
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="email-address"
+                  class="block text-md font-medium text-gray-700"
+                  >電郵地址：</label
+                >
+                <input
+                  type="text"
+                  name="Email"
+                  v-model="reForm.Email"
+                  id="email-address"
+                  autocomplete="off"
+                  class="
+                    h-8
+                    pl-2
+                    mt-1
+                    block
+                    w-full
+                    border-gray-300 border-1
+                    text-primary
+                    sm:text-sm
+                  "
+                />
+              </div>
+
+              <div class="col-span-6 sm:col-span-6 form_selcet_service" style="display:none">
+                <input type="text" name="smilepartner_select" v-model="reForm.smilepartner_select">
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="px-4 sm:mt-12 text-center sm:px-6 mt-2">
+            <button
+              type="submit"
+              class="
+                inline-flex
+                justify-center
+                border
+                text-pink
+                py-2
+                px-30
+                text-xl
+                font-medium
+                bg-white
+                border-gray-300
+                hover:bg-pink 
+                hover:text-white
+                focus:outline-none focus:ring-2 focus:ring-offset-2
+                submitBut
+              "
+              
+              
+            >
+              提 交
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="orthodontic_share">
+      <div class="page_container_show">
+        <div class="orthodontic_title text-left sm:text-center my-20 justify-center">
+          <h2
+            class="
+              text-primary
+              font-normal
+              text-xl
+              md:text-2xl
+              inline-block
+              relative
+            "
+          >
+            成功個案分享
+          </h2>
+        </div>
+        <iframe class="pcShow" width="999" height="563" src="https://www.youtube.com/embed/ljaszj7v-rM" title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="mbShow" width="100%" height="220" src="https://www.youtube.com/embed/ljaszj7v-rM" title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+    </div>
+
+
+    <div class="orthodontic_compete pb-10 md:pb-28">
       <div class="page_container">
         <div
           class="
@@ -667,11 +946,26 @@ useHead(() => ({
       </div>
     </div>
 
-    <component :is="form"></component>
+   
+  <component :is="environment"></component>
   </div>
 </template>
   
   <style lang="scss" scoped>
+  .orthodontic_share{
+  background-image: url(https://static.cmereye.com/imgs/2022/11/adb8a15c4a48e57b.jpg);
+  background-size: 100% 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-bottom: 80px;
+  iframe{
+    margin: 0 auto;
+    position: relative !important;
+  }
+}
+   .orthodontic_form_background{/* Pink Light */
+  background: #FCF4F2;
+ }
 .orthodontic_faq .flex .orthodontic_title {
   width: 64px;
   margin-right: 140px;
@@ -963,6 +1257,10 @@ useHead(() => ({
   content: 'Step 3';
 }
 @media screen and(min-width:768px) {
+  .form_width{
+  padding: 20px 130px;
+  margin: 0 auto;
+ }
   .page_body_header_banner{background-image: url(https://img.cmereye.com/i/2022/09/22/632c2c39558fe.jpg);background-size: 100% auto;background-repeat: no-repeat;background-position: top;background-attachment: fixed;
  width:100%; 
   .page_body_header_fixed{ padding: 70px 130px;position: fixed;width: 100%;height:35vw;top: 0;left: 0;right: 0;margin: auto;}
@@ -973,6 +1271,18 @@ useHead(() => ({
 }
 }
 @media screen and(max-width:768px) {
+  ::v-deep .swiper-button-next:after{
+    display: none !important;
+  }
+  ::v-deep .swiper-button-prev:after{
+    display: none !important;
+  }
+  .orthodontic_compete .page_container::before{
+    height: 25.7vw !important;
+  }
+  .page_body_header_banner{
+    height: 178vw;
+  }
   .orthodontic_table {
     width: 148vw;
   margin: auto;
