@@ -103,7 +103,7 @@ const clearInfo = () =>{
               {{ $t('banners.number') }}
             </span>
           </a>
-          <span>指定信用卡可享免息分期</span>
+          <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
         </div>
 
         <div class="head_banner_text justify-self-center">
@@ -116,9 +116,9 @@ const clearInfo = () =>{
                 srcset=""
               />
             </div>
-            <h2 class="text-pink text-center text-4xl mb-6">希瑪微笑矯齒</h2>
-            <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="text-pink text-center flex flex-col justify-center mb-4">
-              <img src="https://static.cmereye.com/imgs/2022/11/9791c8842c83e633.png" alt="">
+            <!-- <h2 class="text-pink text-center text-4xl mb-6">希瑪微笑矯齒</h2> -->
+            <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="text-pink text-center flex md:flex-row flex-col justify-center mb-4">
+              <img src="https://static.cmereye.com/imgs/2022/11/9791c8842c83e633.png" alt="" class="mbShow">
               <img src="https://static.cmereye.com/imgs/2022/10/d73465bed88552d2.png" alt="">
             </a>
             <p>{{ $t('banners.invisalign_desc') }}</p>
@@ -131,7 +131,7 @@ const clearInfo = () =>{
               {{ $t('banners.number') }}
             </span>
           </a>
-          <span class="pt-4">指定信用卡可享免息分期</span>
+          <span class="pt-4 xinyongka">指定信用卡可享免息分期</span>
         </div>
           </div>
           
@@ -1246,6 +1246,18 @@ const clearInfo = () =>{
   content: 'Step 3';
 }
 @media screen and(min-width:768px) {
+  .xinyongka{
+    font-family: 'Songti TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    /* identical to box height, or 167% */
+
+    text-align: center;
+
+    color: #666666;
+  }
   .orthodontic_share{
   background-image: url(https://static.cmereye.com/imgs/2022/11/adb8a15c4a48e57b.jpg);
   background-size: 100% 100%;
@@ -1292,7 +1304,7 @@ const clearInfo = () =>{
     height: 25.7vw !important;
   }
   .page_body_header_banner{
-    height: 192vw;
+    height: 203vw;
   }
   .orthodontic_table {
     width: 148vw;

@@ -27,6 +27,11 @@ export default defineNuxtConfig({
           // 禁止缩放
         },
         {
+          name: 'facebook-domain-verification',
+          content:
+            '7wgcbipiimb8dvy12hml8jne6l9ytx',
+        },
+        {
           hid: 'description',
           name: 'description',
           content: '希瑪微笑矯齒描述',
