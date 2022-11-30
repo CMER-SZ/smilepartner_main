@@ -4,7 +4,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import { Autoplay, Pagination, Navigation, Scrollbar } from 'swiper'
-import form from '../composables/form/form.vue'
+import form from '../composables/newform/form.vue'
 import environment from '../composables/environment/environment.vue'
 import 'swiper/css/pagination' // 轮播图底面的小圆点
 const modules = [Autoplay, Pagination, Navigation, Scrollbar]
@@ -117,7 +117,8 @@ const clearInfo = () =>{
               />
             </div>
             <h2 class="text-pink text-center text-4xl mb-6">希瑪微笑矯齒</h2>
-            <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="text-pink text-center flex justify-center mb-4">
+            <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="text-pink text-center flex flex-col justify-center mb-4">
+              <img src="https://static.cmereye.com/imgs/2022/11/9791c8842c83e633.png" alt="">
               <img src="https://static.cmereye.com/imgs/2022/10/d73465bed88552d2.png" alt="">
             </a>
             <p>{{ $t('banners.invisalign_desc') }}</p>
@@ -336,7 +337,6 @@ const clearInfo = () =>{
               :modules="modules"
               :options="swiperOption" 
               :pagination="{ clickable: true }"
-              :loop="true"
               :slides-per-view="1"
               :space-between="50"
               navigation
@@ -414,7 +414,6 @@ const clearInfo = () =>{
         </div>
       </div>
     </div>
-
     <div class="orthodontic_form_background" id="yyform">
       <div class="orthodontic_form page_container py-20">
       <p
@@ -437,7 +436,7 @@ const clearInfo = () =>{
       <iframe  id="my" name="my" style="display:none"></iframe>
       <form action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm" method="POST" @submit="checkForm" target="my">
         <div class="overflow-hidden sm:rounded-md">
-          <div class=" py-5  max-w-3xl md:px-20 form_width">
+          <div class=" py-5  max-w-5xl  form_width">
             <div class="grid grid-cols-6 gap-10">
               <div class="col-span-6 sm:col-span-3">
                 <label
@@ -630,7 +629,7 @@ const clearInfo = () =>{
 
   <div class="orthodontic_share">
       <div class="page_container_show">
-        <div class="orthodontic_title text-left sm:text-center my-20 justify-center">
+        <div class="orthodontic_title text-center sm:text-center my-20 justify-center">
           <h2
             class="
               text-primary
@@ -952,17 +951,7 @@ const clearInfo = () =>{
 </template>
   
   <style lang="scss" scoped>
-  .orthodontic_share{
-  background-image: url(https://static.cmereye.com/imgs/2022/11/adb8a15c4a48e57b.jpg);
-  background-size: 100% 100%;
-  background-position: top;
-  background-repeat: no-repeat;
-  padding-bottom: 80px;
-  iframe{
-    margin: 0 auto;
-    position: relative !important;
-  }
-}
+ 
    .orthodontic_form_background{/* Pink Light */
   background: #FCF4F2;
  }
@@ -1257,6 +1246,17 @@ const clearInfo = () =>{
   content: 'Step 3';
 }
 @media screen and(min-width:768px) {
+  .orthodontic_share{
+  background-image: url(https://static.cmereye.com/imgs/2022/11/adb8a15c4a48e57b.jpg);
+  background-size: 100% 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-bottom: 80px;
+  iframe{
+    margin: 0 auto;
+    position: relative !important;
+  }
+}
   .form_width{
   padding: 20px 130px;
   margin: 0 auto;
@@ -1271,6 +1271,17 @@ const clearInfo = () =>{
 }
 }
 @media screen and(max-width:768px) {
+  .orthodontic_share{
+  background-image: url(https://static.cmereye.com/imgs/2022/11/683d18bbf920d3ee.png);
+  background-size: 100% 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-bottom: 80px;
+  iframe{
+    margin: 0 auto;
+    position: relative !important;
+  }
+}
   ::v-deep .swiper-button-next:after{
     display: none !important;
   }
@@ -1281,7 +1292,7 @@ const clearInfo = () =>{
     height: 25.7vw !important;
   }
   .page_body_header_banner{
-    height: 178vw;
+    height: 192vw;
   }
   .orthodontic_table {
     width: 148vw;

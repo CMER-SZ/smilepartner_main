@@ -115,10 +115,15 @@ let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
               <img :src="index" />
             </swiper-slide>
           </swiper>
+          <span class="text-center" style="display: flex;justify-content: center;">*瓷貼片服務由尖沙咀診所提供</span>
           </div>
+          
         </div>
+       
       </div>
+      
     </div>
+    
 </template>
 
 
