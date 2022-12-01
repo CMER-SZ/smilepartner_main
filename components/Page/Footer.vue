@@ -173,15 +173,15 @@ let timer=window.setInterval(function (){
     </section> 
 
     <div class="fixed_button  sm:flex pcShow">
-      <a href="tel:9512 8192" class=" bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+      <a href="tel:9512 8192" class=" iphone bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
        <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/6334083bf1b5a.png" alt="電話預約" ></div>
        <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">電話預約</p><p class="leading-none   text-2xl text-pink">9512 8192</p> </div>  
       </a>
-      <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="pcShow bg-white fixed_button_info justify-end items-center  transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+      <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="WhatsApp pcShow bg-white fixed_button_info justify-end items-center  transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
        <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/633407e1049ed.png" alt="WhatsApp" ></div>
        <div class="fixed_text flex-row "><p class="leading-none text-primary text-2xl text-green">WhatsApp</p> <span class="text-primary text-md  ">&nbsp;預約</span> </div>  
       </a>
-      <a href="#yyform" class=" bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+      <a href="#yyform" class=" goForm bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
        <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/16386373ca307530.png" alt="填表預約" ></div>
        <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">填表預約</p> </div>  
       </a>
@@ -192,15 +192,15 @@ let timer=window.setInterval(function (){
     </div>
 
     <div class="mbShow flex mb-buttom-box"> 
-      <a href="tel:9512 8192" class="bg-white fixed_button_info items-center justify-center "> 
+      <a href="tel:9512 8192" class="iphone bg-white fixed_button_info items-center justify-center "> 
        <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/6334083bf1b5a.png" alt="電話預約" ></div>
        <div class="fixed_text flex-col pt-2"><p class="text-primary text-md leading-none ">電話預約</p></div>  
       </a>
-      <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="bg-white fixed_button_info justify-end items-center  "> 
+      <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="WhatsApp bg-white fixed_button_info justify-end items-center  "> 
        <div class="fixed_img pt-1"><img src="https://static.cmereye.com/imgs/2022/11/4f6f2c4e1008ef29.png" alt="WhatsApp" ></div>
        <div class="fixed_text flex-row pt-1"><p class="text-primary text-md">WhatsApp預約</p> </div>  
       </a>
-      <a href="#yyform" class="bg-white fixed_button_info items-center justify-center"> 
+      <a href="#yyform" class="goForm bg-white fixed_button_info items-center justify-center"> 
        <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/16386373ca307530.png" alt="填表預約" ></div>
        <div class="fixed_text flex-col pt-2"><p class="text-primary text-md leading-none">填表預約</p> </div>  
       </a>
