@@ -739,7 +739,7 @@ const clearInfo = () =>{
               :options="swiperOption" 
               :pagination="{ clickable: true }"
               
-              :slides-per-view="1.1"
+              :slides-per-view="1"
               :space-between="50"
               navigation
               :scrollbar="{ draggable: true }" >
@@ -1044,7 +1044,7 @@ const clearInfo = () =>{
             <div>沒有保養</div> -->
     
           </div>
-          <p class="flex justify-center mt-6 md:text-center">^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br>
+          <p class="flex justify-center mt-6">^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br>
           *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。</p>
         </div>
         <div class="mbShow orthodontic_table_swiper">
@@ -1053,7 +1053,7 @@ const clearInfo = () =>{
               :modules="modules"
               :options="tableswiperOption" 
               :pagination="{ clickable: true }"
-              :slides-per-view="1"
+              :slides-per-view="1.5"
               :space-between="100"
               navigation
               :scrollbar="{ draggable: true }" >
@@ -1101,11 +1101,12 @@ const clearInfo = () =>{
             <div>沒有保養</div> -->
     
           </div>
-          <p class="mt-6 md:text-center">^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br>
-              *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。</p>
+         
               </swiper-slide>
+              <p class="px-2 md:px-0">^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br>
+              *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。</p>
               <swiper-slide></swiper-slide>
-              
+              <swiper-slide></swiper-slide>
           </swiper>
           
         </div>
@@ -1383,7 +1384,7 @@ const clearInfo = () =>{
   background-attachment: fixed;
 }
 .orthodontic_table {
-  max-width: 940px;
+  max-width: max-content;
   margin: auto;
 }
 .orthodontic_table > div {
@@ -1612,7 +1613,7 @@ const clearInfo = () =>{
 .orthodontic_pic {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center ;
   align-items: center;
 }
 .orthodontic_pic > div {
@@ -1938,7 +1939,7 @@ const clearInfo = () =>{
       padding-left: 56px;
     }
   }
-  .orthodontic_table > div:nth-child(4n+4){grid-column: span 5/span 5;}
+  .orthodontic_table > div:nth-child(4n+4){grid-column: span 4/span 4;}
   .orthodontic_table>div:nth-child(1){order: 2;}
 .orthodontic_table>div:nth-child(2){order: 1;}
 .orthodontic_table>div:nth-child(3){order: 3;}
@@ -1991,7 +1992,11 @@ const clearInfo = () =>{
 }
 }
 @media screen and(max-width:768px) {
-
+  .orthodontic_table_swiper{
+    .swiper{
+      padding-bottom: 33px;
+    }
+  }
   .anli-photo{
 
     .swiper-slide{
@@ -2229,7 +2234,7 @@ const clearInfo = () =>{
   }
   .orthodontic_compete .swiper-slide{padding-bottom: 28px;}
   .orthodontic_table{padding-bottom: 0 !important;}
-  .orthodontic_table > div:nth-child(4n+4){grid-column: span 5/span 5;}
+  .orthodontic_table > div:nth-child(4n+4){grid-column: span 4/span 4;}
   .orthodontic_table>div:nth-child(1){order: 2;}
 .orthodontic_table>div:nth-child(2){order: 1;}
 .orthodontic_table>div:nth-child(3){order: 3;}
@@ -2289,7 +2294,7 @@ const clearInfo = () =>{
 
 
   .orthodontic_table {
-    width: 210vw;
+    width: 220vw;
   margin: auto;
 }
 .orthodontic_swiper{
@@ -2361,7 +2366,7 @@ const clearInfo = () =>{
     background-color: #AACE79;
     
 }
-::v-deep .swiper-pagination-bullet:nth-child(2)::after{
+::v-deep .swiper-pagination-bullet:nth-child(3)::after{
   height: 0px;
 }
 ::v-deep .swiper-pagination-bullet-active{

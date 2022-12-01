@@ -173,7 +173,7 @@ let timer=window.setInterval(function (){
     </section> 
 
     <div class="fixed_button  sm:flex pcShow">
-      <a href="tel:9512 8192" class=" iphone bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+      <a href="tel:9512 8192" class="iphone bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
        <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/6334083bf1b5a.png" alt="電話預約" ></div>
        <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">電話預約</p><p class="leading-none   text-2xl text-pink">9512 8192</p> </div>  
       </a>
@@ -181,7 +181,7 @@ let timer=window.setInterval(function (){
        <div class="fixed_img"><img src="https://img.cmereye.com/i/2022/09/28/633407e1049ed.png" alt="WhatsApp" ></div>
        <div class="fixed_text flex-row "><p class="leading-none text-primary text-2xl text-green">WhatsApp</p> <span class="text-primary text-md  ">&nbsp;預約</span> </div>  
       </a>
-      <a href="#yyform" class=" goForm bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
+      <a href="#yyform" class="goForm bg-white fixed_button_info items-center justify-center transition duration-500  ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"> 
        <div class="fixed_img"><img src="https://static.cmereye.com/imgs/2022/11/16386373ca307530.png" alt="填表預約" ></div>
        <div class="fixed_text flex-col"><p class="text-primary text-md leading-none">填表預約</p> </div>  
       </a>
