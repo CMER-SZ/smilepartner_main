@@ -738,14 +738,13 @@ const clearInfo = () =>{
               :modules="modules"
               :options="swiperOption" 
               :pagination="{ clickable: true }"
-              
               :slides-per-view="1"
               :space-between="50"
               navigation
               :scrollbar="{ draggable: true }" >
               <swiper-slide>
                 <div class="orthodontic_pic pic-one" >
-                  <div class="text-center">
+                  <div class="text-center mt-2">
               <img
                 src="https://static.cmereye.com/imgs/2022/11/76e080989686c6a3.jpg"
                 alt=""
@@ -762,7 +761,7 @@ const clearInfo = () =>{
               </swiper-slide>
               <swiper-slide>
                 <div class="orthodontic_pic  pic-two" >
-                  <div class="text-center">
+                  <div class="text-center mt-2">
                     <img
                       class=""
                       src="https://static.cmereye.com/imgs/2022/11/16aeb97c17dee646.jpg"
@@ -799,7 +798,7 @@ const clearInfo = () =>{
               </swiper-slide> -->
               <swiper-slide>
                 <div class="orthodontic_pic pic-four" >
-                  <div class="text-center">
+                  <div class="text-center mt-2">
               <img
                 class=""
                 src="https://static.cmereye.com/imgs/2022/11/5bd826a6d6bbdbe1.jpg"
