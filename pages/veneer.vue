@@ -1592,7 +1592,7 @@ const clearInfo = () =>{
   content: '牙齒排列不整齊';
 }
 .orthodontic_pic .text-center:nth-child(2):after {
-  content: '四環素牙';
+  content: '牙齒變色';
 }
 .orthodontic_pic .text-center:nth-child(3):after {
   content: '牙齒出現磨損';
@@ -2445,6 +2445,9 @@ const clearInfo = () =>{
 }
 .pic-four .text-center:nth-child(1):after {
   content: '牙齒過小';
+}
+.pic-four .text-center:nth-child(2):after {
+  content: '四環素牙';
 }
 .orthodontic_pic {
   display: flex;
