@@ -8,13 +8,6 @@ import form from '../composables/newform/form.vue'
 import environment from '../composables/environment/environment.vue'
 import 'swiper/css/pagination' // 轮播图底面的小圆点
 const modules = [Autoplay, Pagination, Navigation, Scrollbar]
-import { useRouter } from "vue-router"
-onMounted(() => {
-    const router = useRouter()
-    router.push({
-      path: 'clear-aligners'
-    })
-})
 const swiperOption = {
   // 显示分页
   pagination: {
@@ -89,14 +82,15 @@ const clearInfo = () =>{
 </script>
   
   <template>
+
   <div class="page_body_header z-0">
     <div class="page_body_header_banner">
       <img
         class="page_body_header_banner_img sm:invisible"
         src="https://img.cmereye.com/i/2022/09/27/633271306fae1.jpg"
         srcset="
-          https://img.cmereye.com/i/2022/09/27/633271306fae1.jpg 400w,
-          https://img.cmereye.com/i/2022/09/27/633271306fae1.jpg 640w,
+        https://static.cmereye.com/imgs/2022/12/bdfe78077cdb48df.png 400w,
+        https://static.cmereye.com/imgs/2022/12/bdfe78077cdb48df.png 640w,
           https://img.cmereye.com/i/2022/09/22/632c2c39558fe.jpg
         "
       />
@@ -118,18 +112,18 @@ const clearInfo = () =>{
             <div class="head_banner_img">
               <img
                 class="m-auto"
-                src="https://static.cmereye.com/imgs/2022/11/9094aac5df24575e.png"
+                src="https://static.cmereye.com/imgs/2022/12/b6f6a40c1f61075b.png"
                 alt=""
                 srcset=""
               />
             </div>
             <!-- <h2 class="text-pink text-center text-4xl mb-6">希瑪微笑矯齒</h2> -->
             <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="text-pink text-center flex md:flex-row flex-col justify-center mb-4">
-              <img src="https://static.cmereye.com/imgs/2022/11/9791c8842c83e633.png" alt="" class="mbShow">
-              <img src="https://static.cmereye.com/imgs/2022/10/d73465bed88552d2.png" alt="">
+              <img src="https://static.cmereye.com/imgs/2022/12/d1e933d739057daa.png" alt="" class="mbShow">
+              <img src="https://static.cmereye.com/imgs/2022/12/e939bd7a893a0bec.png" alt="">
             </a>
             <p>{{ $t('banners.invisalign_desc') }}</p>
-            <div class=" text-center mbShow"  style="margin-top: 47vw;display: flex;flex-direction: column;">
+            <div class=" text-center mbShow"  style="margin-top: 52vw;display: flex;flex-direction: column;">
           <a :href="$t('banners.booking')" target="_blank" class="head_button"
             ><p class="pt-1 text-primary" style="position: unset;padding:0;">
               {{ $t('banners.invisalign_text') }}
@@ -177,7 +171,7 @@ const clearInfo = () =>{
             relative
           "
         >
-          隱適美矯齒過程
+        隱形牙箍矯齒過程
         </h2>
       </div>
         <!-- <div class="  flex_between_items_start">
@@ -242,7 +236,7 @@ const clearInfo = () =>{
           <div class="sm:w-6/13">
             <h4 class="py-5 text-lg font-normal">訂製牙套並開始療程</h4>
             <p class="text-md">
-              隱適美會將牙醫治療方案製作成一系列沿牙齦剪裁的專屬牙箍，再寄至牙醫診所。之後就會聯絡患者到診所試戴及評估效果。
+              我們選用的隱形牙箍品牌牙醫治療方案製作成一系列沿牙齦剪裁的專屬牙箍，再寄至牙醫診所。之後就會聯絡患者到診所試戴及評估效果。
             </p>
           </div>
           <div class="sm:w-6/13">
@@ -282,7 +276,7 @@ const clearInfo = () =>{
             tracking-widest-2x
           "
         >
-          隱適美能伴你矯正以
+        隱形牙箍能伴你矯正以<br class="mbShow">
           <span class="text-2xl text-green">展露自信笑容</span>
         </p>
         <div class="orthodontic_pic_scroll pcShow">
@@ -679,17 +673,18 @@ const clearInfo = () =>{
               relative
             "
           >
-            隱適美VS其他透明牙箍大比拼！
+          我們選用的隱形牙箍VS其他品牌中比拼！
           </h2>
         </div>
         <div class="orthodontic_table_scroll pcShow">
           <div class="orthodontic_table grid grid-cols-10">
             <div>
-              <img
+              <!-- <img
                 src="https://img.cmereye.com/i/2022/09/26/633187b4536a0.png"
                 alt=""
                 srcset=""
-              />
+              /> -->
+              我們選用的隱形牙箍
             </div>
             <div></div>
             <div>其他隱形牙箍</div>
@@ -709,13 +704,12 @@ const clearInfo = () =>{
               獲註冊牙醫最少3次會診，當中註冊牙醫僅初次面診，甚至沒有註冊牙醫診症及跟進
             </div>
             <div>
-              收集及擁有來自全球隱適美使用者資料庫，超過1200萬大數據不斷更新及調整矯正技術，提高成效及舒適度
+              收集及擁有來自全球使用者資料庫，超過1200萬大數據不斷更新及調整矯正技術，提高成效及舒適度
             </div>
             <div>數據支援</div>
             <div>未有收集資料庫或使用者數據甚少</div>
             <div>
-              配合SmartForce
-              專利附件粒粒，能精細移動牙齒及控制牙腳移動，令療程更加有效
+              配合專利附件粒粒，能精細移動牙齒及控制牙腳移動，令療程更加有效
             </div>
             <div>移動附件及預測技術</div>
             <div>少量或沒有</div>
@@ -824,7 +818,7 @@ const clearInfo = () =>{
                     >
                   </DisclosureButton>
                   <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
-                    建議用家必須每天配戴隱形牙箍 20 至 22 小時才能確保療程成效。
+                    建議必須每天配戴隱形牙箍 20 至 22 小時才能確保療程成效。
                   </DisclosurePanel>
                 </div>
               </Disclosure>
@@ -854,7 +848,7 @@ const clearInfo = () =>{
                     >
                   </DisclosureButton>
                   <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
-                    視乎個別患者的矯齒複雜程度、牙齒移動速度，隱適美隱形牙箍療程時間因人而異。一般而言，最快大約3個月就可以見到矯齒成效，而整個療程就平均需要1年至2年，如個案較為複雜，就可能需2年或以上。
+                    視乎個別患者的矯齒複雜程度、牙齒移動速度，隱形牙箍療程時間因人而異。一般而言，最快大約3個月就可以見到矯齒成效，而整個療程就平均需要1年至2年，如個案較為複雜，就可能需2年或以上。
                   </DisclosurePanel>
                 </div>
               </Disclosure>
@@ -884,7 +878,7 @@ const clearInfo = () =>{
                     >
                   </DisclosureButton>
                   <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
-                    隱適美隱形牙箍療程並無年齡限制，只要經牙醫評估後個案適合便能進行療程。
+                    隱形牙箍療程並無年齡限制，只要經牙醫評估後個案適合便能進行療程。
                   </DisclosurePanel>
                 </div>
               </Disclosure>
@@ -913,7 +907,7 @@ const clearInfo = () =>{
                     >
                   </DisclosureButton>
                   <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
-                    隱適美隱形牙箍用家可以在進食之前，除下牙箍，除非牙醫有特別指示，否則的話在日常飲食上無特別限制。
+                    隱形牙箍用家可以在進食之前，除下牙箍，除非牙醫有特別指示，否則的話在日常飲食上無特別限制。
                   </DisclosurePanel>
                 </div>
               </Disclosure>
@@ -942,7 +936,7 @@ const clearInfo = () =>{
                     >
                   </DisclosureButton>
                   <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
-                    隱適美牙箍以漸進緩和的矯正力道移動你的牙齒，相比其他矯正療程引起的痛楚較低。而某些使用者會於剛戴上新牙箍數天內或會感到緊繃的感覺，此為牙齒移動的跡象，不適感亦會於數天後消失。
+                    隱形牙箍以漸進緩和的矯正力道移動你的牙齒，相比其他矯正療程引起的痛楚較低。而某些使用者會於剛戴上新牙箍數天內或會感到緊繃的感覺，此為牙齒移動的跡象，不適感亦會於數天後消失。
                   </DisclosurePanel>
                 </div>
               </Disclosure>
@@ -955,6 +949,7 @@ const clearInfo = () =>{
    
   <component :is="environment"></component>
   </div>
+
 </template>
   
   <style lang="scss" scoped>
@@ -1247,11 +1242,15 @@ const clearInfo = () =>{
   content: 'Step 1';
 }
 .page_orthodontic .flex_between_items_start:nth-child(2) > div h4::before {
-  content: 'Step 2';
+  content: 'Step 1';
 }
 .page_orthodontic .flex_between_items_start:nth-child(3) > div h4::before {
+  content: 'Step 2';
+}
+.page_orthodontic .flex_between_items_start:nth-child(4) > div h4::before {
   content: 'Step 3';
 }
+
 @media screen and(min-width:768px) {
   .head_button{
     border: 1px solid #CDCDCD !important;
@@ -1283,12 +1282,12 @@ const clearInfo = () =>{
   padding: 20px 130px;
   margin: 0 auto;
  }
-  .page_body_header_banner{background-image: url(https://img.cmereye.com/i/2022/09/22/632c2c39558fe.jpg);background-size: 100% auto;background-repeat: no-repeat;background-position: top;background-attachment: fixed;
+  .page_body_header_banner{background-image: url(https://static.cmereye.com/imgs/2022/12/ce53289c705f1be6.jpg);background-size: 100% auto;background-repeat: no-repeat;background-position: top;background-attachment: fixed;
  width:100%; 
   .page_body_header_fixed{ padding: 70px 130px;position: fixed;width: 100%;height:35vw;top: 0;left: 0;right: 0;margin: auto;}
   .head_booking{font-family: 'Songti TC';}
   .head_banner_text{position: relative; z-index: -5; width: 50%; float: right; height: 100%; justify-self: center; display: flex; justify-content: flex-end; align-items: center;position: absolute;right: 0;top:0;
-   .head_banner_text_p{position: absolute;z-index: -20; left: 0; max-width: 720px;font-family: 'Songti TC'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 35px; /* or 194% */ color: #666666;margin-top: -100px;}
+   .head_banner_text_p{position: absolute;z-index: -20; left: 0; max-width: 720px;font-family: 'Songti TC'; font-style: normal; font-weight: 400; font-size: 17px; line-height: 35px; /* or 194% */ color: #666666;margin-top: -100px;}
   }
 }
 }
