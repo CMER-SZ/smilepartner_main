@@ -63,7 +63,7 @@ let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
               relative
             "
           >
-          優美、舒適診所環境
+          診所環境
              <!--  -->
           </h2>
         </div>
@@ -115,7 +115,7 @@ let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
               <img :src="index" />
             </swiper-slide>
           </swiper>
-          <span class="text-center address-env" style="display: flex;justify-content: center;">*瓷貼片服務由尖沙咀診所提供</span>
+          <!-- <span class="text-center address-env" style="display: flex;justify-content: center;">*瓷貼片服務由尖沙咀診所提供</span> -->
           </div>
           
         </div>

@@ -8,6 +8,13 @@ import form from '../composables/newform/form.vue'
 import environment from '../composables/environment/environment.vue'
 import 'swiper/css/pagination' // 轮播图底面的小圆点
 const modules = [Autoplay, Pagination, Navigation, Scrollbar]
+import { useRouter } from "vue-router"
+onMounted(() => {
+    const router = useRouter()
+    router.push({
+      path: 'clear-aligners'
+    })
+})
 const swiperOption = {
   // 显示分页
   pagination: {
