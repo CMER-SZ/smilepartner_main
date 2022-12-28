@@ -711,11 +711,7 @@ const clearInfo = () =>{
               <swiper-slide>
             <div class="orthodontic_table grid grid-cols-10">
             <div>
-              <img
-                src="https://img.cmereye.com/i/2022/09/26/633187b4536a0.png"
-                alt=""
-                srcset=""
-              />
+             我們選用的隱形牙箍
             </div>
             <div></div>
             <div>其他隱形牙箍</div>
