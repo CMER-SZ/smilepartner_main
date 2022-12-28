@@ -89,8 +89,8 @@ const clearInfo = () =>{
         class="page_body_header_banner_img sm:invisible"
         src="https://img.cmereye.com/i/2022/09/27/633271306fae1.jpg"
         srcset="
-        https://static.cmereye.com/imgs/2022/12/bdfe78077cdb48df.png 400w,
-        https://static.cmereye.com/imgs/2022/12/bdfe78077cdb48df.png 640w,
+       https://static.cmereye.com/imgs/2022/12/10f1809e26d4d6b7.png 400w,
+        https://static.cmereye.com/imgs/2022/12/10f1809e26d4d6b7.png 640w,
           https://img.cmereye.com/i/2022/09/22/632c2c39558fe.jpg
         "
       />
@@ -118,9 +118,17 @@ const clearInfo = () =>{
               />
             </div>
             <!-- <h2 class="text-pink text-center text-4xl mb-6">希瑪微笑矯齒</h2> -->
-            <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="text-pink text-center flex md:flex-row flex-col justify-center mb-4">
+            <a href="https://api.whatsapp.com/send?phone=85295128192" target="_blank" class="text-pink text-center flex items-center md:flex-col flex-col justify-center mb-4">
               <img src="https://static.cmereye.com/imgs/2022/12/d1e933d739057daa.png" alt="" class="mbShow">
-              <img src="https://static.cmereye.com/imgs/2022/12/e939bd7a893a0bec.png" alt="">
+              <!-- <img src="https://static.cmereye.com/imgs/2022/12/e939bd7a893a0bec.png" alt=""> -->
+              <div class="flex flex-col items-center pcShow">
+              <img src="https://static.cmereye.com/imgs/2022/12/7750b2b02630f4eb.png" alt="" style="width:90%;">
+              <img src="https://static.cmereye.com/imgs/2022/12/fd2d9929abdbdd22.png" alt="" style="width:60%; margin-top: 22px;margin-bottom: 20px;">
+              </div>
+              <div class="flex flex-col items-center mbShow">
+              <img src="https://static.cmereye.com/imgs/2022/12/7750b2b02630f4eb.png" alt="" style="width:100%;">
+              <img src="https://static.cmereye.com/imgs/2022/12/fd2d9929abdbdd22.png" alt="" style="width:80%; margin-top: 22px;">
+              </div>
             </a>
             <p>{{ $t('banners.invisalign_desc') }}</p>
             <div class=" text-center mbShow"  style="margin-top: 52vw;display: flex;flex-direction: column;">
@@ -174,31 +182,6 @@ const clearInfo = () =>{
         隱形牙箍矯齒過程
         </h2>
       </div>
-        <!-- <div class="  flex_between_items_start">
-     <div class=" sm:w-6/13">
-      <div class="sticky_step">
-      <h4 class="py-5 text-lg font-normal ">諮詢並檢查個人牙齒狀況</h4>
-      <p class="text-md ">牙醫與患者諮詢和溝通之後，會先為牙齒拍照、照X光片，以及做口腔內掃瞄或牙模套印，以建立牙齒資料，之後就會詳細講解令患者明白整個療程過程及效果。</p>
-
-    </div><div class="sticky_step">
-      <h4 class="py-5 text-lg font-normal ">訂制矯齒計劃</h4>
-      <p class="text-md">經牙醫專業診斷，為患者度身訂造3D矯齒治療方案。</p>
-    </div>
-    <div class="sticky_step">
-      <h4 class="py-5 text-lg font-normal ">訂製牙套並開始療程</h4>
-      <p class="text-md">隱適美會將牙醫治療方案製作成一系列沿牙齦剪裁的專屬牙箍，再寄至牙醫診所。之後就會聯絡患者到診所試戴及評估效果。</p>
-    </div> 
-    <div class="sticky_step">
-      <p class="text-md"></p>
-    </div> 
-     </div>
-     <div class="sm:w-6/13">
-        <img src="https://img.cmereye.com/i/2022/09/27/63325fb6cdf6e.jpg" class="w-full mb-10" alt="">
-        <img src="https://img.cmereye.com/i/2022/09/27/63325fb6521da.jpg" class="w-full mb-10" alt="">
-        <img src="https://img.cmereye.com/i/2022/09/27/63325fb5dff4d.jpg" class="w-full" alt="">
-        
-     </div>
-      </div>  -->
 
         <div class="flex_between_items_start">
           <div class="sm:w-6/13">
@@ -1282,7 +1265,7 @@ const clearInfo = () =>{
   padding: 20px 130px;
   margin: 0 auto;
  }
-  .page_body_header_banner{background-image: url(https://static.cmereye.com/imgs/2022/12/ce53289c705f1be6.jpg);background-size: 100% auto;background-repeat: no-repeat;background-position: top;background-attachment: fixed;
+  .page_body_header_banner{background-image: url(https://static.cmereye.com/imgs/2022/12/2d1078f9193dfde7.jpg);background-size: 100% auto;background-repeat: no-repeat;background-position: top;background-attachment: fixed;
  width:100%; 
   .page_body_header_fixed{ padding: 70px 130px;position: fixed;width: 100%;height:35vw;top: 0;left: 0;right: 0;margin: auto;}
   .head_booking{font-family: 'Songti TC';}
