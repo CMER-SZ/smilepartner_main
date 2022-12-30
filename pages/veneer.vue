@@ -16,7 +16,26 @@ const thumbsSwiper = ref<SwiperClass>()
     const setThumbsSwiper = (swiper: SwiperClass) => {
       thumbsSwiper.value = swiper
     }
-
+    onMounted(() => {
+  console.log('312');
+  
+  setTop()
+})
+const setTop = () => {
+  let s =document.documentElement.scrollTop;
+// 定时器 每10ms执行一次
+let timer=window.setInterval(function (){
+            // 每次走50
+            s-=50;
+            //  到顶部后清除定时器  必须清定时器  不然就死循环了
+            if (s<0){
+                window.clearInterval(timer);
+            }
+            window.scrollTo(0,s);
+        },10);                
+     
+  
+}
 const swiperOption = {
   // 显示分页
   pagination: {
@@ -127,7 +146,12 @@ const clearInfo = () =>{
 }
 </script>
   <template>
- 
+ <div>
+  <div class="mbShow">
+  <slot name="header">
+    <PageNavbar />
+  </slot>
+</div>
   <div class="page_body_header z-0">
     <div class="page_body_header_banner" >
       <img
@@ -159,7 +183,7 @@ const clearInfo = () =>{
             <div class="head_banner_img" style="display: block" >
               <img
                 class="m-auto"
-                src="https://static.cmereye.com/imgs/2022/12/04fa1cbc45b1646c.png"
+                src="https://static.cmereye.com/imgs/2022/12/58179e020f5986ec.png"
       
                 alt=""
               />
@@ -188,10 +212,12 @@ const clearInfo = () =>{
       </div>
     </div>
   </div>
-
+<div class="pcShow">
   <slot name="header">
     <PageNavbar />
   </slot>
+</div>
+
   <!-- sm:py-38 -->
   <div class="page_orthodontic md:pb-20 ">
     <div class="">
@@ -265,7 +291,7 @@ const clearInfo = () =>{
         </div> -->
       </div>
     </div>
-    <div class="flex flex-col items-center" style="display: none;">
+    <div class="flex flex-col items-center"  >
         <p
           class="
             sm:mb-14
@@ -284,9 +310,9 @@ const clearInfo = () =>{
 
           <span class="text-2xl text-green">專屬瓷貼片</span>
         </p>
-        <iframe class="pcShow" width="999" height="563" src="https://www.youtube.com/embed/tpybdKRVmtM" title="瓷貼 v1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe class="mbShow" width="100%" height="220" src="https://www.youtube.com/embed/tpybdKRVmtM" title="瓷貼 v1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+        <iframe class="pcShow" width="999" height="563" src="https://www.youtube.com/embed/g7-inRZVs9s" title="【瓷貼片流程】30秒帶你看🦷希瑪微笑矯齒即日瓷牙貼片🦷製作流程" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="mbShow" width="100%" height="220" src="https://www.youtube.com/embed/g7-inRZVs9s" title="【瓷貼片流程】30秒帶你看🦷希瑪微笑矯齒即日瓷牙貼片🦷製作流程" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
   
 
     <div class="md:mt-20 mt-12">
@@ -824,7 +850,7 @@ const clearInfo = () =>{
       </div>
     </div>
 
-    <div class="flex flex-col items-center mt-20 anli-photo" style="display: none;">
+    <div class="flex flex-col items-center mt-20 anli-photo" >
       <!-- <div class=" anli-photo"> -->
         
         <p
@@ -842,17 +868,17 @@ const clearInfo = () =>{
           相片
         </p>
         <div class="flex pcShow">
-        <div class="flex px-4">
-          <img src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg" alt="">
+        <div class="flex px-4 anli-photo-box">
+          <img src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg" alt="" >
           <img src="https://static.cmereye.com/imgs/2022/12/767a34c0308d030f.jpg" alt="">
         </div>
-        <div class="flex  px-4">
-          <img src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg" alt="">
-          <img src="https://static.cmereye.com/imgs/2022/12/767a34c0308d030f.jpg" alt="">
+        <div class="flex  px-4 anli-photo-box">
+          <img src="https://static.cmereye.com/imgs/2022/12/bfeb85198745ea3f.jpg" alt="">
+          <img src="https://static.cmereye.com/imgs/2022/12/9045f8172a0ed798.jpg" alt="">
         </div>
       </div>
       <div class="page_container  anli-photo">
-        <div class="mbShow orthodontic_table_swiper">
+        <div class="mbShow orthodontic_table_swiper orthodontic_swiper_point">
           <swiper 
               ref="mySwiper" 
               :modules="modules"
@@ -863,12 +889,12 @@ const clearInfo = () =>{
               navigation
               :scrollbar="{ draggable: true }" >
               <swiper-slide >
-                <img src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg" alt="">
-                <img src="https://static.cmereye.com/imgs/2022/12/767a34c0308d030f.jpg" alt="">
+                <img src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg" alt="" style="padding: 10px 20px;">
+                <img src="https://static.cmereye.com/imgs/2022/12/767a34c0308d030f.jpg" alt="" style="padding: 10px 20px;">
               </swiper-slide>
               <swiper-slide>
-                <img src="https://static.cmereye.com/imgs/2022/12/bfeb85198745ea3f.jpg" alt="">
-                <img src="https://static.cmereye.com/imgs/2022/12/9045f8172a0ed798.jpg" alt="">
+                <img src="https://static.cmereye.com/imgs/2022/12/bfeb85198745ea3f.jpg" alt="" style="padding: 10px 20px;">
+                <img src="https://static.cmereye.com/imgs/2022/12/9045f8172a0ed798.jpg" alt="" style="padding: 10px 20px;">
               </swiper-slide>
               
           </swiper>
@@ -1308,7 +1334,7 @@ const clearInfo = () =>{
       </div>
     </div> -->
   </div>
- 
+</div>
 </template>
   
   <style lang="scss" scoped>
@@ -1588,27 +1614,7 @@ const clearInfo = () =>{
   margin: auto;
   z-index: 99;
 }
-.orthodontic_pic .text-center:nth-child(1):after {
-  content: '牙齒排列不整齊';
-}
-.orthodontic_pic .text-center:nth-child(2):after {
-  content: '牙齒變色';
-}
-.orthodontic_pic .text-center:nth-child(3):after {
-  content: '牙齒出現磨損';
-}
-.orthodontic_pic .text-center:nth-child(4):after {
-  content: '牙齒縫隙過大';
-}
-.orthodontic_pic .text-center:nth-child(5):after {
-  content: '牙齒過小';
-}
-.orthodontic_pic .text-center:nth-child(6):after {
-  content: '四環素牙';
-}
-.orthodontic_pic .text-center:nth-child(7):after {
-  content: '齒列擠擁';
-}
+
 .orthodontic_pic {
   display: flex;
   flex-wrap: wrap;
@@ -1725,6 +1731,36 @@ const clearInfo = () =>{
   background: url(https://static.cmereye.com/imgs/2022/11/5f2b9d4f44128741.png) no-repeat;
 }
 @media screen and(min-width:768px) {
+  .step_title{margin: 0;}
+  .anli-photo{
+    .anli-photo-box{
+      img{
+        padding: 5px;
+      }
+    }
+  }
+
+  .orthodontic_pic .text-center:nth-child(1):after {
+  content: '牙齒排列不整齊';
+}
+.orthodontic_pic .text-center:nth-child(2):after {
+  content: '牙齒變色';
+}
+.orthodontic_pic .text-center:nth-child(3):after {
+  content: '牙齒出現磨損';
+}
+.orthodontic_pic .text-center:nth-child(4):after {
+  content: '牙齒縫隙過大';
+}
+.orthodontic_pic .text-center:nth-child(5):after {
+  content: '牙齒過小';
+}
+.orthodontic_pic .text-center:nth-child(6):after {
+  content: '四環素牙';
+}
+.orthodontic_pic .text-center:nth-child(7):after {
+  content: '齒列擠擁';
+}
   .compete_bac_1{
     padding-left: 192px;
     position: absolute;
@@ -1991,6 +2027,7 @@ const clearInfo = () =>{
 }
 }
 @media screen and(max-width:768px) {
+  
   .orthodontic_table_swiper{
     .swiper{
       padding-bottom: 33px;
@@ -2007,10 +2044,10 @@ const clearInfo = () =>{
       height: 141vw;
     }
     ::v-deep .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
-      bottom: 33px !important;
+      bottom: 9px !important;
     }
      .page_container::before{
-      bottom: 8px !important;
+      bottom: -19px !important;
     }
   }
   .anli-photo::before {
@@ -2330,7 +2367,48 @@ const clearInfo = () =>{
   background: #ECB3AC !important;
 }
 }
+.orthodontic_swiper_point{
 
+::v-deep .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: -5px;
+  left: 4px;
+  width: 100%;
+  // top: 161vw;
+}
+
+::v-deep .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap,29px);
+  
+}
+::v-deep .swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
+  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
+  display: inline-block;
+  border-radius: 50%;
+  background: #EEF5E4;
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+
+   
+}
+::v-deep .swiper-pagination-bullet:after{
+content: "";
+  display: inline-block;
+  position: relative;
+  top: -11px;
+  left: 8px;
+  width: 60px;
+  height: 2px;
+  background-color: #AACE79;
+  
+}
+::v-deep .swiper-pagination-bullet:nth-child(2)::after{
+height: 0px;
+}
+::v-deep .swiper-pagination-bullet-active{
+opacity: var(--swiper-pagination-bullet-opacity, 1);
+background: #AACE79 !important;
+}
+}
 .orthodontic_table_swiper{
 
   ::v-deep .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
