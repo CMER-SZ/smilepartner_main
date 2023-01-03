@@ -1,60 +1,72 @@
 <script setup lang="ts">
-
 import 'swiper/css'
+
+const props = defineProps({
+  smilepartner_from: {
+    type: String,
+    default: '',
+  },
+})
+const smilepartner_from = toRef(props, 'smilepartner_from')
+// console.log('smilepartner_from',smilepartner_from.value);
+
 let reForm = reactive({
   smilepartnerName: '',
-  sex:'',
-  Tel:'',
-  Email:'',
-  smilepartner_select: '經系統分析,該表單來自隱適美 ‧ 易頁面,来源地址：https://smilepartner.hk/invisalign'
+  sex: '',
+  Tel: '',
+  Email: '',
+  smilepartner_select:
+    '經系統分析,該表單來自隱適美 ‧ 易頁面,来源地址：https://smilepartner.hk/invisalign',
 })
 
 const checkForm = (e) => {
-  if(reForm.smilepartnerName === '' || reForm.sex === '' || reForm.Tel === '' || reForm.Email === '' ){
-   
-    alert("請完善信息！")
-    e.preventDefault();
-  }else{
-    alert("提交成功！")
-    setTimeout(()=>{
+  if (
+    reForm.smilepartnerName === '' ||
+    reForm.sex === '' ||
+    reForm.Tel === '' ||
+    reForm.Email === ''
+  ) {
+    alert('請完善信息！')
+    e.preventDefault()
+  } else {
+    alert('提交成功！')
+    setTimeout(() => {
       clearInfo()
-    },500)
+    }, 500)
     return true
   }
 }
-const clearInfo = () =>{
-    reForm.smilepartnerName = ''
-    reForm.sex = ''
-    reForm.Tel = ''
-    reForm.Email = ''
-    // reForm.smilepartner_select = ''
+const clearInfo = () => {
+  reForm.smilepartnerName = ''
+  reForm.sex = ''
+  reForm.Tel = ''
+  reForm.Email = ''
+  // reForm.smilepartner_select = ''
 }
 </script>
 
 <template>
-     <div class="orthodontic_form_background">
-      <div class="orthodontic_form page_container py-20">
+  <div class="orthodontic_form_background" id="yyform">
+    <div class="orthodontic_form page_container py-20">
       <p
         class="text-center text-lg text-primary font-normal tracking-widest-2x"
       >
         填寫你的資料，
       </p>
       <h4
-        class="
-          text-center text-xl text-pink
-          font-normal
-          tracking-widest-2x
-          mb-4
-          sm:mb-12
-          
-        "
+        class="text-center text-xl text-pink font-normal tracking-widest-2x mb-4 sm:mb-12"
       >
         展開專屬牙齒美容旅程！
       </h4>
-      <iframe  id="my" name="my" style="display:none"></iframe>
-      <form action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm" method="POST" @submit="checkForm" target="my">
+      <iframe id="my" name="my" style="display: none"></iframe>
+      <form
+        action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm"
+        method="POST"
+        @submit="checkForm"
+        target="my"
+      >
         <div class="overflow-hidden sm:rounded-md">
-          <div class=" py-5  max-w-3xl px-20 form_width">
+          <div class="py-5 max-w-3xl px-20 form_width">
             <div class="grid grid-cols-6 gap-10">
               <div class="col-span-6 sm:col-span-3">
                 <label
@@ -68,20 +80,11 @@ const clearInfo = () =>{
                   v-model="reForm.smilepartnerName"
                   id="first-name"
                   autocomplete="off"
-                  class="
-                    h-8
-                    pl-2
-                    mt-1
-                    block
-                    w-full
-                    border-gray-300 border-1
-                    sm:text-sm
-                    text-primary
-                  "
+                  class="h-8 pl-2 mt-1 block w-full border-gray-300 border-1 sm:text-sm text-primary"
                 />
               </div>
 
-              <div class="col-span-6 sm:col-span-3 ">
+              <div class="col-span-6 sm:col-span-3">
                 <label
                   for="last-name"
                   class="block text-md font-medium text-gray-700"
@@ -91,19 +94,12 @@ const clearInfo = () =>{
                   <div class="flex items-center">
                     <input
                       id="push-everything"
-                      
                       data-name="man"
                       name="sex"
                       v-model="reForm.sex"
                       value="先生"
                       type="radio"
-                      class="
-                        h-4
-                        w-4
-                        border-gray-300 border-1
-                        text-green
-                        focus:ring-green focus:outline-none
-                      "
+                      class="h-4 w-4 border-gray-300 border-1 text-green focus:ring-green focus:outline-none"
                     />
                     <label
                       for="push-everything"
@@ -119,13 +115,7 @@ const clearInfo = () =>{
                       v-model="reForm.sex"
                       value="女士"
                       type="radio"
-                      class="
-                        h-4
-                        w-4
-                        border-gray-300
-                        text-green
-                        focus:ring-green focus:outline-none
-                      "
+                      class="h-4 w-4 border-gray-300 text-green focus:ring-green focus:outline-none"
                     />
                     <label
                       for="push-email"
@@ -141,13 +131,7 @@ const clearInfo = () =>{
                       v-model="reForm.sex"
                       value="小姐"
                       type="radio"
-                      class="
-                        h-4
-                        w-4
-                        border-gray-300
-                        text-green
-                        focus:ring-green focus:outline-none
-                      "
+                      class="h-4 w-4 border-gray-300 text-green focus:ring-green focus:outline-none"
                     />
                     <label
                       for="push-nothing"
@@ -170,16 +154,7 @@ const clearInfo = () =>{
                   v-model="reForm.Tel"
                   id="tel"
                   autocomplete="off"
-                  class="
-                    h-8
-                    pl-2
-                    mt-1
-                    block
-                    w-full
-                    border-gray-300 border-1
-                    text-primary
-                    sm:text-sm
-                  "
+                  class="h-8 pl-2 mt-1 block w-full border-gray-300 border-1 text-primary sm:text-sm"
                 />
               </div>
 
@@ -195,47 +170,26 @@ const clearInfo = () =>{
                   v-model="reForm.Email"
                   id="email-address"
                   autocomplete="off"
-                  class="
-                    h-8
-                    pl-2
-                    mt-1
-                    block
-                    w-full
-                    border-gray-300 border-1
-                    text-primary
-                    sm:text-sm
-                  "
+                  class="h-8 pl-2 mt-1 block w-full border-gray-300 border-1 text-primary sm:text-sm"
                 />
               </div>
 
-              <div class="col-span-6 sm:col-span-6 form_selcet_service" style="display:none">
-                <input type="text" name="smilepartner_select" v-model="reForm.smilepartner_select">
-                
-                
+              <div
+                class="col-span-6 sm:col-span-6 form_selcet_service"
+                style="display: none"
+              >
+                <input
+                  type="text"
+                  name="smilepartner_select"
+                  v-model="smilepartner_from"
+                />
               </div>
             </div>
           </div>
           <div class="px-4 sm:mt-12 text-center sm:px-6 mt-2">
             <button
               type="submit"
-              class="
-                inline-flex
-                justify-center
-                border
-                text-pink
-                py-2
-                px-30
-                text-xl
-                font-medium
-                bg-white
-                border-gray-300
-                hover:bg-pink 
-                hover:text-white
-                focus:outline-none focus:ring-2 focus:ring-offset-2
-                submitBut
-              "
-              
-              
+              class="inline-flex justify-center border text-pink py-3 px-30 text-xl font-medium bg-white border-gray-300 hover:bg-pink hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 submitBut"
             >
               提 交
             </button>
@@ -246,16 +200,14 @@ const clearInfo = () =>{
   </div>
 </template>
 
-
-
 <style scoped>
- .orthodontic_form_background{/* Pink Light */
-  background: #FCF4F2;
- }
- @media screen and(min-width:768px) {
-  .form_width{
-  padding: 20px 130px;
- }
- }
-
+.orthodontic_form_background {
+  /* Pink Light */
+  background: #fcf4f2;
+}
+@media screen and (min-width: 768px) {
+  .form_width {
+    padding: 20px 130px;
+  }
+}
 </style>
