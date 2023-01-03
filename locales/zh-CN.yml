@@ -46,8 +46,12 @@ pages:
     description: 這是一個瓷貼片簡介
   case:
     nav: 個案分享
-    title: 模板簡介
+    title: 隱形牙箍兒童專線
     description: 這是一個模板簡介
+  clear-aligners-lite:
+    title: 隱形牙箍簡易版
+  clear-aligners:
+    title: 準新人隱形牙箍體驗價
   fees:
     nav: 收費詳情
     title: 模板簡介
