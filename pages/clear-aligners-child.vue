@@ -35,7 +35,7 @@ const tableswiperOption = {
 }
 // composable
 const { t } = useLang()
-const fromhere = ref('經系統分析,該表單來自隱形牙箍兒童專線頁面,来源地址：https://smilepartner-preview.vercel.app/clear-aligners-child')
+const fromhere = ref('經系統分析,該表單來自隱形牙箍兒童專線頁面,来源地址：https://smilepartner.hk/clear-aligners-child')
 // compiler macro
 definePageMeta({
   layout: 'page',
