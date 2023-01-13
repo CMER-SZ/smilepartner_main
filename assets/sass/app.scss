@@ -354,7 +354,7 @@ footer .fixed_button .fixed_button_info:hover > .fixed_text {
   }
   .header {
     background: unset !important;
-    z-index: 9999;
+    z-index: 9999 !important;
     backdrop-filter: unset !important;
   }
   // .header.sticky{background: unset;position: sticky;z-index: 9999;backdrop-filter: unset;}
