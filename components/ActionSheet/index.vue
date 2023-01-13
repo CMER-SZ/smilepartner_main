@@ -34,8 +34,8 @@ onMounted(() => {
           leave-to="opacity-0"
         >
           <div
-            class="fixed  w-screen z-50 flex"
-            style="max-height: 76%;top: 38vw;"
+            class="fixed w-screen z-999 flex"
+            style="max-height: 76%; top: 38vw"
           >
             <div
               class="relative max-w-8xl w-full mx-auto flex flex-col flex-1 space-y-1 overflow-y-auto justify-end"

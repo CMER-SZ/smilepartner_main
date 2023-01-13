@@ -202,7 +202,7 @@ const checkForm = (e) => {
                     </div>
                   </div>
                 </swiper-slide>
-                <swiper-slide>
+                <!-- <swiper-slide>
                   <div class="orthodontic_pic">
                     <div class="text-center">
                       <nuxt-link href="https://smilepartner.hk/clear-aligners">
@@ -252,7 +252,7 @@ const checkForm = (e) => {
                       </nuxt-link>
                     </div>
                   </div>
-                </swiper-slide>
+                </swiper-slide> -->
 
                 <!-- <div slot="pagination" class="swiper-pagination"></div>
               <div slot="button-prev" class="swiper-button-prev"></div>
@@ -2162,6 +2162,7 @@ const checkForm = (e) => {
   }
 
   .orthodontic_swiper::after {
+    display: none !important;
     position: absolute;
     content: '';
     width: 12.5vw;

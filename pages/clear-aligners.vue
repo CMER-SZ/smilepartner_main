@@ -261,7 +261,7 @@ const clearInfo = () => {
             <div class="sm:w-6/13">
               <h4 class="py-5 text-lg font-normal">訂製牙套並開始療程</h4>
               <p class="text-md">
-                我們選用的隱形牙箍品牌牙醫治療方案製作成一系列沿牙齦剪裁的專屬牙箍，再寄至牙醫診所。之後就會聯絡患者到診所試戴及評估效果。
+                我們選用的隱形牙箍品牌會按牙醫治療方案製作一系列沿牙齦剪裁的專屬牙箍，再寄至牙醫診所。之後就會聯絡患者到診所試戴及評估效果。
               </p>
             </div>
             <div class="sm:w-6/13">
@@ -622,7 +622,7 @@ const clearInfo = () => {
             <h2
               class="text-primary font-normal text-xl md:text-2xl inline-block relative"
             >
-              我們選用的隱形牙箍VS其他品牌中比拼！
+              我們選用的隱形牙箍VS其他品牌
             </h2>
           </div>
           <div class="orthodontic_table_scroll pcShow">

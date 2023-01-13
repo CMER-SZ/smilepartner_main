@@ -236,11 +236,10 @@ const clearInfo = () => {
         </div>
       </div>
     </div>
-    <div class="pcShow">
-      <slot name="header">
-        <PageNavbar />
-      </slot>
-    </div>
+
+    <slot name="header">
+      <PageNavbar class="pcShow" />
+    </slot>
 
     <!-- sm:py-38 -->
     <div class="page_orthodontic md:pb-20 sm:py-24">
@@ -912,7 +911,7 @@ const clearInfo = () => {
                   alt=""
                 />
                 <p class="">
-                  拍攝X光片，全方位分析你的牙齒及笑容比例，了解你對療程嘅需求同期望
+                  拍攝X光片，全方位分析你的牙齒及笑容比例，了解你對療程嘅需求及期望
                 </p>
               </div>
               <div class="compete_three">
@@ -983,7 +982,7 @@ const clearInfo = () => {
                   alt=""
                 />
                 <p class="">
-                  拍攝X光片，全方位分析你的牙齒及笑容比例，了解你對療程嘅需求同期望
+                  拍攝X光片，全方位分析你的牙齒及笑容比例，了解你對療程嘅需求及期望
                 </p>
               </div>
               <div class="compete_three">
