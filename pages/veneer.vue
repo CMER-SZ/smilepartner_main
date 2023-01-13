@@ -6,35 +6,39 @@ import environmentVue from '~~/composables/environment/environment.vue'
 import 'swiper/css'
 import type { Ref } from 'vue'
 // import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import SwiperClass, { Autoplay, Pagination, Navigation, Scrollbar,Thumbs } from 'swiper'
+import SwiperClass, {
+  Autoplay,
+  Pagination,
+  Navigation,
+  Scrollbar,
+  Thumbs,
+} from 'swiper'
 import 'swiper/css/pagination' // 轮播图底面的小圆点
 import 'swiper/css/thumbs'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css/navigation'
-const modules = [Autoplay, Pagination, Navigation, Scrollbar,Thumbs]
+const modules = [Autoplay, Pagination, Navigation, Scrollbar, Thumbs]
 const thumbsSwiper = ref<SwiperClass>()
-    const setThumbsSwiper = (swiper: SwiperClass) => {
-      thumbsSwiper.value = swiper
-    }
-    onMounted(() => {
-  console.log('312');
-  
+const setThumbsSwiper = (swiper: SwiperClass) => {
+  thumbsSwiper.value = swiper
+}
+onMounted(() => {
+  console.log('312')
+
   setTop()
 })
 const setTop = () => {
-  let s =document.documentElement.scrollTop;
-// 定时器 每10ms执行一次
-let timer=window.setInterval(function (){
-            // 每次走50
-            s-=50;
-            //  到顶部后清除定时器  必须清定时器  不然就死循环了
-            if (s<0){
-                window.clearInterval(timer);
-            }
-            window.scrollTo(0,s);
-        },10);                
-     
-  
+  let s = document.documentElement.scrollTop
+  // 定时器 每10ms执行一次
+  let timer = window.setInterval(function () {
+    // 每次走50
+    s -= 50
+    //  到顶部后清除定时器  必须清定时器  不然就死循环了
+    if (s < 0) {
+      window.clearInterval(timer)
+    }
+    window.scrollTo(0, s)
+  }, 10)
 }
 const swiperOption = {
   // 显示分页
@@ -61,7 +65,7 @@ const swiperOptionRew = {
   },
 }
 const tableswiperOption = {
-  slidesPerView: "1.1",
+  slidesPerView: '1.1',
   // 显示分页
   pagination: {
     el: '.swiper-pagination',
@@ -75,12 +79,11 @@ const tableswiperOption = {
 }
 // composable
 const { t } = useLang()
-  let currentIndex = reactive({
-    Index: 0
+let currentIndex = reactive({
+  Index: 0,
 })
-// let currentIndex:number = 
-function titelclick(index){
-  
+// let currentIndex:number =
+function titelclick(index) {
   currentIndex.Index = index
   // console.log(this.currentIndex);
 }
@@ -98,177 +101,182 @@ useHead(() => ({
   ],
 }))
 let bigimgsrc = reactive([
-  "https://static.cmereye.com/imgs/2022/11/4470dc6cbeede80f.jpg",
-  "https://static.cmereye.com/imgs/2022/11/9b3e381f7d2d3ca4.jpg",
-  "https://static.cmereye.com/imgs/2022/11/516557a11c87b513.jpg"
+  'https://static.cmereye.com/imgs/2022/11/4470dc6cbeede80f.jpg',
+  'https://static.cmereye.com/imgs/2022/11/9b3e381f7d2d3ca4.jpg',
+  'https://static.cmereye.com/imgs/2022/11/516557a11c87b513.jpg',
 ])
 let imgsrc = reactive([
-              "https://static.cmereye.com/imgs/2022/11/f743d8dbbdf29778.jpg",
-              "https://static.cmereye.com/imgs/2022/11/d822c1644e615863.jpg",
-              "https://static.cmereye.com/imgs/2022/11/ef651d3ee55bc6b7.jpg"])
+  'https://static.cmereye.com/imgs/2022/11/f743d8dbbdf29778.jpg',
+  'https://static.cmereye.com/imgs/2022/11/d822c1644e615863.jpg',
+  'https://static.cmereye.com/imgs/2022/11/ef651d3ee55bc6b7.jpg',
+])
 let bigimgsrc2 = reactive([
-  "https://static.cmereye.com/imgs/2022/11/eb3fd5b84863b0b6.jpg",
-  "https://static.cmereye.com/imgs/2022/11/3291fce5d036fa37.jpg",
-  "https://static.cmereye.com/imgs/2022/11/1b8d3a6d24f6f372.jpg"
+  'https://static.cmereye.com/imgs/2022/11/eb3fd5b84863b0b6.jpg',
+  'https://static.cmereye.com/imgs/2022/11/3291fce5d036fa37.jpg',
+  'https://static.cmereye.com/imgs/2022/11/1b8d3a6d24f6f372.jpg',
 ])
 let imgsrc2 = reactive([
-                      "https://static.cmereye.com/imgs/2022/11/ac292df57993961d.jpg",
-                      "https://static.cmereye.com/imgs/2022/11/89d022005e8b03e6.jpg",
-                      "https://static.cmereye.com/imgs/2022/11/d4e4b782e854920e.jpg"])
-let title = reactive(["中環中建大廈", "尖沙咀K11 ATELIER"])
+  'https://static.cmereye.com/imgs/2022/11/ac292df57993961d.jpg',
+  'https://static.cmereye.com/imgs/2022/11/89d022005e8b03e6.jpg',
+  'https://static.cmereye.com/imgs/2022/11/d4e4b782e854920e.jpg',
+])
+let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
 let reForm = reactive({
   smilepartnerName: '',
-  sex:'',
-  Tel:'',
-  Email:'',
-  smilepartner_select: '經系統分析,該表單來自瓷貼片頁面,該用戶想查詢瓷貼片，来源地址：https://smilepartner.hk/veneer'
+  sex: '',
+  Tel: '',
+  Email: '',
+  smilepartner_select:
+    '經系統分析,該表單來自瓷貼片頁面,該用戶想查詢瓷貼片，来源地址：https://smilepartner.hk/veneer',
 })
 
 const checkForm = (e) => {
-  if(reForm.smilepartnerName === '' || reForm.sex === '' || reForm.Tel === '' || reForm.Email === '' ){
-   
-    alert("請完善信息！")
-    e.preventDefault();
-  }else{
-    alert("提交成功！")
-    setTimeout(()=>{
+  if (
+    reForm.smilepartnerName === '' ||
+    reForm.sex === '' ||
+    reForm.Tel === '' ||
+    reForm.Email === ''
+  ) {
+    alert('請完善信息！')
+    e.preventDefault()
+  } else {
+    alert('提交成功！')
+    setTimeout(() => {
       clearInfo()
-    },500)
+    }, 500)
     return true
   }
 }
-const clearInfo = () =>{
-    reForm.smilepartnerName = ''
-    reForm.sex = ''
-    reForm.Tel = ''
-    reForm.Email = ''
-    // reForm.smilepartner_select = ''
+const clearInfo = () => {
+  reForm.smilepartnerName = ''
+  reForm.sex = ''
+  reForm.Tel = ''
+  reForm.Email = ''
+  // reForm.smilepartner_select = ''
 }
 </script>
-  <template>
- <div>
-  <div class="mbShow">
-  <slot name="header">
-    <PageNavbar />
-  </slot>
-</div>
-  <div class="page_body_header z-0">
-    <div class="page_body_header_banner" >
-      <img
-        
-        class="page_body_header_banner_img sm:invisible"
-        src="https://static.cmereye.com/imgs/2022/11/ea7549556b5ed67d.jpg"
-        srcset="
-        https://static.cmereye.com/imgs/2022/11/251ee3578eb999a7.png 400w,
-          https://static.cmereye.com/imgs/2022/11/251ee3578eb999a7.png 640w,
-          https://static.cmereye.com/imgs/2022/11/ea7549556b5ed67d.jpg
-        "
-      />
-      <div class="page_body_header_fixed">
-        <div class="head_booking inline-block float-right text-center">
-          <a :href="$t('banners.booking')" target="_blank" class="head_button"
-            ><p class="md:pt-1 text-primary">
-              {{ $t('banners.invisalign_text') }}
-            </p>
-            <span class="text-green md:text-3xl sm:ml-3">
-              {{ $t('banners.number') }}
-            </span>
-          </a>
-          <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
-        </div>
-
-        
-        <div class="head_banner_text justify-self-center">
-          <div class="head_banner_text_p">
-            <div class="head_banner_img" style="display: block" >
-              <img
-                class="m-auto"
-                src="https://static.cmereye.com/imgs/2022/12/58179e020f5986ec.png"
-      
-                alt=""
-              />
-            </div>
-            <h2 class="text-pink text-center text-4xl mb-6" style="display: none;">希瑪微笑矯齒</h2>
-            <div class="flex items-center justify-center my-4">
-              <p class="p-fast">即日<br>特快</p> 
-              <img class="" src="https://static.cmereye.com/imgs/2022/11/6c599297d15d53bb.png" alt="">
-            </div>
-            
-              <p>{{ $t('banners.porcelain_desc') }}</p>
-              <div class=" text-center mbShow"  style="margin-top: 47vw;display: flex;flex-direction: column;">
-          <a :href="$t('banners.booking')" target="_blank" class="head_button"
-            ><p class="pt-1 text-primary" style="position: unset;padding:0;">
-              {{ $t('banners.invisalign_text') }}
-            </p>
-            <span class="text-green text-2xl ml-5">
-              {{ $t('banners.number') }}
-            </span>
-          </a>
-          <span class="pt-4 xinyongka">指定信用卡可享免息分期</span>
-        </div>
+<template>
+  <div>
+    <div class="mbShow">
+      <slot name="header">
+        <PageNavbar />
+      </slot>
+    </div>
+    <div class="page_body_header z-0">
+      <div class="page_body_header_banner">
+        <img
+          class="page_body_header_banner_img sm:invisible"
+          src="https://static.cmereye.com/imgs/2022/11/ea7549556b5ed67d.jpg"
+          srcset="
+            https://static.cmereye.com/imgs/2022/11/251ee3578eb999a7.png 400w,
+            https://static.cmereye.com/imgs/2022/11/251ee3578eb999a7.png 640w,
+            https://static.cmereye.com/imgs/2022/11/ea7549556b5ed67d.jpg
+          "
+        />
+        <div class="page_body_header_fixed">
+          <div class="head_booking inline-block float-right text-center">
+            <a :href="$t('banners.booking')" target="_blank" class="head_button"
+              ><p class="md:pt-1 text-primary">
+                {{ $t('banners.invisalign_text') }}
+              </p>
+              <span class="text-green md:text-3xl sm:ml-3">
+                {{ $t('banners.number') }}
+              </span>
+            </a>
+            <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
           </div>
-          
+
+          <div class="head_banner_text justify-self-center">
+            <div class="head_banner_text_p">
+              <div class="head_banner_img" style="display: block">
+                <img
+                  class="m-auto"
+                  src="https://static.cmereye.com/imgs/2022/12/58179e020f5986ec.png"
+                  alt=""
+                />
+              </div>
+              <h2
+                class="text-pink text-center text-4xl mb-6"
+                style="display: none"
+              >
+                希瑪微笑矯齒
+              </h2>
+              <div class="flex items-center justify-center my-4">
+                <p class="p-fast">即日<br />特快</p>
+                <img
+                  class=""
+                  src="https://static.cmereye.com/imgs/2022/11/6c599297d15d53bb.png"
+                  alt=""
+                />
+              </div>
+
+              <p>{{ $t('banners.porcelain_desc') }}</p>
+              <div
+                class="text-center mbShow"
+                style="margin-top: 47vw; display: flex; flex-direction: column"
+              >
+                <a
+                  :href="$t('banners.booking')"
+                  target="_blank"
+                  class="head_button"
+                  ><p
+                    class="pt-1 text-primary"
+                    style="position: unset; padding: 0"
+                  >
+                    {{ $t('banners.invisalign_text') }}
+                  </p>
+                  <span class="text-green text-2xl ml-5">
+                    {{ $t('banners.number') }}
+                  </span>
+                </a>
+                <span class="pt-4 xinyongka">指定信用卡可享免息分期</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<div class="pcShow">
-  <slot name="header">
-    <PageNavbar />
-  </slot>
-</div>
+    <div class="pcShow">
+      <slot name="header">
+        <PageNavbar />
+      </slot>
+    </div>
 
-  <!-- sm:py-38 -->
-  <div class="page_orthodontic md:pb-20 ">
-    <div class="">
-      <div
-        class="
-        orthodontic_title
-          step_title
-          text-center
-          sm:text-center
-          mt-5
-          md:py-10
-          py-8
-          z-10
-        "
-      >
-        <h2
-          class="
-          text-primary
-            font-normal
-            text-xl
-            md:text-2xl
-            inline-block
-            relative
-          "
+    <!-- sm:py-38 -->
+    <div class="page_orthodontic md:pb-20 sm:py-24">
+      <div class="">
+        <div
+          class="orthodontic_title step_title text-center sm:text-center mt-5 md:py-10 py-8 z-10"
         >
-        最快即日完成、註冊牙醫主理 
-        </h2>
-      </div>
-
-      <div class="orthodontic_step page_container" style="padding-top: 0;">
-        <div class="flex_between_items_start">
-          
-          <div class="sm:w-6/13">
-            <h4 class="py-2 text-lg font-normal"></h4>
-            <p class="text-md py-5">
-              Smile Partner瓷貼片療程由註冊牙醫全程貼心主理，配合先進儀器，為你度身打造出自然亮白的瓷貼片，令你可以安心地在最快一日之內，達成不同程度的牙齒外觀追求，展現全新自信笑容！ <br>
-              <!-- <span class="py-2> </span> -->
-            </p>
-            <span >*歡迎於以下表格填寫個人聯絡電話，查詢瓷牙貼片價錢。</span>
-
-          </div>
-          <div class="sm:w-6/13">
-            <img
-              src="https://static.cmereye.com/imgs/2022/11/a7cadf88977436fb.jpg"
-              class=""
-              alt=""
-            />
-          </div>
+          <h2
+            class="text-primary font-normal text-xl md:text-2xl inline-block relative"
+          >
+            最快即日完成、註冊牙醫主理
+          </h2>
         </div>
 
-        <!-- <div class="flex_between_items_start">
+        <div class="orthodontic_step page_container" style="padding-top: 0">
+          <div class="flex_between_items_start">
+            <div class="sm:w-6/13">
+              <h4 class="py-2 text-lg font-normal"></h4>
+              <p class="text-md py-5">
+                Smile
+                Partner瓷貼片療程由註冊牙醫全程貼心主理，配合先進儀器，為你度身打造出自然亮白的瓷貼片，令你可以安心地在最快一日之內，達成不同程度的牙齒外觀追求，展現全新自信笑容！
+                <br />
+                <!-- <span class="py-2> </span> -->
+              </p>
+              <span>*歡迎於以下表格填寫個人聯絡電話，查詢瓷牙貼片價錢。</span>
+            </div>
+            <div class="sm:w-6/13">
+              <img
+                src="https://static.cmereye.com/imgs/2022/11/a7cadf88977436fb.jpg"
+                class=""
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- <div class="flex_between_items_start">
           <div class="sm:w-6/13">
             <h4 class="py-5 text-lg font-normal">6大信心保證</h4>
             <p class="text-md">
@@ -289,382 +297,348 @@ const clearInfo = () =>{
             />
           </div>
         </div> -->
+        </div>
       </div>
-    </div>
-    <div class="flex flex-col items-center"  >
+      <div class="flex flex-col items-center">
         <p
-          class="
-            sm:mb-14
-            mb-10
-            text-primary text-center
-            font-bold
-            text-base
-            tracking-widest-2x
-            text-iframe-one
-          "
+          class="sm:mb-14 mb-10 text-primary text-center font-bold text-base tracking-widest-2x text-iframe-one"
         >
-        
-
-        精心打造
-
+          精心打造
 
           <span class="text-2xl text-green">專屬瓷貼片</span>
         </p>
-        <iframe class="pcShow" width="999" height="563" src="https://www.youtube.com/embed/g7-inRZVs9s" title="【瓷貼片流程】30秒帶你看🦷希瑪微笑矯齒即日瓷牙貼片🦷製作流程" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe class="mbShow" width="100%" height="220" src="https://www.youtube.com/embed/g7-inRZVs9s" title="【瓷貼片流程】30秒帶你看🦷希瑪微笑矯齒即日瓷牙貼片🦷製作流程" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-  
-
-    <div class="md:mt-20 mt-12">
-    
-      <div class="orthodontic_step page_container">
-        <div
-        class="
-          orthodontic_title
-          
-          text-center
-          sm:text-center
-
-       
-          z-10
-        "
-      >
-        <h2
-          class="
-            text-primary
-            font-normal
-            text-xl
-            md:text-2xl
-            inline-block
-            relative
-            six_pro
-          "
-        >
-        5大信心保證  
-        </h2>
+        <iframe
+          class="pcShow"
+          width="999"
+          height="563"
+          src="https://www.youtube.com/embed/g7-inRZVs9s"
+          title="【瓷貼片流程】30秒帶你看🦷希瑪微笑矯齒即日瓷牙貼片🦷製作流程"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="mbShow"
+          width="100%"
+          height="220"
+          src="https://www.youtube.com/embed/g7-inRZVs9s"
+          title="【瓷貼片流程】30秒帶你看🦷希瑪微笑矯齒即日瓷牙貼片🦷製作流程"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
-    
-        <div class="mb-20 .orthodontic_box_grid">
-          <h3></h3>
-          <div class="md:flex md:justify-center md:flex-row mt-24 grid grid-cols-2 orthodontic_box" style="white-space: pre;">
-          <div class="mx-8 flex flex-col">
-            <img src="https://static.cmereye.com/imgs/2022/11/585a103b2e5c6ee7.png" alt="" >
-            <p class="md:mt-6 mt-3 mb-2">知名歐洲物料</p>
+
+      <div class="md:mt-20 mt-12">
+        <div class="orthodontic_step page_container">
+          <div class="orthodontic_title text-center sm:text-center z-10">
+            <h2
+              class="text-primary font-normal text-xl md:text-2xl inline-block relative six_pro"
+            >
+              5大信心保證
+            </h2>
           </div>
-          <div class="mx-8 flex flex-col items-center"><img src="https://static.cmereye.com/imgs/2022/11/47389cb1a675614b.png" alt="">
-            <p class="md:mt-6 mt-3 mb-2">近乎真牙通透自然</p></div>
-          <div class="mx-8 flex flex-col items-center"><img src="https://static.cmereye.com/imgs/2022/11/7cbcde77a3778fb1.png" alt="">
-            <p class="md:mt-6 mt-3 mb-2">1.0mm堅固耐用</p></div>
-          <div class="mx-8 flex flex-col items-center"><img src="https://static.cmereye.com/imgs/2022/11/6e029b05ccdbcc33.png" alt="">
-            <p class="md:mt-6 mt-3 mb-2">即日度身訂造牙貼片</p></div>
-          <div class="mx-8 flex flex-col items-center"><img src="https://static.cmereye.com/imgs/2022/11/28fc758182a1df81.png" alt="">
-            <p class="md:mt-6 mt-3 mb-2">專屬微笑線設計</p></div>
-          <!-- <div class="mx-8 flex flex-col items-center"><img src="https://static.cmereye.com/imgs/2022/11/f2d170aa10bacf76.png" alt="">
+
+          <div class="mb-20 .orthodontic_box_grid">
+            <h3></h3>
+            <div
+              class="md:flex md:justify-center md:flex-row mt-24 grid grid-cols-2 orthodontic_box"
+              style="white-space: pre"
+            >
+              <div class="mx-8 flex flex-col">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/585a103b2e5c6ee7.png"
+                  alt=""
+                />
+                <p class="md:mt-6 mt-3 mb-2">知名歐洲物料</p>
+              </div>
+              <div class="mx-8 flex flex-col items-center">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/47389cb1a675614b.png"
+                  alt=""
+                />
+                <p class="md:mt-6 mt-3 mb-2">近乎真牙通透自然</p>
+              </div>
+              <div class="mx-8 flex flex-col items-center">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/7cbcde77a3778fb1.png"
+                  alt=""
+                />
+                <p class="md:mt-6 mt-3 mb-2">1.0mm堅固耐用</p>
+              </div>
+              <div class="mx-8 flex flex-col items-center">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/6e029b05ccdbcc33.png"
+                  alt=""
+                />
+                <p class="md:mt-6 mt-3 mb-2">即日度身訂造牙貼片</p>
+              </div>
+              <div class="mx-8 flex flex-col items-center">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/28fc758182a1df81.png"
+                  alt=""
+                />
+                <p class="md:mt-6 mt-3 mb-2">專屬微笑線設計</p>
+              </div>
+              <!-- <div class="mx-8 flex flex-col items-center"><img src="https://static.cmereye.com/imgs/2022/11/f2d170aa10bacf76.png" alt="">
             <p class="md:mt-6 mt-3 mb-2"> 5年貼心保養</p></div> -->
-
-        </div>
-        </div>
-      </div>
-
-
-      <div class="orthodontic_form_background md:mb-0 mb-10" id="yyform">
-      <div class="orthodontic_form page_container py-20">
-      <p
-        class="text-center text-lg text-primary font-normal tracking-widest-2x"
-      >
-        填寫你的資料，
-      </p>
-      <h4
-        class="
-          text-center text-xl text-pink
-          font-normal
-          tracking-widest-2x
-          mb-4
-          sm:mb-12
-        "
-      >
-        展開專屬牙齒美容旅程！
-      </h4>
-      <iframe  id="my" name="my" style="display:none"></iframe>
-      <form action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm" method="POST" @submit="checkForm" target="my">
-        <div class="overflow-hidden sm:rounded-md">
-          <div class="px-4 py-5 sm:p-6 max-w-5xl form_width">
-            <div class="grid grid-cols-6 gap-10">
-              <div class="col-span-6 sm:col-span-3">
-                <label
-                  for="first-name"
-                  class="block text-md font-medium text-gray-700"
-                  >姓名：</label
-                >
-                <input
-                  type="text"
-                  name="smilepartner_name"
-                  v-model="reForm.smilepartnerName"
-                  id="first-name"
-                  autocomplete="off"
-                  class="
-                    h-8
-                    pl-2
-                    mt-1
-                    block
-                    w-full
-                    border-gray-300 border-1
-                    sm:text-sm
-                    text-primary
-                  "
-                />
-              </div>
-
-              <div class="col-span-6 sm:col-span-3 ">
-                <label
-                  for="last-name"
-                  class="block text-md font-medium text-gray-700"
-                  >稱呼：</label
-                >
-                <div class="mt-2 justify-start flex">
-                  <div class="flex items-center">
-                    <input
-                      id="push-everything"
-                      
-                      data-name="man"
-                      name="sex"
-                      v-model="reForm.sex"
-                      value="先生"
-                      type="radio"
-                      class="
-                        h-4
-                        w-4
-                        border-gray-300 border-1
-                        text-green
-                        focus:ring-green focus:outline-none
-                      "
-                    />
-                    <label
-                      for="push-everything"
-                      class="ml-3 block text-md font-medium text-gray-700"
-                      >先生</label
-                    >
-                  </div>
-                  <div class="flex items-center ml-4">
-                    <input
-                      id="push-email"
-                      data-name="lady"
-                      name="sex"
-                      v-model="reForm.sex"
-                      value="女士"
-                      type="radio"
-                      class="
-                        h-4
-                        w-4
-                        border-gray-300
-                        text-green
-                        focus:ring-green focus:outline-none
-                      "
-                    />
-                    <label
-                      for="push-email"
-                      class="ml-3 block text-md font-medium text-gray-700"
-                      >女士</label
-                    >
-                  </div>
-                  <div class="flex items-center ml-4">
-                    <input
-                      id="push-nothing"
-                      data-name="miss"
-                      name="sex"
-                      v-model="reForm.sex"
-                      value="小姐"
-                      type="radio"
-                      class="
-                        h-4
-                        w-4
-                        border-gray-300
-                        text-green
-                        focus:ring-green focus:outline-none
-                      "
-                    />
-                    <label
-                      for="push-nothing"
-                      class="ml-3 block text-md font-medium text-gray-700"
-                      >小姐</label
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-span-6 sm:col-span-3">
-                <label
-                  for="email-address"
-                  class="block text-md font-medium text-gray-700"
-                  >電話號碼：</label
-                >
-                <input
-                  type="text"
-                  name="Tel"
-                  v-model="reForm.Tel"
-                  id="tel"
-                  autocomplete="off"
-                  class="
-                    h-8
-                    pl-2
-                    mt-1
-                    block
-                    w-full
-                    border-gray-300 border-1
-                    text-primary
-                    sm:text-sm
-                  "
-                />
-              </div>
-
-              <div class="col-span-6 sm:col-span-3">
-                <label
-                  for="email-address"
-                  class="block text-md font-medium text-gray-700"
-                  >電郵地址：</label
-                >
-                <input
-                  type="text"
-                  name="Email"
-                  v-model="reForm.Email"
-                  id="email-address"
-                  autocomplete="off"
-                  class="
-                    h-8
-                    pl-2
-                    mt-1
-                    block
-                    w-full
-                    border-gray-300 border-1
-                    text-primary
-                    sm:text-sm
-                  "
-                />
-              </div>
-
-              <div class="col-span-6 sm:col-span-6 form_selcet_service" style="display:none">
-                <input type="text" name="smilepartner_select" v-model="reForm.smilepartner_select">
-                
-                
-              </div>
             </div>
           </div>
-          <div class="px-4 sm:mt-12 text-center sm:px-6 mt-2">
-            <button
-              type="submit"
-              class="
-                inline-flex
-                justify-center
-                border
-                text-pink
-                py-2
-                px-30
-                text-xl
-                font-medium
-                bg-white
-                border-gray-300
-                hover:bg-pink 
-                hover:text-white
-                focus:outline-none focus:ring-2 focus:ring-offset-2
-                submitBut
-              "
-              
-              
+        </div>
+
+        <div class="orthodontic_form_background md:mb-0 mb-10" id="yyform">
+          <div class="orthodontic_form page_container py-20">
+            <p
+              class="text-center text-lg text-primary font-normal tracking-widest-2x"
             >
-              提 交
-            </button>
+              填寫你的資料，
+            </p>
+            <h4
+              class="text-center text-xl text-pink font-normal tracking-widest-2x mb-4 sm:mb-12"
+            >
+              展開專屬牙齒美容旅程！
+            </h4>
+            <iframe id="my" name="my" style="display: none"></iframe>
+            <form
+              action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm"
+              method="POST"
+              @submit="checkForm"
+              target="my"
+            >
+              <div class="overflow-hidden sm:rounded-md">
+                <div class="px-4 py-5 sm:p-6 max-w-5xl form_width">
+                  <div class="grid grid-cols-6 gap-10">
+                    <div class="col-span-6 sm:col-span-3">
+                      <label
+                        for="first-name"
+                        class="block text-md font-medium text-gray-700"
+                        >姓名：</label
+                      >
+                      <input
+                        type="text"
+                        name="smilepartner_name"
+                        v-model="reForm.smilepartnerName"
+                        id="first-name"
+                        autocomplete="off"
+                        class="h-8 pl-2 mt-1 block w-full border-gray-300 border-1 sm:text-sm text-primary"
+                      />
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label
+                        for="last-name"
+                        class="block text-md font-medium text-gray-700"
+                        >稱呼：</label
+                      >
+                      <div class="mt-2 justify-start flex">
+                        <div class="flex items-center">
+                          <input
+                            id="push-everything"
+                            data-name="man"
+                            name="sex"
+                            v-model="reForm.sex"
+                            value="先生"
+                            type="radio"
+                            class="h-4 w-4 border-gray-300 border-1 text-green focus:ring-green focus:outline-none"
+                          />
+                          <label
+                            for="push-everything"
+                            class="ml-3 block text-md font-medium text-gray-700"
+                            >先生</label
+                          >
+                        </div>
+                        <div class="flex items-center ml-4">
+                          <input
+                            id="push-email"
+                            data-name="lady"
+                            name="sex"
+                            v-model="reForm.sex"
+                            value="女士"
+                            type="radio"
+                            class="h-4 w-4 border-gray-300 text-green focus:ring-green focus:outline-none"
+                          />
+                          <label
+                            for="push-email"
+                            class="ml-3 block text-md font-medium text-gray-700"
+                            >女士</label
+                          >
+                        </div>
+                        <div class="flex items-center ml-4">
+                          <input
+                            id="push-nothing"
+                            data-name="miss"
+                            name="sex"
+                            v-model="reForm.sex"
+                            value="小姐"
+                            type="radio"
+                            class="h-4 w-4 border-gray-300 text-green focus:ring-green focus:outline-none"
+                          />
+                          <label
+                            for="push-nothing"
+                            class="ml-3 block text-md font-medium text-gray-700"
+                            >小姐</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label
+                        for="email-address"
+                        class="block text-md font-medium text-gray-700"
+                        >電話號碼：</label
+                      >
+                      <input
+                        type="text"
+                        name="Tel"
+                        v-model="reForm.Tel"
+                        id="tel"
+                        autocomplete="off"
+                        class="h-8 pl-2 mt-1 block w-full border-gray-300 border-1 text-primary sm:text-sm"
+                      />
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                      <label
+                        for="email-address"
+                        class="block text-md font-medium text-gray-700"
+                        >電郵地址：</label
+                      >
+                      <input
+                        type="text"
+                        name="Email"
+                        v-model="reForm.Email"
+                        id="email-address"
+                        autocomplete="off"
+                        class="h-8 pl-2 mt-1 block w-full border-gray-300 border-1 text-primary sm:text-sm"
+                      />
+                    </div>
+
+                    <div
+                      class="col-span-6 sm:col-span-6 form_selcet_service"
+                      style="display: none"
+                    >
+                      <input
+                        type="text"
+                        name="smilepartner_select"
+                        v-model="reForm.smilepartner_select"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 sm:mt-12 text-center sm:px-6 mt-2">
+                  <button
+                    type="submit"
+                    class="inline-flex justify-center border text-pink py-2 px-30 text-xl font-medium bg-white border-gray-300 hover:bg-pink hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 submitBut"
+                  >
+                    提 交
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      </form>
-    </div>
-  </div>
-
-
 
         <div class="orthodontic_step page_container">
-        <div class="flex_between_items_start_continue flex_between_items_start">
-          <div class="sm:w-6/13 continue_box">
-            <h4 class="py-5 text-lg font-normal">知名歐洲物料</h4>
-            <p class="text-md">
-              採用德國進口CEREC Tessera™ 物料，獲ISO優質認證。
-            </p>
+          <div
+            class="flex_between_items_start_continue flex_between_items_start"
+          >
+            <div class="sm:w-6/13 continue_box">
+              <h4 class="py-5 text-lg font-normal">知名歐洲物料</h4>
+              <p class="text-md">
+                採用德國進口CEREC Tessera™ 物料，獲ISO優質認證。
+              </p>
+            </div>
+            <div class="sm:w-6/13 img-box-step">
+              <img
+                src="https://static.cmereye.com/imgs/2022/11/a19f898f099d413d.jpg"
+                class="w-full"
+                alt=""
+              />
+            </div>
           </div>
-          <div class="sm:w-6/13 img-box-step" >
-            <img
-              src="https://static.cmereye.com/imgs/2022/11/a19f898f099d413d.jpg"
-              class="w-full"
-              alt=""
-            />
-          </div>
-        </div>
 
-        <div class="flex_between_items_start_continue flex_between_items_start">
-          <div class="sm:w-6/13 continue_box">
-            <h4 class="py-5 text-lg font-normal">多種顏色、近乎真牙般通透自然 </h4>
-            <p class="text-md">
-              我們採用的瓷貼片有多種牙齒顏色選擇，可呈現出近乎真牙般的光澤及通透度，貼合你對牙齒外觀的想像及追求。
-            </p>
+          <div
+            class="flex_between_items_start_continue flex_between_items_start"
+          >
+            <div class="sm:w-6/13 continue_box">
+              <h4 class="py-5 text-lg font-normal">
+                多種顏色、近乎真牙般通透自然
+              </h4>
+              <p class="text-md">
+                我們採用的瓷貼片有多種牙齒顏色選擇，可呈現出近乎真牙般的光澤及通透度，貼合你對牙齒外觀的想像及追求。
+              </p>
+            </div>
+            <div class="sm:w-6/13 img-box-step">
+              <img
+                src="https://static.cmereye.com/imgs/2022/11/443983d7e9d112fc.jpg"
+                class="w-full"
+                alt=""
+              />
+            </div>
           </div>
-          <div class="sm:w-6/13 img-box-step">
-            <img
-              src="https://static.cmereye.com/imgs/2022/11/443983d7e9d112fc.jpg"
-              class="w-full"
-              alt=""
-            />
-          </div>
-        </div>
 
-        <div class="flex_between_items_start_continue flex_between_items_start">
-          <div class="sm:w-6/13 continue_box">
-            <h4 class="py-5 text-lg font-normal">1.0mm堅固耐用</h4>
-            <p class="text-md pb-5 ">
-              瓷貼片堅硬度高達700 Mpa以上，媲美牙齒琺瑯質，不易斷裂，耐用度可長達10年或以上*。<br>
-            </p>
-            <p>*耐用度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。 </p>
+          <div
+            class="flex_between_items_start_continue flex_between_items_start"
+          >
+            <div class="sm:w-6/13 continue_box">
+              <h4 class="py-5 text-lg font-normal">1.0mm堅固耐用</h4>
+              <p class="text-md pb-5">
+                瓷貼片堅硬度高達700
+                Mpa以上，媲美牙齒琺瑯質，不易斷裂，耐用度可長達10年或以上*。<br />
+              </p>
+              <p>
+                *耐用度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。
+              </p>
+            </div>
+            <div class="sm:w-6/13 img-box-step">
+              <img
+                src="https://static.cmereye.com/imgs/2022/11/b1861b61ec3fe299.jpg"
+                class="w-full"
+                alt=""
+              />
+            </div>
           </div>
-          <div class="sm:w-6/13 img-box-step" >
-            <img
-              src="https://static.cmereye.com/imgs/2022/11/b1861b61ec3fe299.jpg"
-              class="w-full"
-              alt=""
-            />
-          </div>
-        </div>
 
-        <div class="flex_between_items_start_continue flex_between_items_start">
-          <div class="sm:w-6/13 continue_box">
-            <h4 class="py-5 text-lg font-normal">即日度身訂造牙貼片</h4>
-            <p class="text-md pb-5">
-              使用先進儀器，全方位掃描牙齒，並經註冊牙醫及牙科技術員討論及修改後，精準設計出切合你牙齒及需求的瓷牙貼片，最快即日*便可完成療程。<br>
-            </p>
-            <p>*療程時間需視乎你的牙齒情況；如有疑問，請向牙科醫生諮詢。</p>
+          <div
+            class="flex_between_items_start_continue flex_between_items_start"
+          >
+            <div class="sm:w-6/13 continue_box">
+              <h4 class="py-5 text-lg font-normal">即日度身訂造牙貼片</h4>
+              <p class="text-md pb-5">
+                使用先進儀器，全方位掃描牙齒，並經註冊牙醫及牙科技術員討論及修改後，精準設計出切合你牙齒及需求的瓷牙貼片，最快即日*便可完成療程。<br />
+              </p>
+              <p>*療程時間需視乎你的牙齒情況；如有疑問，請向牙科醫生諮詢。</p>
+            </div>
+            <div class="sm:w-6/13 img-box-step">
+              <img
+                src="https://static.cmereye.com/imgs/2022/11/7c4f640489024f55.jpg"
+                class="w-full"
+                alt=""
+              />
+            </div>
           </div>
-          <div class="sm:w-6/13 img-box-step">
-            <img
-              src="https://static.cmereye.com/imgs/2022/11/7c4f640489024f55.jpg"
-              class="w-full"
-              alt=""
-            />
-          </div>
-        </div>
 
-        <div class="flex_between_items_start_continue flex_between_items_start">
-          <div class="sm:w-6/13 continue_box">
-            <h4 class="py-5 text-lg font-normal">專屬微笑線設計</h4>
-            <p class="text-md">
-              運用先進技術，助牙醫為你設計出專屬的微笑曲線，展現自信笑容無難度 。 
-            </p>
+          <div
+            class="flex_between_items_start_continue flex_between_items_start"
+          >
+            <div class="sm:w-6/13 continue_box">
+              <h4 class="py-5 text-lg font-normal">專屬微笑線設計</h4>
+              <p class="text-md">
+                運用先進技術，助牙醫為你設計出專屬的微笑曲線，展現自信笑容無難度
+                。
+              </p>
+            </div>
+            <div class="sm:w-6/13 img-box-step">
+              <img
+                src="https://static.cmereye.com/imgs/2022/11/d9fc2eb4839f1fa4.jpg"
+                class="w-full"
+                alt=""
+              />
+            </div>
           </div>
-          <div class="sm:w-6/13 img-box-step">
-            <img
-              src="https://static.cmereye.com/imgs/2022/11/d9fc2eb4839f1fa4.jpg"
-              class="w-full"
-              alt=""
-            />
-          </div>
-        </div>
 
-        <!-- <div class="flex_between_items_start_continue flex_between_items_start">
+          <!-- <div class="flex_between_items_start_continue flex_between_items_start">
           <div class="sm:w-6/13 continue_box">
             <h4 class="py-5 text-lg font-normal">5年保養服務</h4>
             <p class="text-md">
@@ -679,132 +653,118 @@ const clearInfo = () =>{
             />
           </div>
         </div> -->
+        </div>
       </div>
-    </div>
-    <div class="orthodontic_condition">
-      <div class="page_container">
-        <div class="orthodontic_title text-left sm:text-center py-14">
-          <h2
-            class="
-            text-primary
-              font-normal
-              text-xl
-              md:text-2xl
-              inline-block
-              relative
-            "
-          >
-            你有以下情況嗎？
-          </h2>
-        </div>
-        <p
-          class="
-            sm:mb-12
-            mb-2
-            text-primary text-center
-            font-bold
-            text-base
-            tracking-widest-2x
-          "
-        >
-          <!-- 隱適美能伴你矯正以
-          <span class="text-2xl text-green">展露自信笑容</span> -->
-        </p>
-        <div class="orthodontic_pic_scroll pcShow">
-          <div class="orthodontic_pic grid grid-cols-4 sm:flex sm:gap-0">
-            <div class="text-center">
-              <img
-                src="https://static.cmereye.com/imgs/2022/11/76e080989686c6a3.jpg"
-                alt=""
-              />
-            </div>
-            
-            <div class="text-center">
-              <img
-                src="https://static.cmereye.com/imgs/2022/11/4a19e51e853ba665.jpg"
-                alt=""
-              />
-            </div>
-            <div class="text-center">
-              <img
-                class=""
-                src="https://static.cmereye.com/imgs/2022/11/16aeb97c17dee646.jpg"
-                alt=""
-              />
-            </div>
-            
-            <div class="text-center">
-              <img
-                class=""
-                src="https://static.cmereye.com/imgs/2022/11/7fb0c55d9630275d.jpg"
-                alt=""
-              />
-            </div>
-            <div class="text-center">
-              <img
-                class=""
-                src="https://static.cmereye.com/imgs/2022/11/5bd826a6d6bbdbe1.jpg"
-                alt=""
-              />
-            </div>
-            <div class="text-center">
-              <img
-                class=""
-                src="https://static.cmereye.com/imgs/2022/11/c2bb81bdd01c39be.jpg"
-                alt=""
-              />
-            </div>
-            
+      <div class="orthodontic_condition">
+        <div class="page_container">
+          <div class="orthodontic_title text-left sm:text-center py-14">
+            <h2
+              class="text-primary font-normal text-xl md:text-2xl inline-block relative"
+            >
+              你有以下情況嗎？
+            </h2>
           </div>
-        </div>
-        <div class="mbShow mb-20 orthodontic_swiper">
-          <div class="mt-5" >
-            <swiper 
-              ref="mySwiper" 
-              :modules="modules"
-              :options="swiperOption" 
-              :pagination="{ clickable: true }"
-              :slides-per-view="1"
-              :space-between="50"
-              navigation
-              :scrollbar="{ draggable: true }" >
-              <swiper-slide>
-                <div class="orthodontic_pic pic-one" >
-                  <div class="text-center mt-2">
-              <img
-                src="https://static.cmereye.com/imgs/2022/11/76e080989686c6a3.jpg"
-                alt=""
-              />
-            </div>
-            
-            <div class="text-center">
-              <img
-                src="https://static.cmereye.com/imgs/2022/11/4a19e51e853ba665.jpg"
-                alt=""
-              />
-            </div>
+          <p
+            class="sm:mb-12 mb-2 text-primary text-center font-bold text-base tracking-widest-2x"
+          >
+            <!-- 隱適美能伴你矯正以
+          <span class="text-2xl text-green">展露自信笑容</span> -->
+          </p>
+          <div class="orthodontic_pic_scroll pcShow">
+            <div class="orthodontic_pic grid grid-cols-4 sm:flex sm:gap-0">
+              <div class="text-center">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/76e080989686c6a3.jpg"
+                  alt=""
+                />
               </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="orthodontic_pic  pic-two" >
-                  <div class="text-center mt-2">
-                    <img
-                      class=""
-                      src="https://static.cmereye.com/imgs/2022/11/16aeb97c17dee646.jpg"
-                      alt=""
-                    />
+
+              <div class="text-center">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/4a19e51e853ba665.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="text-center">
+                <img
+                  class=""
+                  src="https://static.cmereye.com/imgs/2022/11/16aeb97c17dee646.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="text-center">
+                <img
+                  class=""
+                  src="https://static.cmereye.com/imgs/2022/11/7fb0c55d9630275d.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="text-center">
+                <img
+                  class=""
+                  src="https://static.cmereye.com/imgs/2022/11/5bd826a6d6bbdbe1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="text-center">
+                <img
+                  class=""
+                  src="https://static.cmereye.com/imgs/2022/11/c2bb81bdd01c39be.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mbShow mb-20 orthodontic_swiper">
+            <div class="mt-5">
+              <swiper
+                ref="mySwiper"
+                :modules="modules"
+                :options="swiperOption"
+                :pagination="{ clickable: true }"
+                :slides-per-view="1"
+                :space-between="50"
+                navigation
+                :scrollbar="{ draggable: true }"
+              >
+                <swiper-slide>
+                  <div class="orthodontic_pic pic-one">
+                    <div class="text-center mt-2">
+                      <img
+                        src="https://static.cmereye.com/imgs/2022/11/76e080989686c6a3.jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="text-center">
+                      <img
+                        src="https://static.cmereye.com/imgs/2022/11/4a19e51e853ba665.jpg"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                  
-                  <div class="text-center">
-                    <img
-                      class=""
-                      src="https://static.cmereye.com/imgs/2022/11/7fb0c55d9630275d.jpg"
-                      alt=""
-                    />
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="orthodontic_pic pic-two">
+                    <div class="text-center mt-2">
+                      <img
+                        class=""
+                        src="https://static.cmereye.com/imgs/2022/11/16aeb97c17dee646.jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="text-center">
+                      <img
+                        class=""
+                        src="https://static.cmereye.com/imgs/2022/11/7fb0c55d9630275d.jpg"
+                        alt=""
+                      />
+                    </div>
                   </div>
-               </div> 
-              </swiper-slide>
-              <!-- <swiper-slide>
+                </swiper-slide>
+                <!-- <swiper-slide>
                 <div class="orthodontic_pic pic-three" >
                 <div class="text-center">
                   <img
@@ -822,440 +782,436 @@ const clearInfo = () =>{
                 </div>
                 </div>
               </swiper-slide> -->
-              <swiper-slide>
-                <div class="orthodontic_pic pic-four" >
-                  <div class="text-center mt-2">
-              <img
-                class=""
-                src="https://static.cmereye.com/imgs/2022/11/5bd826a6d6bbdbe1.jpg"
-                alt=""
-              />
-            </div>
-            <div class="text-center">
-              <img
-                class=""
-                src="https://static.cmereye.com/imgs/2022/11/c2bb81bdd01c39be.jpg"
-                alt=""
-              />
-            </div>
-                </div>
-              </swiper-slide>
+                <swiper-slide>
+                  <div class="orthodontic_pic pic-four">
+                    <div class="text-center mt-2">
+                      <img
+                        class=""
+                        src="https://static.cmereye.com/imgs/2022/11/5bd826a6d6bbdbe1.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="text-center">
+                      <img
+                        class=""
+                        src="https://static.cmereye.com/imgs/2022/11/c2bb81bdd01c39be.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </swiper-slide>
 
-              <!-- <div slot="pagination" class="swiper-pagination"></div>
+                <!-- <div slot="pagination" class="swiper-pagination"></div>
               <div slot="button-prev" class="swiper-button-prev"></div>
               <div slot="button-next" class="swiper-button-next"></div> -->
-            </swiper>
+              </swiper>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="flex flex-col items-center mt-20 anli-photo" >
-      <!-- <div class=" anli-photo"> -->
-        
+      <div class="flex flex-col items-center mt-20 anli-photo">
+        <!-- <div class=" anli-photo"> -->
+
         <p
-          class="
-            sm:mb-14
-            mb-10
-            text-primary text-center
-            font-bold
-            text-base
-            tracking-widest-2x
-            text-iframe-one
-          "
+          class="sm:mb-14 mb-10 text-primary text-center font-bold text-base tracking-widest-2x text-iframe-one"
         >
           <span class="text-2xl text-green">真實個案</span>
           相片
         </p>
         <div class="flex pcShow">
-        <div class="flex px-4 anli-photo-box">
-          <img src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg" alt="" >
-          <img src="https://static.cmereye.com/imgs/2022/12/767a34c0308d030f.jpg" alt="">
+          <div class="flex px-4 anli-photo-box">
+            <img
+              src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg"
+              alt=""
+            />
+            <img
+              src="https://static.cmereye.com/imgs/2022/12/767a34c0308d030f.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex px-4 anli-photo-box">
+            <img
+              src="https://static.cmereye.com/imgs/2022/12/bfeb85198745ea3f.jpg"
+              alt=""
+            />
+            <img
+              src="https://static.cmereye.com/imgs/2022/12/9045f8172a0ed798.jpg"
+              alt=""
+            />
+          </div>
         </div>
-        <div class="flex  px-4 anli-photo-box">
-          <img src="https://static.cmereye.com/imgs/2022/12/bfeb85198745ea3f.jpg" alt="">
-          <img src="https://static.cmereye.com/imgs/2022/12/9045f8172a0ed798.jpg" alt="">
-        </div>
-      </div>
-      <div class="page_container  anli-photo">
-        <div class="mbShow orthodontic_table_swiper orthodontic_swiper_point">
-          <swiper 
-              ref="mySwiper" 
+        <div class="page_container anli-photo">
+          <div class="mbShow orthodontic_table_swiper orthodontic_swiper_point">
+            <swiper
+              ref="mySwiper"
               :modules="modules"
-              :options="swiperOptionRew" 
+              :options="swiperOptionRew"
               :pagination="{ clickable: true }"
               :slides-per-view="1"
               :space-between="0"
               navigation
-              :scrollbar="{ draggable: true }" >
-              <swiper-slide >
-                <img src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg" alt="" style="padding: 10px 20px;">
-                <img src="https://static.cmereye.com/imgs/2022/12/767a34c0308d030f.jpg" alt="" style="padding: 10px 20px;">
+              :scrollbar="{ draggable: true }"
+            >
+              <swiper-slide>
+                <img
+                  src="https://static.cmereye.com/imgs/2022/12/09a518d75b7bbcb0.jpg"
+                  alt=""
+                  style="padding: 10px 20px"
+                />
+                <img
+                  src="https://static.cmereye.com/imgs/2022/12/767a34c0308d030f.jpg"
+                  alt=""
+                  style="padding: 10px 20px"
+                />
               </swiper-slide>
               <swiper-slide>
-                <img src="https://static.cmereye.com/imgs/2022/12/bfeb85198745ea3f.jpg" alt="" style="padding: 10px 20px;">
-                <img src="https://static.cmereye.com/imgs/2022/12/9045f8172a0ed798.jpg" alt="" style="padding: 10px 20px;">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/12/bfeb85198745ea3f.jpg"
+                  alt=""
+                  style="padding: 10px 20px"
+                />
+                <img
+                  src="https://static.cmereye.com/imgs/2022/12/9045f8172a0ed798.jpg"
+                  alt=""
+                  style="padding: 10px 20px"
+                />
               </swiper-slide>
-              
-          </swiper>
-          
+            </swiper>
+          </div>
+        </div>
+
+        <!-- </div> -->
+      </div>
+
+      <div class="orthodontic_compete2 mb:pb-28">
+        <div class="page_container">
+          <div class="flex flex-col">
+            <div class="w-full compete_bac md:px-16 pcShow">
+              <div
+                class="orthodontic_title text-left sm:text-center md:mt-32 cipian_one_title my-12"
+              >
+                <h2
+                  class="text-primary font-normal text-xl md:text-2xl inline-block relative"
+                >
+                  瓷貼片過程一覽
+                </h2>
+              </div>
+              <div class="compete_one">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/12403c3c5397b595.png"
+                  alt=""
+                />
+                <p class="">
+                  醫生會先為你檢查牙齒及牙周健康，確保無口腔問題如牙周病
+                </p>
+              </div>
+              <div class="compete_two">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/fc164c87854c5a6f.png"
+                  alt=""
+                />
+                <p class="">
+                  拍攝X光片，全方位分析你的牙齒及笑容比例，了解你對療程嘅需求同期望
+                </p>
+              </div>
+              <div class="compete_three">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/b882ae46d0f992d1.png"
+                  alt=""
+                />
+                <p class="">
+                  微量修磨牙齒表面及印製牙模，以度身設計及訂製專屬瓷牙貼片
+                </p>
+              </div>
+              <div class="compete_four">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/b3524555988cee46.png"
+                  alt=""
+                />
+                <p class="">
+                  安裝瓷牙貼片，檢查貼片黏合程度及顏色，再作精準微調
+                </p>
+              </div>
+              <div class="compete_bac_box">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/3eaf3197f193a398.jpg"
+                  alt=""
+                  class="compete_bac_1"
+                />
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/369758fbdfdcdd86.png"
+                  alt=""
+                  class="compete_bac_2"
+                />
+              </div>
+            </div>
+            <div class="w-full compete_bac md:px-16 mbShow">
+              <div
+                class="orthodontic_title text-left sm:text-center md:mt-32 cipian_one_title my-12"
+              >
+                <h2
+                  class="text-primary font-normal text-xl md:text-2xl inline-block relative"
+                >
+                  瓷貼片過程一覽
+                </h2>
+              </div>
+              <div class="compete_bac_box">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/3eaf3197f193a398.jpg"
+                  alt=""
+                  class="compete_bac_1"
+                />
+                <img
+                  src="https://static.cmereye.com/imgs/2022/11/369758fbdfdcdd86.png"
+                  alt=""
+                  class="compete_bac_2"
+                />
+              </div>
+              <div class="compete_one">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/12403c3c5397b595.png"
+                  alt=""
+                />
+                <p class="">
+                  醫生會先為你檢查牙齒及牙周健康，確保無口腔問題如牙周病
+                </p>
+              </div>
+              <div class="compete_two">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/fc164c87854c5a6f.png"
+                  alt=""
+                />
+                <p class="">
+                  拍攝X光片，全方位分析你的牙齒及笑容比例，了解你對療程嘅需求同期望
+                </p>
+              </div>
+              <div class="compete_three">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/b882ae46d0f992d1.png"
+                  alt=""
+                />
+                <p class="">
+                  微量修磨牙齒表面及印製牙模，以度身設計及訂製專屬瓷牙貼片
+                </p>
+              </div>
+              <div class="compete_four">
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/b3524555988cee46.png"
+                  alt=""
+                />
+                <p class="">
+                  安裝瓷牙貼片，檢查貼片黏合程度及顏色，再作精準微調
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
 
-
-    <!-- </div> -->
-      </div>
-
-
-
-    <div class="orthodontic_compete2  mb:pb-28">
-      <div class="page_container ">
-        <div class="flex  flex-col">
-          <div class="w-full  compete_bac  md:px-16 pcShow">
-            <div
-            class="orthodontic_title text-left sm:text-center md:mt-32 cipian_one_title my-12"
+      <div class="orthodontic_compete pb-20">
+        <div class="page_container">
+          <div
+            class="orthodontic_title text-left sm:text-center my-24 mb-14 sm:my-14 md:pt-14"
           >
             <h2
-              class="
-                text-primary
-                font-normal
-                text-xl
-                md:text-2xl
-                inline-block
-                relative
-              "
+              class="text-primary font-normal text-xl md:text-2xl inline-block relative"
             >
-            瓷貼片過程一覽
+              各類牙齒美白大比拼
             </h2>
           </div>
-            <div class="compete_one"> 
-            <img src="https://static.cmereye.com/imgs/2022/10/12403c3c5397b595.png" alt="">
-            <p class="">醫生會先為你檢查牙齒及牙周健康，確保無口腔問題如牙周病</p>
-            </div>
-            <div class="compete_two"> 
-              <img src="https://static.cmereye.com/imgs/2022/10/fc164c87854c5a6f.png" alt="">
-              <p class="">拍攝X光片，全方位分析你的牙齒及笑容比例，了解你對療程嘅需求同期望</p>             
-            </div>
-            <div class="compete_three"> 
-              <img src="https://static.cmereye.com/imgs/2022/10/b882ae46d0f992d1.png" alt="">
-            <p class="">微量修磨牙齒表面及印製牙模，以度身設計及訂製專屬瓷牙貼片</p>
-            </div>
-            <div class="compete_four"> 
-              <img src="https://static.cmereye.com/imgs/2022/10/b3524555988cee46.png" alt="">
-              <p class="">安裝瓷牙貼片，檢查貼片黏合程度及顏色，再作精準微調</p>             
-            </div>
-            <div class="compete_bac_box"> 
-              <img src="https://static.cmereye.com/imgs/2022/11/3eaf3197f193a398.jpg" alt="" class="compete_bac_1">
-              <img src="https://static.cmereye.com/imgs/2022/11/369758fbdfdcdd86.png" alt="" class="compete_bac_2">
-            </div>
-            
-            
-          </div>
-          <div class="w-full  compete_bac  md:px-16 mbShow">
-            <div
-            class="orthodontic_title text-left sm:text-center md:mt-32 cipian_one_title my-12"
-          >
-            <h2
-              class="
-                text-primary
-                font-normal
-                text-xl
-                md:text-2xl
-                inline-block
-                relative
-              "
-            >
-            瓷貼片過程一覽
-            </h2>
-          </div>
-          <div class="compete_bac_box"> 
-              <img src="https://static.cmereye.com/imgs/2022/11/3eaf3197f193a398.jpg" alt="" class="compete_bac_1">
-              <img src="https://static.cmereye.com/imgs/2022/11/369758fbdfdcdd86.png" alt="" class="compete_bac_2">
-            </div>
-            <div class="compete_one"> 
-            <img src="https://static.cmereye.com/imgs/2022/10/12403c3c5397b595.png" alt="">
-            <p class="">醫生會先為你檢查牙齒及牙周健康，確保無口腔問題如牙周病</p>
-            </div>
-            <div class="compete_two"> 
-              <img src="https://static.cmereye.com/imgs/2022/10/fc164c87854c5a6f.png" alt="">
-              <p class="">拍攝X光片，全方位分析你的牙齒及笑容比例，了解你對療程嘅需求同期望</p>             
-            </div>
-            <div class="compete_three"> 
-              <img src="https://static.cmereye.com/imgs/2022/10/b882ae46d0f992d1.png" alt="">
-            <p class="">微量修磨牙齒表面及印製牙模，以度身設計及訂製專屬瓷牙貼片</p>
-            </div>
-            <div class="compete_four"> 
-              <img src="https://static.cmereye.com/imgs/2022/10/b3524555988cee46.png" alt="">
-              <p class="">安裝瓷牙貼片，檢查貼片黏合程度及顏色，再作精準微調</p>             
-            </div>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-    </div>
-    
+          <div class="orthodontic_table_scroll pcShow">
+            <div class="orthodontic_table grid grid-cols-15">
+              <div>Smile Partner全瓷貼片療程</div>
+              <div></div>
+              <div class="mx-1">免磨牙牙貼片療程</div>
+              <div>藍光牙齒美白</div>
 
+              <div>療程原理</div>
+              <div>
+                把度身訂製的瓷貼片黏附於牙齒表層，改善牙齒的形狀、長度、外觀及顏色
+              </div>
 
-    <div class="orthodontic_compete pb-20">
-      <div class="page_container">
-        <div
-          class="
-            orthodontic_title
-            text-left
-            sm:text-center
-            my-24
-            mb-14
-            sm:my-14
-            md:pt-14
-          "
-        >
-          <h2
-            class="
-              text-primary
-              font-normal
-              text-xl
-              md:text-2xl
-              inline-block
-              relative
-            "
-          >
-          各類牙齒美白大比拼
-          </h2>
-        </div>
-        <div class="orthodontic_table_scroll pcShow">
-          <div class="orthodontic_table grid grid-cols-15">
-            
-            <div>
-              Smile Partner全瓷貼片療程
-            </div>
-            <div></div>
-            <div class="mx-1">免磨牙牙貼片療程</div>
-            <div>藍光牙齒美白</div>
-            
-             
-            <div>療程原理</div>
-            <div>
-              把度身訂製的瓷貼片黏附於牙齒表層，改善牙齒的形狀、長度、外觀及顏色
-            </div>
-           
-            <div class="mx-1">把牙貼片黏附於牙齒表層，改善牙齒的形狀、長度、外觀及顏色</div>
-             <div>將專用美白溶液塗上牙齒表面，以藍光照射數次，進行氧化還原作用，達到美白牙齒的效果</div>
-            <div>磨牙程度</div>
-            <div class="mx-1">聲稱不用磨牙</div>
-            <div>
-              打磨牙齒表面最多 0.3-0.5mm^
-            </div>
-           <div>/</div>
-             <div>
-              持久度*
-            </div>
-            <div>
-              10年以上 
-            </div>
-            <div class="mx-1">大多使用樹脂貼片，一般容易染色，不太持久</div>
-            <div>可維持至少1年</div>
-            <div>
-              副作用
-            </div>
-            <div>沒有</div>
-            <div class="mx-1">安裝貼片後，有可能出現爆牙，甚至繼而導致蛀牙、貼片掉落等問題</div>
-            <div>容易形成敏感牙齒</div>
-            <!-- <div>療程後保養</div>
+              <div class="mx-1">
+                把牙貼片黏附於牙齒表層，改善牙齒的形狀、長度、外觀及顏色
+              </div>
+              <div>
+                將專用美白溶液塗上牙齒表面，以藍光照射數次，進行氧化還原作用，達到美白牙齒的效果
+              </div>
+              <div>磨牙程度</div>
+              <div class="mx-1">聲稱不用磨牙</div>
+              <div>打磨牙齒表面最多 0.3-0.5mm^</div>
+              <div>/</div>
+              <div>持久度*</div>
+              <div>10年以上</div>
+              <div class="mx-1">大多使用樹脂貼片，一般容易染色，不太持久</div>
+              <div>可維持至少1年</div>
+              <div>副作用</div>
+              <div>沒有</div>
+              <div class="mx-1">
+                安裝貼片後，有可能出現爆牙，甚至繼而導致蛀牙、貼片掉落等問題
+              </div>
+              <div>容易形成敏感牙齒</div>
+              <!-- <div>療程後保養</div>
             <div>5年</div>
             <div class="mx-1">5年</div>
             <div>沒有保養</div> -->
-    
+            </div>
+            <p class="flex justify-center mt-6">
+              ^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br />
+              *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。
+            </p>
           </div>
-          <p class="flex justify-center mt-6">^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br>
-          *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。</p>
-        </div>
-        <div class="mbShow orthodontic_table_swiper">
-          <swiper 
-              ref="mySwiper" 
+          <div class="mbShow orthodontic_table_swiper">
+            <swiper
+              ref="mySwiper"
               :modules="modules"
-              :options="tableswiperOption" 
+              :options="tableswiperOption"
               :pagination="{ clickable: true }"
               :slides-per-view="1.5"
               :space-between="100"
               navigation
-              :scrollbar="{ draggable: true }" >
+              :scrollbar="{ draggable: true }"
+            >
               <swiper-slide>
                 <div class="orthodontic_table grid grid-cols-15">
-            
-            <div>
-              Smile Partner全瓷貼片療程
-            </div>
-            <div></div>
-            <div class="">免磨牙牙貼片療程</div>
-            <div>藍光牙齒美白</div>
-            
-             
-            <div>療程原理</div>
-            <div>
-              把度身訂製的瓷貼片黏附於牙齒表層，改善牙齒的形狀、長度、外觀及顏色
-            </div>
-           
-            <div class="">把牙貼片黏附於牙齒表層，改善牙齒的形狀、長度、外觀及顏色</div>
-             <div>將專用美白溶液塗上牙齒表面，以藍光照射數次，進行氧化還原作用，達到美白牙齒的效果</div>
-            <div>磨牙程度</div>
-            <div class="">聲稱不用磨牙</div>
-            <div>
-              打磨牙齒表面最多 0.3-0.5mm^
-            </div>
-           <div>/</div>
-             <div>
-              持久度*
-            </div>
-            <div>
-              10年以上 
-            </div>
-            <div class="">大多使用樹脂貼片，一般容易染色，不太持久。</div>
-            <div>可維持至少1年</div>
-            <div>
-              副作用
-            </div>
-            <div>沒有</div>
-            <div class="">安裝貼片後，有可能出現爆牙，甚至繼而導致蛀牙、貼片掉落等問題</div>
-            <div>容易形成敏感牙齒</div>
-            <!-- <div>療程後保養</div>
+                  <div>Smile Partner全瓷貼片療程</div>
+                  <div></div>
+                  <div class="">免磨牙牙貼片療程</div>
+                  <div>藍光牙齒美白</div>
+
+                  <div>療程原理</div>
+                  <div>
+                    把度身訂製的瓷貼片黏附於牙齒表層，改善牙齒的形狀、長度、外觀及顏色
+                  </div>
+
+                  <div class="">
+                    把牙貼片黏附於牙齒表層，改善牙齒的形狀、長度、外觀及顏色
+                  </div>
+                  <div>
+                    將專用美白溶液塗上牙齒表面，以藍光照射數次，進行氧化還原作用，達到美白牙齒的效果
+                  </div>
+                  <div>磨牙程度</div>
+                  <div class="">聲稱不用磨牙</div>
+                  <div>打磨牙齒表面最多 0.3-0.5mm^</div>
+                  <div>/</div>
+                  <div>持久度*</div>
+                  <div>10年以上</div>
+                  <div class="">大多使用樹脂貼片，一般容易染色，不太持久。</div>
+                  <div>可維持至少1年</div>
+                  <div>副作用</div>
+                  <div>沒有</div>
+                  <div class="">
+                    安裝貼片後，有可能出現爆牙，甚至繼而導致蛀牙、貼片掉落等問題
+                  </div>
+                  <div>容易形成敏感牙齒</div>
+                  <!-- <div>療程後保養</div>
             <div>5年</div>
             <div class="">1年</div>
             <div>沒有保養</div> -->
-    
-          </div>
-         
+                </div>
               </swiper-slide>
-              <p class="px-2 md:px-0">^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br>
-              *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。</p>
+              <p class="px-2 md:px-0">
+                ^輕輕磨走牙齒表面，可令瓷貼片更貼合真牙<br />
+                *持久度視乎患者個別情況，如身體狀況、後續保養等；如有任何疑問，請聯絡你的牙科醫生。
+              </p>
               <swiper-slide></swiper-slide>
               <swiper-slide></swiper-slide>
-          </swiper>
-          
+            </swiper>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="orthodontic_faq pb-20">
-      <div class="page_container">
-        <div class="flex">
-          <div
-            class="orthodontic_title text-left sm:text-center sm:my-16 sm:my-28"
-          >
-            <h2
-              class="
-                text-primary
-                font-normal
-                text-xl
-                md:text-2xl
-                inline-block
-                relative
-              "
+      <div class="orthodontic_faq pb-20">
+        <div class="page_container">
+          <div class="flex">
+            <div
+              class="orthodontic_title text-left sm:text-center sm:my-16 sm:my-28"
             >
-              常見問題
-            </h2>
-          </div>
+              <h2
+                class="text-primary font-normal text-xl md:text-2xl inline-block relative"
+              >
+                常見問題
+              </h2>
+            </div>
 
-          <div class="w-full sm:px-4 pt-10 sm:pt-20">
-            <div class="mx-auto w-full rounded-2xl p-2 orthodontic_faq_list">
-              <Disclosure v-slot="{ open }">
-                <div
-                  :class="
-                    open
-                      ? 'border-t-1 border-b-1 py-6 border-pink'
-                      : 'border-t-1 border-b-1 py-6 border-primary'
-                  "
-                >
-                  <DisclosureButton
-                    class="
-                      flex
-                      w-full
-                      justify-between
-                      px-4
-                      py-2
-                      text-left text-lg
-                      font-medium
-                      focus:outline-none
+            <div class="w-full sm:px-4 pt-10 sm:pt-20">
+              <div class="mx-auto w-full rounded-2xl p-2 orthodontic_faq_list">
+                <Disclosure v-slot="{ open }">
+                  <div
+                    :class="
+                      open
+                        ? 'border-t-1 border-b-1 py-6 border-pink'
+                        : 'border-t-1 border-b-1 py-6 border-primary'
                     "
                   >
-                    <span :class="open ? 'text-pink' : 'text-primary'"
-                      >瓷貼片一般建議要做幾顆，效果才好？</span
+                    <DisclosureButton
+                      class="flex w-full justify-between px-4 py-2 text-left text-lg font-medium focus:outline-none"
                     >
-                  </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
-                    考慮到露齒笑時牙齒的協調性，多建議同時期處理約6至8顆牙齒，這樣牙齒看起來會較為和諧。
-                  </DisclosurePanel>
-                </div>
-              </Disclosure>
+                      <span :class="open ? 'text-pink' : 'text-primary'"
+                        >瓷貼片一般建議要做幾顆，效果才好？</span
+                      >
+                    </DisclosureButton>
+                    <DisclosurePanel
+                      class="px-4 pt-4 pb-2 text-md text-primary"
+                    >
+                      考慮到露齒笑時牙齒的協調性，多建議同時期處理約6至8顆牙齒，這樣牙齒看起來會較為和諧。
+                    </DisclosurePanel>
+                  </div>
+                </Disclosure>
 
-              <Disclosure v-slot="{ open }">
-                <div
-                  :class="
-                    open
-                      ? 'border-t-1 border-b-1 py-6 border-pink'
-                      : 'border-t-1 border-b-1 py-6 border-primary'
-                  "
-                >
-                  <DisclosureButton
-                    class="
-                      flex
-                      w-full
-                      justify-between
-                      px-4
-                      py-2
-                      text-left text-lg
-                      font-medium
-                      focus:outline-none
+                <Disclosure v-slot="{ open }">
+                  <div
+                    :class="
+                      open
+                        ? 'border-t-1 border-b-1 py-6 border-pink'
+                        : 'border-t-1 border-b-1 py-6 border-primary'
                     "
                   >
-                    <span :class="open ? 'text-pink' : 'text-primary'"
-                      >瓷貼片會不會引致牙齒敏感？</span
+                    <DisclosureButton
+                      class="flex w-full justify-between px-4 py-2 text-left text-lg font-medium focus:outline-none"
                     >
-                  </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
-                    牙齒敏感狀況因人而異，一般做瓷貼片後大約1至2個星期，牙齒會比較敏感，不過隨著牙齒適應貼片後，便會逐漸消失。而牙醫在開始療程前，亦會先為患者全面檢查牙齒及牙周健康，以評估是否適合做瓷貼片。
-                  </DisclosurePanel>
-                </div>
-              </Disclosure>
+                      <span :class="open ? 'text-pink' : 'text-primary'"
+                        >瓷貼片會不會引致牙齒敏感？</span
+                      >
+                    </DisclosureButton>
+                    <DisclosurePanel
+                      class="px-4 pt-4 pb-2 text-md text-primary"
+                    >
+                      牙齒敏感狀況因人而異，一般做瓷貼片後大約1至2個星期，牙齒會比較敏感，不過隨著牙齒適應貼片後，便會逐漸消失。而牙醫在開始療程前，亦會先為患者全面檢查牙齒及牙周健康，以評估是否適合做瓷貼片。
+                    </DisclosurePanel>
+                  </div>
+                </Disclosure>
 
-              <Disclosure v-slot="{ open }">
-                <div
-                  :class="
-                    open
-                      ? 'border-t-1 border-b-1 py-6 border-pink'
-                      : 'border-t-1 border-b-1 py-6 border-primary'
-                  "
-                >
-                  <DisclosureButton
-                    class="
-                      flex
-                      w-full
-                      justify-between
-                      px-4
-                      py-2
-                      text-left text-lg
-                      font-medium
-                      focus:outline-none
+                <Disclosure v-slot="{ open }">
+                  <div
+                    :class="
+                      open
+                        ? 'border-t-1 border-b-1 py-6 border-pink'
+                        : 'border-t-1 border-b-1 py-6 border-primary'
                     "
                   >
-                    <span :class="open ? 'text-pink' : 'text-primary'"
-                      >如何護理瓷貼片？</span
+                    <DisclosureButton
+                      class="flex w-full justify-between px-4 py-2 text-left text-lg font-medium focus:outline-none"
                     >
-                  </DisclosureButton>
-                  <DisclosurePanel class="px-4 pt-4 pb-2 text-md text-primary">
-                    瓷貼片耐用度高，研究指好好保養更可以有長達10年或以上壽命，其中包括：維持良好的潔齒習慣、定期覆診，避免咬太堅硬食物及太用力刷牙。
-                  </DisclosurePanel>
-                </div>
-              </Disclosure>
+                      <span :class="open ? 'text-pink' : 'text-primary'"
+                        >如何護理瓷貼片？</span
+                      >
+                    </DisclosureButton>
+                    <DisclosurePanel
+                      class="px-4 pt-4 pb-2 text-md text-primary"
+                    >
+                      瓷貼片耐用度高，研究指好好保養更可以有長達10年或以上壽命，其中包括：維持良好的潔齒習慣、定期覆診，避免咬太堅硬食物及太用力刷牙。
+                    </DisclosurePanel>
+                  </div>
+                </Disclosure>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <component :is="environmentVue"></component>
-    <!-- <div class="orthodontic_compete1 md:pb-80">
+      <component :is="environmentVue"></component>
+      <!-- <div class="orthodontic_compete1 md:pb-80">
       <div class="page_container">
         <div
           class="
@@ -1333,14 +1289,15 @@ const clearInfo = () =>{
         </div>
       </div>
     </div> -->
+    </div>
   </div>
-</div>
 </template>
-  
-  <style lang="scss" scoped>
-  .orthodontic_form_background{/* Pink Light */
-  background: #FCF4F2;
- }
+
+<style lang="scss" scoped>
+.orthodontic_form_background {
+  /* Pink Light */
+  background: #fcf4f2;
+}
 .orthodontic_faq .flex .orthodontic_title {
   width: 64px;
   margin-right: 140px;
@@ -1455,7 +1412,7 @@ const clearInfo = () =>{
 }
 .orthodontic_table > div:nth-child(6n + 7),
 .orthodontic_table > div:nth-child(7),
- .orthodontic_table > div:nth-child(8) {
+.orthodontic_table > div:nth-child(8) {
   background: rgb(238, 245, 228);
   // background: rgb(248, 228, 224);
 }
@@ -1464,7 +1421,7 @@ const clearInfo = () =>{
   background: rgb(251, 240, 238);
 }
 .orthodontic_table > div:nth-child(6n + 9) {
-    // background: rgb(238, 245, 228);
+  // background: rgb(238, 245, 228);
 }
 
 .orthodontic_table > div:nth-child(3n + 1) {
@@ -1482,13 +1439,12 @@ const clearInfo = () =>{
   grid-column: span 4 / span 4;
   background: rgb(224, 237, 206);
 }
-.orthodontic_table > div:nth-child(2), 
+.orthodontic_table > div:nth-child(2),
 .orthodontic_table > div:nth-child(5),
 .orthodontic_table > div:nth-child(9),
 .orthodontic_table > div:nth-child(13),
 .orthodontic_table > div:nth-child(17),
-.orthodontic_table > div:nth-child(21)
-{
+.orthodontic_table > div:nth-child(21) {
   grid-column: span 2 / span 2 !important;
   font-size: 18px;
   background-color: #fff;
@@ -1618,7 +1574,7 @@ const clearInfo = () =>{
 .orthodontic_pic {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
 }
 .orthodontic_pic > div {
@@ -1659,9 +1615,12 @@ const clearInfo = () =>{
 // .page_orthodontic  .flex_between_items_start .sticky_step:nth-child(2) h4::before{content: 'Step 2';}
 // .page_orthodontic  .flex_between_items_start .sticky_step:nth-child(3) h4::before{content: 'Step 3';}
 
-
-.orthodontic_compete .page_container{position: relative;}
-.orthodontic_compete2 .page_container{position: relative;}
+.orthodontic_compete .page_container {
+  position: relative;
+}
+.orthodontic_compete2 .page_container {
+  position: relative;
+}
 
 .page_orthodontic .flex_between_items_start:nth-child(1) > div h4::before {
   content: ' ';
@@ -1669,124 +1628,160 @@ const clearInfo = () =>{
 
 .page_orthodontic .flex_between_items_start:nth-child(3) > div h4::before {
   // content: 'Step 2';
-  top:8px;
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/deda966d1aaa92c1.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/deda966d1aaa92c1.png)
+    no-repeat;
 }
 .page_orthodontic .flex_between_items_start:nth-child(4) > div h4::before {
   // content: 'Step 2';
-  top:8px;
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/deda966d1aaa92c1.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/deda966d1aaa92c1.png)
+    no-repeat;
 }
-.page_orthodontic .flex_between_items_start_continue:nth-child(1) > div h4::before {
+.page_orthodontic
+  .flex_between_items_start_continue:nth-child(1)
+  > div
+  h4::before {
   // content: 'Step 3';
-  top:8px;
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/deda966d1aaa92c1.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/deda966d1aaa92c1.png)
+    no-repeat;
 }
-.page_orthodontic .flex_between_items_start_continue:nth-child(2) > div h4::before {
-  top:8px;
+.page_orthodontic
+  .flex_between_items_start_continue:nth-child(2)
+  > div
+  h4::before {
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/75d9cd0d33de2d35.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/75d9cd0d33de2d35.png)
+    no-repeat;
 }
-.page_orthodontic .flex_between_items_start_continue:nth-child(3) > div h4::before {
-  top:8px;
+.page_orthodontic
+  .flex_between_items_start_continue:nth-child(3)
+  > div
+  h4::before {
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/9fd89cf90984354a.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/9fd89cf90984354a.png)
+    no-repeat;
 }
-.page_orthodontic .flex_between_items_start_continue:nth-child(4) > div h4::before {
-  top:8px;
+.page_orthodontic
+  .flex_between_items_start_continue:nth-child(4)
+  > div
+  h4::before {
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/e43a24f5931f8d8f.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/e43a24f5931f8d8f.png)
+    no-repeat;
 }
-.page_orthodontic .flex_between_items_start_continue:nth-child(5) > div h4::before {
-  top:8px;
+.page_orthodontic
+  .flex_between_items_start_continue:nth-child(5)
+  > div
+  h4::before {
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/bcb122d078269f66.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/bcb122d078269f66.png)
+    no-repeat;
 }
-.page_orthodontic .flex_between_items_start_continue:nth-child(6) > div h4::before {
-  top:8px;
+.page_orthodontic
+  .flex_between_items_start_continue:nth-child(6)
+  > div
+  h4::before {
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/e43a24f5931f8d8f.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/e43a24f5931f8d8f.png)
+    no-repeat;
 }
-.page_orthodontic .flex_between_items_start_continue:nth-child(7) > div h4::before {
-  top:8px;
+.page_orthodontic
+  .flex_between_items_start_continue:nth-child(7)
+  > div
+  h4::before {
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/bcb122d078269f66.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/bcb122d078269f66.png)
+    no-repeat;
 }
-.page_orthodontic .flex_between_items_start_continue:nth-child(8) > div h4::before {
-  top:8px;
+.page_orthodontic
+  .flex_between_items_start_continue:nth-child(8)
+  > div
+  h4::before {
+  top: 8px;
   width: 50px;
   height: 50px;
-  background: url(https://static.cmereye.com/imgs/2022/11/5f2b9d4f44128741.png) no-repeat;
+  background: url(https://static.cmereye.com/imgs/2022/11/5f2b9d4f44128741.png)
+    no-repeat;
 }
 @media screen and(min-width:768px) {
-  .step_title{margin: 0;}
-  .anli-photo{
-    .anli-photo-box{
-      img{
+  .step_title {
+    margin: 0;
+  }
+  .anli-photo {
+    .anli-photo-box {
+      img {
         padding: 5px;
       }
     }
   }
 
   .orthodontic_pic .text-center:nth-child(1):after {
-  content: '牙齒排列不整齊';
-}
-.orthodontic_pic .text-center:nth-child(2):after {
-  content: '牙齒變色';
-}
-.orthodontic_pic .text-center:nth-child(3):after {
-  content: '牙齒出現磨損';
-}
-.orthodontic_pic .text-center:nth-child(4):after {
-  content: '牙齒縫隙過大';
-}
-.orthodontic_pic .text-center:nth-child(5):after {
-  content: '牙齒過小';
-}
-.orthodontic_pic .text-center:nth-child(6):after {
-  content: '四環素牙';
-}
-.orthodontic_pic .text-center:nth-child(7):after {
-  content: '齒列擠擁';
-}
-  .compete_bac_1{
+    content: '牙齒排列不整齊';
+  }
+  .orthodontic_pic .text-center:nth-child(2):after {
+    content: '牙齒變色';
+  }
+  .orthodontic_pic .text-center:nth-child(3):after {
+    content: '牙齒出現磨損';
+  }
+  .orthodontic_pic .text-center:nth-child(4):after {
+    content: '牙齒縫隙過大';
+  }
+  .orthodontic_pic .text-center:nth-child(5):after {
+    content: '牙齒過小';
+  }
+  .orthodontic_pic .text-center:nth-child(6):after {
+    content: '四環素牙';
+  }
+  .orthodontic_pic .text-center:nth-child(7):after {
+    content: '齒列擠擁';
+  }
+  .compete_bac_1 {
     padding-left: 192px;
     position: absolute;
   }
-  .compete_bac_2{
+  .compete_bac_2 {
     padding-top: 205px;
   }
-  .orthodontic_step{
+  .orthodontic_step {
     padding-top: 54px;
   }
-  .form_width{
-  padding: 20px 130px;
- }
-  .tab-control .active{
-    span{
-      color: #ECB3AC !important;
+  .form_width {
+    padding: 20px 130px;
+  }
+  .tab-control .active {
+    span {
+      color: #ecb3ac !important;
     }
   }
-  .tab-control{
+  .tab-control {
     display: flex;
     justify-content: center;
     padding: 40px 0;
     cursor: pointer;
-    .tab-control-item{
+    .tab-control-item {
       padding: 0 20px;
-      span{
+      span {
         font-family: 'Songti TC';
         font-style: normal;
         font-weight: 400;
@@ -1797,25 +1792,25 @@ const clearInfo = () =>{
         text-align: center;
         /* Teeth Grey */
         color: #666666;
-        border-bottom: 1px solid #ECB3AC;
+        border-bottom: 1px solid #ecb3ac;
       }
     }
   }
-  ::v-deep .swiper-button-next, .swiper-button-prev{
+  ::v-deep .swiper-button-next,
+  .swiper-button-prev {
     display: none;
   }
-    .thumb-example {
+  .thumb-example {
     height: 480px;
     background-color: #fff;
   }
-  .swiper-slide{
+  .swiper-slide {
     display: flex;
-      justify-content: center;
+    justify-content: center;
   }
   .top-swiper,
   .thumbs-swiper {
     .slide {
-
       // img {
       //   display: block;
       //   width: 100%;
@@ -1845,68 +1840,69 @@ const clearInfo = () =>{
       }
     }
   }
-    ::v-deep .swiper-pagination{
-    display:none;
+  ::v-deep .swiper-pagination {
+    display: none;
   }
-  .orthodontic_form_background{/* Pink Light */
-  background: #FCF4F2;
- }
+  .orthodontic_form_background {
+    /* Pink Light */
+    background: #fcf4f2;
+  }
   // 瓷貼片過程一覽
-  .cipian_one_title{
+  .cipian_one_title {
     display: flex;
     margin-left: 28%;
   }
-  .compete_bac .compete_bac_box{
+  .compete_bac .compete_bac_box {
     float: right;
   }
-  .compete_bac_1{
+  .compete_bac_1 {
     padding-left: 192px;
     position: absolute;
   }
-  .compete_bac_2{
+  .compete_bac_2 {
     padding-top: 205px;
   }
-  .orthodontic_compete2 .compete_one{
+  .orthodontic_compete2 .compete_one {
     position: absolute;
     width: 47%;
     margin: 19px 0 0 58px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    p{
+    p {
       /* regular font 18 */
-    font-family: 'Songti TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
 
-    /* Teeth Grey */
+      /* Teeth Grey */
 
-    color: #666666;
+      color: #666666;
     }
   }
-  .orthodontic_compete2 .compete_two{
+  .orthodontic_compete2 .compete_two {
     position: absolute;
     width: 52%;
     display: flex;
     margin-top: 161px;
     flex-direction: row-reverse;
     padding-left: 57px;
-    p{
+    p {
       /* regular font 18 */
-    font-family: 'Songti TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
 
-    /* Teeth Grey */
+      /* Teeth Grey */
 
-    color: #666666;
+      color: #666666;
     }
   }
-  .orthodontic_compete2 .compete_four{
+  .orthodontic_compete2 .compete_four {
     position: absolute;
     width: 52%;
     display: flex;
@@ -1914,45 +1910,45 @@ const clearInfo = () =>{
     flex-direction: row-reverse;
     padding-left: 57px;
     align-items: flex-end;
-    p{
+    p {
       /* regular font 18 */
-    font-family: 'Songti TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
 
-    /* Teeth Grey */
+      /* Teeth Grey */
 
-    color: #666666;
+      color: #666666;
     }
   }
-  .orthodontic_compete2 .compete_three{
+  .orthodontic_compete2 .compete_three {
     position: absolute;
     width: 42%;
     margin: 269px 0 0 96px;
     display: flex;
     align-items: flex-end;
-    p{
+    p {
       /* regular font 18 */
-    font-family: 'Songti TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
 
-    /* Teeth Grey */
+      /* Teeth Grey */
 
-    color: #666666;
+      color: #666666;
     }
   }
   // 即日特快全瓷牙貼片 顶部小圆
- .p-fast{
+  .p-fast {
     position: unset;
     left: 19%;
     height: 100px;
     width: 100px;
-    font-family: "Songti TC";
+    font-family: 'Songti TC';
     font-style: normal;
     font-weight: 500;
     font-size: 29px;
@@ -1960,45 +1956,99 @@ const clearInfo = () =>{
     display: flex;
     align-items: center;
     text-align: center;
-    color: #ECB3AC;
+    color: #ecb3ac;
     background: #fff;
     border-radius: 50%;
     justify-content: center;
     box-shadow: 0px 0px 3.36508px 3px rgba(226, 163, 156, 0.3);
- }
+  }
   .continue_box {
-    h4{
+    h4 {
       padding-left: 56px;
     }
-    p{
+    p {
       padding-left: 56px;
     }
   }
-  .orthodontic_table > div:nth-child(4n+4){grid-column: span 4/span 4;}
-  .orthodontic_table>div:nth-child(1){order: 2;}
-.orthodontic_table>div:nth-child(2){order: 1;}
-.orthodontic_table>div:nth-child(3){order: 3;}
-.orthodontic_table>div:nth-child(4){order: 4; background: #aace79;} 
-.orthodontic_table>div:nth-child(5){order: 4} 
-.orthodontic_table>div:nth-child(6){order: 6} 
-.orthodontic_table>div:nth-child(7){order: 8} 
-.orthodontic_table>div:nth-child(8){order: 8} 
-.orthodontic_table>div:nth-child(9){order: 9} 
-.orthodontic_table>div:nth-child(10){order: 11}  
-.orthodontic_table>div:nth-child(11){order: 10} 
-.orthodontic_table>div:nth-child(12){order: 12} 
-.orthodontic_table>div:nth-child(13){order: 14} 
-.orthodontic_table>div:nth-child(14){order: 14;grid-column: span 4/span 4;    background: rgb(251, 240, 238); } 
-.orthodontic_table>div:nth-child(15){order: 15;  background: rgb(238, 245, 228); } 
-.orthodontic_table>div:nth-child(16){order: 16;background: rgb(238, 245, 228);} 
-.orthodontic_table>div:nth-child(16)::before{height: 0;}
-.orthodontic_table>div:nth-child(17){order: 17} 
-.orthodontic_table>div:nth-child(18){order: 18;background: rgb(248, 228, 224); } 
-.orthodontic_table>div:nth-child(19){order: 19; background: rgb(224, 237, 206); } 
-.orthodontic_table>div:nth-child(20){order: 20;
-    background: rgb(224, 237, 206); } 
-  .orthodontic_table>div:nth-child(21){order: 21;grid-column: span 2/span 2; } 
-  .orthodontic_table>div:nth-child(21)::after{
+  .orthodontic_table > div:nth-child(4n + 4) {
+    grid-column: span 4 / span 4;
+  }
+  .orthodontic_table > div:nth-child(1) {
+    order: 2;
+  }
+  .orthodontic_table > div:nth-child(2) {
+    order: 1;
+  }
+  .orthodontic_table > div:nth-child(3) {
+    order: 3;
+  }
+  .orthodontic_table > div:nth-child(4) {
+    order: 4;
+    background: #aace79;
+  }
+  .orthodontic_table > div:nth-child(5) {
+    order: 4;
+  }
+  .orthodontic_table > div:nth-child(6) {
+    order: 6;
+  }
+  .orthodontic_table > div:nth-child(7) {
+    order: 8;
+  }
+  .orthodontic_table > div:nth-child(8) {
+    order: 8;
+  }
+  .orthodontic_table > div:nth-child(9) {
+    order: 9;
+  }
+  .orthodontic_table > div:nth-child(10) {
+    order: 11;
+  }
+  .orthodontic_table > div:nth-child(11) {
+    order: 10;
+  }
+  .orthodontic_table > div:nth-child(12) {
+    order: 12;
+  }
+  .orthodontic_table > div:nth-child(13) {
+    order: 14;
+  }
+  .orthodontic_table > div:nth-child(14) {
+    order: 14;
+    grid-column: span 4 / span 4;
+    background: rgb(251, 240, 238);
+  }
+  .orthodontic_table > div:nth-child(15) {
+    order: 15;
+    background: rgb(238, 245, 228);
+  }
+  .orthodontic_table > div:nth-child(16) {
+    order: 16;
+    background: rgb(238, 245, 228) !important;
+  }
+  .orthodontic_table > div:nth-child(16)::before {
+    height: 0;
+  }
+  .orthodontic_table > div:nth-child(17) {
+    order: 17;
+  }
+  .orthodontic_table > div:nth-child(18) {
+    order: 18;
+    background: rgb(248, 228, 224);
+  }
+  .orthodontic_table > div:nth-child(19) {
+    order: 19;
+    background: rgb(224, 237, 206);
+  }
+  .orthodontic_table > div:nth-child(20) {
+    order: 20;
+    background: rgb(224, 237, 206);
+  }
+  .orthodontic_table > div:nth-child(21) {
+    order: 21;
+    grid-column: span 2 / span 2;
+  }
+  .orthodontic_table > div:nth-child(21)::after {
     width: 95px;
     height: 1px;
     left: 0;
@@ -2007,184 +2057,245 @@ const clearInfo = () =>{
     margin: auto;
     background-color: #ecb3ac;
     position: absolute;
-    content: "";
+    content: '';
   }
-   .orthodontic_table>div:nth-child(22){order: 22;grid-column: span 4/span 4; } 
-   .orthodontic_table>div:nth-child(23){order: 23;grid-column: span 4/span 4;  background: rgb(238, 245, 228);} 
-   .orthodontic_table>div:nth-child(23)::before{
+  .orthodontic_table > div:nth-child(22) {
+    order: 22;
+    grid-column: span 4 / span 4;
+  }
+  .orthodontic_table > div:nth-child(23) {
+    order: 23;
+    grid-column: span 4 / span 4;
+    background: rgb(238, 245, 228);
+  }
+  .orthodontic_table > div:nth-child(23)::before {
     height: 0;
-   }
-   .orthodontic_table>div:nth-child(24){order: 24;grid-column: span 5/span 5;  background: rgb(238, 245, 228);} 
-    .page_body_header{background-image: url(https://static.cmereye.com/imgs/2022/11/de166a90eedeb7fd.jpg);background-size: 100% auto;background-repeat: no-repeat;background-position: top;background-attachment: fixed;
- width:100%; }
-  .page_body_header_banner{background-image: url(https://static.cmereye.com/imgs/2022/11/8b566367bafbbf32.png);background-repeat: no-repeat;background-position: top;background-attachment: fixed;
- width:100%; 
-  .page_body_header_fixed{ padding: 70px 130px;position: fixed;width: 100%;height:35vw;top: 0;left: 0;right: 0;margin: auto;}
-  .head_booking{font-family: 'Songti TC';}
-  .head_banner_text{position: relative; z-index: -5; width: 50%; float: right; height: 87%; justify-self: center; display: flex; justify-content: flex-end; align-items: center;position: absolute;right: 0;top:0;
-   .head_banner_text_p{position: absolute;z-index: -20; left: 0; max-width: 720px;font-family: 'Songti TC'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 35px; /* or 194% */ color: #666666;margin-top: -100px;}
   }
-}
+  .orthodontic_table > div:nth-child(24) {
+    order: 24;
+    grid-column: span 5 / span 5;
+    background: rgb(238, 245, 228);
+  }
+  .page_body_header {
+    background-image: url(https://static.cmereye.com/imgs/2022/11/de166a90eedeb7fd.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    width: 100%;
+  }
+  .page_body_header_banner {
+    background-image: url(https://static.cmereye.com/imgs/2022/11/8b566367bafbbf32.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    width: 100%;
+    .page_body_header_fixed {
+      padding: 70px 130px;
+      position: fixed;
+      width: 100%;
+      height: 35vw;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .head_booking {
+      font-family: 'Songti TC';
+    }
+    .head_banner_text {
+      position: relative;
+      z-index: -5;
+      width: 50%;
+      float: right;
+      height: 87%;
+      justify-self: center;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      .head_banner_text_p {
+        position: absolute;
+        z-index: -20;
+        left: 0;
+        max-width: 720px;
+        font-family: 'Songti TC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 35px; /* or 194% */
+        color: #666666;
+        margin-top: -100px;
+      }
+    }
+  }
 }
 @media screen and(max-width:768px) {
-  
-  .orthodontic_table_swiper{
-    .swiper{
+  .orthodontic_table_swiper {
+    .swiper {
       padding-bottom: 33px;
     }
   }
-  .anli-photo{
-
-    .swiper-slide{
+  .anli-photo {
+    .swiper-slide {
       display: flex;
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-    .swiper{
+    .swiper {
       height: 141vw;
     }
-    ::v-deep .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    ::v-deep .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
       bottom: 9px !important;
     }
-     .page_container::before{
+    .page_container::before {
       bottom: -19px !important;
     }
   }
   .anli-photo::before {
-      position: absolute;
-      content: "";
-      width: 12.5vw;
-      height: 6.7vw;
-      background-image: url(https://img.cmereye.com/i/2022/09/27/6332b6a7ada01.png);
-      bottom: -29px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      animation: translateX 1s ease-in-out alternate infinite;
+    position: absolute;
+    content: '';
+    width: 12.5vw;
+    height: 6.7vw;
+    background-image: url(https://img.cmereye.com/i/2022/09/27/6332b6a7ada01.png);
+    bottom: -29px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: translateX 1s ease-in-out alternate infinite;
   }
-
 
   // .swiper-backface-hidden .swiper-slide{
   //   display: flex;
   //  flex-direction: column;
   //   align-items: center;
   // }
-  .orthodontic_step{
-    .flex_between_items_start{
-    // align-items: flex-end !important;
-    .img-box-step{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .w-full{
-      width: 86% !important;
-    }
-  }
-  }
-  .orthodontic_compete2 .page_container{position: relative;}
-  .compete_bac_box{position: relative;}
-  .compete_bac_1{position: absolute;
-    width: 76%;
-    right: 0;}
-    .compete_bac_2{width: 76%;
-    padding-top: 40vw;}
-  .orthodontic_compete2 .compete_one{
-    display: flex;
-    align-items: flex-end;
-    padding: 14px 0;
-    p{
-      /* regular font 18 */
-    font-family: 'Songti TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-
-    /* Teeth Grey */
-
-    color: #666666;
-    }
-  }
-  .orthodontic_compete2 .compete_two{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    padding: 14px 0;
-    p{
-      /* regular font 18 */
-    font-family: 'Songti TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-
-    /* Teeth Grey */
-
-    color: #666666;
-    }
-  }
-  .orthodontic_compete2 .compete_four{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    padding: 14px 0;
-    p{
-      /* regular font 18 */
-    font-family: 'Songti TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-
-    /* Teeth Grey */
-
-    color: #666666;
-    }
-  }
-  .orthodontic_compete2 .compete_three{
-    display: flex;
-    align-items: flex-end;
-    padding: 14px 0;
-    p{
-      /* regular font 18 */
-    font-family: 'Songti TC';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-
-    /* Teeth Grey */
-
-    color: #666666;
-    }
-  }
-
-    .slide {
-
-      img {
- 
-        width: 100%;
-        height: 100%;
-        
+  .orthodontic_step {
+    .flex_between_items_start {
+      // align-items: flex-end !important;
+      .img-box-step {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .w-full {
+        width: 86% !important;
       }
     }
-  
-  .tab-control .active{
-    span{
-      color: #ECB3AC !important;
+  }
+  .orthodontic_compete2 .page_container {
+    position: relative;
+  }
+  .compete_bac_box {
+    position: relative;
+  }
+  .compete_bac_1 {
+    position: absolute;
+    width: 76%;
+    right: 0;
+  }
+  .compete_bac_2 {
+    width: 76%;
+    padding-top: 40vw;
+  }
+  .orthodontic_compete2 .compete_one {
+    display: flex;
+    align-items: flex-end;
+    padding: 14px 0;
+    p {
+      /* regular font 18 */
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+
+      /* Teeth Grey */
+
+      color: #666666;
     }
   }
-  .tab-control{
+  .orthodontic_compete2 .compete_two {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 14px 0;
+    p {
+      /* regular font 18 */
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+
+      /* Teeth Grey */
+
+      color: #666666;
+    }
+  }
+  .orthodontic_compete2 .compete_four {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 14px 0;
+    p {
+      /* regular font 18 */
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+
+      /* Teeth Grey */
+
+      color: #666666;
+    }
+  }
+  .orthodontic_compete2 .compete_three {
+    display: flex;
+    align-items: flex-end;
+    padding: 14px 0;
+    p {
+      /* regular font 18 */
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+
+      /* Teeth Grey */
+
+      color: #666666;
+    }
+  }
+
+  .slide {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .tab-control .active {
+    span {
+      color: #ecb3ac !important;
+    }
+  }
+  .tab-control {
     display: flex;
     justify-content: center;
     padding: 12px 0;
     cursor: pointer;
-    .tab-control-item{
+    .tab-control-item {
       padding: 0 20px;
-      span{
+      span {
         font-family: 'Songti TC';
         font-style: normal;
         font-weight: 400;
@@ -2195,23 +2306,23 @@ const clearInfo = () =>{
         text-align: center;
         /* Teeth Grey */
         color: #666666;
-        border-bottom: 1px solid #ECB3AC;
+        border-bottom: 1px solid #ecb3ac;
       }
     }
   }
   ::v-deep .swiper-button-prev:after {
     display: none;
   }
-  
-  ::v-deep .swiper-button-next:after{
+
+  ::v-deep .swiper-button-next:after {
     display: none;
   }
-  .page_body_header_banner .head_banner_text .p-fast{
+  .page_body_header_banner .head_banner_text .p-fast {
     position: unset;
     left: 19%;
     height: 17vw;
     width: 17vw;
-    font-family: "Songti TC";
+    font-family: 'Songti TC';
     font-style: normal;
     font-weight: 900;
     font-size: 16px;
@@ -2219,26 +2330,26 @@ const clearInfo = () =>{
     display: flex;
     align-items: center;
     text-align: center;
-    color: #ECB3AC;
+    color: #ecb3ac;
     background: #fff;
     border-radius: 50%;
     justify-content: center;
     box-shadow: 0px 0px 3.36508px 3px rgb(226 163 156 / 30%);
- }
-  .orthodontic_box img{
+  }
+  .orthodontic_box img {
     max-width: 20vw;
   }
-  .orthodontic_title .six_pro::after{
+  .orthodontic_title .six_pro::after {
     position: absolute;
     left: -40px;
     right: 0;
     top: 76px;
     width: 90vw;
-    content: "";
+    content: '';
     height: 1px;
     background: #666666;
   }
-  .orthodontic_box > div{
+  .orthodontic_box > div {
     width: calc((100% - 0px) / 2);
     margin-bottom: 2vw;
     display: flex;
@@ -2246,68 +2357,124 @@ const clearInfo = () =>{
     width: auto;
   }
   .continue_box {
-    h4{
+    h4 {
       padding-left: 13vw;
     }
-    p{
+    p {
       padding-left: 13vw;
     }
   }
-  .page_body_header_banne{
+  .page_body_header_banne {
     padding-bottom: 96px;
   }
-  .orthodontic_title{
+  .orthodontic_title {
     padding-left: 12vw;
     text-align: inherit;
 
-    h2{
+    h2 {
       padding-left: 0vw;
-
     }
   }
-  .orthodontic_step .flex_between_items_start div{
-    padding-left: 0 ;
+  .orthodontic_step .flex_between_items_start div {
+    padding-left: 0;
   }
-  .orthodontic_compete .swiper-slide{padding-bottom: 28px;}
-  .orthodontic_table{padding-bottom: 0 !important;}
-  .orthodontic_table > div:nth-child(4n+4){grid-column: span 4/span 4;}
-  .orthodontic_table>div:nth-child(1){order: 2;}
-.orthodontic_table>div:nth-child(2){order: 1;}
-.orthodontic_table>div:nth-child(3){order: 3;}
-.orthodontic_table>div:nth-child(4){order: 4; background: #aace79;} 
-.orthodontic_table>div:nth-child(5){order: 4} 
-.orthodontic_table>div:nth-child(6){order: 6} 
-.orthodontic_table>div:nth-child(7){order: 8} 
-.orthodontic_table>div:nth-child(8){order: 8} 
-.orthodontic_table>div:nth-child(9){order: 9} 
-.orthodontic_table>div:nth-child(10){order: 11}  
-.orthodontic_table>div:nth-child(11){order: 10} 
-.orthodontic_table>div:nth-child(12){order: 12} 
-.orthodontic_table>div:nth-child(13){order: 14} 
-.orthodontic_table>div:nth-child(14){order: 14;grid-column: span 4/span 4;    background: rgb(251, 240, 238); } 
-.orthodontic_table>div:nth-child(15){order: 15;  background: rgb(238, 245, 228); } 
-.orthodontic_table>div:nth-child(16){order: 16;background: rgb(238, 245, 228);} 
-.orthodontic_table>div:nth-child(16)::before{height: 0;}
-.orthodontic_table>div:nth-child(17){order: 17} 
-.orthodontic_table>div:nth-child(18){order: 18;background: rgb(248, 228, 224); } 
-.orthodontic_table>div:nth-child(19){order: 19; background: rgb(224, 237, 206); } 
-.orthodontic_table>div:nth-child(20){order: 20;
-    background: rgb(224, 237, 206); } 
-  .orthodontic_table>div:nth-child(21){order: 21;grid-column: span 2/span 2; } 
-  .orthodontic_table > div:nth-child(2), 
-.orthodontic_table > div:nth-child(5),
-.orthodontic_table > div:nth-child(9),
-.orthodontic_table > div:nth-child(13),
-.orthodontic_table > div:nth-child(17),
-.orthodontic_table > div:nth-child(21)
-{
-  grid-column: span 2 / span 2 !important;
-  font-size: 16px;
-  background-color: #fff;
-  padding: 0;
-  padding-left: 20px;
-}
-  .orthodontic_table>div:nth-child(21)::after{
+  .orthodontic_compete .swiper-slide {
+    padding-bottom: 28px;
+  }
+  .orthodontic_table {
+    padding-bottom: 0 !important;
+  }
+  .orthodontic_table > div:nth-child(4n + 4) {
+    grid-column: span 4 / span 4;
+  }
+  .orthodontic_table > div:nth-child(1) {
+    order: 2;
+  }
+  .orthodontic_table > div:nth-child(2) {
+    order: 1;
+  }
+  .orthodontic_table > div:nth-child(3) {
+    order: 3;
+  }
+  .orthodontic_table > div:nth-child(4) {
+    order: 4;
+    background: #aace79;
+  }
+  .orthodontic_table > div:nth-child(5) {
+    order: 4;
+  }
+  .orthodontic_table > div:nth-child(6) {
+    order: 6;
+  }
+  .orthodontic_table > div:nth-child(7) {
+    order: 8;
+  }
+  .orthodontic_table > div:nth-child(8) {
+    order: 8;
+  }
+  .orthodontic_table > div:nth-child(9) {
+    order: 9;
+  }
+  .orthodontic_table > div:nth-child(10) {
+    order: 11;
+  }
+  .orthodontic_table > div:nth-child(11) {
+    order: 10;
+  }
+  .orthodontic_table > div:nth-child(12) {
+    order: 12;
+  }
+  .orthodontic_table > div:nth-child(13) {
+    order: 14;
+  }
+  .orthodontic_table > div:nth-child(14) {
+    order: 14;
+    grid-column: span 4 / span 4;
+    background: rgb(251, 240, 238);
+  }
+  .orthodontic_table > div:nth-child(15) {
+    order: 15;
+    background: rgb(238, 245, 228);
+  }
+  .orthodontic_table > div:nth-child(16) {
+    order: 16;
+    background: rgb(238, 245, 228);
+  }
+  .orthodontic_table > div:nth-child(16)::before {
+    height: 0;
+  }
+  .orthodontic_table > div:nth-child(17) {
+    order: 17;
+  }
+  .orthodontic_table > div:nth-child(18) {
+    order: 18;
+    background: rgb(248, 228, 224);
+  }
+  .orthodontic_table > div:nth-child(19) {
+    order: 19;
+    background: rgb(224, 237, 206);
+  }
+  .orthodontic_table > div:nth-child(20) {
+    order: 20;
+    background: rgb(224, 237, 206);
+  }
+  .orthodontic_table > div:nth-child(21) {
+    order: 21;
+    grid-column: span 2 / span 2;
+  }
+  .orthodontic_table > div:nth-child(2),
+  .orthodontic_table > div:nth-child(5),
+  .orthodontic_table > div:nth-child(9),
+  .orthodontic_table > div:nth-child(13),
+  .orthodontic_table > div:nth-child(17),
+  .orthodontic_table > div:nth-child(21) {
+    grid-column: span 2 / span 2 !important;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 0;
+    padding-left: 20px;
+  }
+  .orthodontic_table > div:nth-child(21)::after {
     width: 95px;
     height: 1px;
     left: 0;
@@ -2316,236 +2483,276 @@ const clearInfo = () =>{
     margin: auto;
     background-color: #ecb3ac;
     position: absolute;
-    content: "";
+    content: '';
   }
-   .orthodontic_table>div:nth-child(22){order: 22;grid-column: span 4/span 4; } 
-   .orthodontic_table>div:nth-child(23){order: 23;grid-column: span 4/span 4;  background: rgb(238, 245, 228);} 
-   .orthodontic_table>div:nth-child(23)::before{
+  .orthodontic_table > div:nth-child(22) {
+    order: 22;
+    grid-column: span 4 / span 4;
+  }
+  .orthodontic_table > div:nth-child(23) {
+    order: 23;
+    grid-column: span 4 / span 4;
+    background: rgb(238, 245, 228);
+  }
+  .orthodontic_table > div:nth-child(23)::before {
     height: 0;
-   }
-   .orthodontic_table>div:nth-child(24){order: 24;grid-column: span 5/span 5;  background: rgb(238, 245, 228);} 
+  }
+  .orthodontic_table > div:nth-child(24) {
+    order: 24;
+    grid-column: span 5 / span 5;
+    background: rgb(238, 245, 228);
+  }
 
-  .page_body_header_banner .head_banner_text{display: flex;  justify-content: center;}
-    .page_body_header_banner{    padding-bottom: 280px;}
-
+  .page_body_header_banner .head_banner_text {
+    display: flex;
+    justify-content: center;
+  }
+  .page_body_header_banner {
+    padding-bottom: 280px;
+  }
 
   .orthodontic_table {
     width: 220vw;
-  margin: auto;
-}
-.orthodontic_swiper{
-  ::v-deep .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,29px);
-    
-}
-::v-deep .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,15px));
-    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,15px));
-    display: inline-block;
-    border-radius: 50%;
-    background: #F6D9D6;
-    opacity: var(--swiper-pagination-bullet-opacity, 1);
-
-     
-}
-::v-deep .swiper-pagination-bullet:after{
-  content: "";
-    display: inline-block;
-    position: relative;
-    top: -8px;
-    left: 14px;
-    width: 60px;
-    height: 2px;
-    background-color: #ECB3AC;
-    
-}
-::v-deep .swiper-pagination-bullet:nth-child(3)::after{
-  height: 0px;
-}
-::v-deep .swiper-pagination-bullet-active{
-  opacity: var(--swiper-pagination-bullet-opacity, 1);
-  background: #ECB3AC !important;
-}
-}
-.orthodontic_swiper_point{
-
-::v-deep .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
-  bottom: -5px;
-  left: 4px;
-  width: 100%;
-  // top: 161vw;
-}
-
-::v-deep .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap,29px);
-  
-}
-::v-deep .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
-  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
-  display: inline-block;
-  border-radius: 50%;
-  background: #EEF5E4;
-  opacity: var(--swiper-pagination-bullet-opacity, 1);
-
-   
-}
-::v-deep .swiper-pagination-bullet:after{
-content: "";
-  display: inline-block;
-  position: relative;
-  top: -11px;
-  left: 8px;
-  width: 60px;
-  height: 2px;
-  background-color: #AACE79;
-  
-}
-::v-deep .swiper-pagination-bullet:nth-child(2)::after{
-height: 0px;
-}
-::v-deep .swiper-pagination-bullet-active{
-opacity: var(--swiper-pagination-bullet-opacity, 1);
-background: #AACE79 !important;
-}
-}
-.orthodontic_table_swiper{
-
-  ::v-deep .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
-    bottom: -5px;
-    left: 4px;
-    width: 100%;
-    // top: 161vw;
+    margin: auto;
   }
+  .orthodontic_swiper {
+    ::v-deep
+      .swiper-horizontal
+      > .swiper-pagination-bullets
+      .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+      .swiper-pagination-bullet {
+      margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 29px);
+    }
+    ::v-deep .swiper-pagination-bullet {
+      width: var(
+        --swiper-pagination-bullet-width,
+        var(--swiper-pagination-bullet-size, 15px)
+      );
+      height: var(
+        --swiper-pagination-bullet-height,
+        var(--swiper-pagination-bullet-size, 15px)
+      );
+      display: inline-block;
+      border-radius: 50%;
+      background: #f6d9d6;
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+    }
+    ::v-deep .swiper-pagination-bullet:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      top: -8px;
+      left: 14px;
+      width: 60px;
+      height: 2px;
+      background-color: #ecb3ac;
+    }
+    ::v-deep .swiper-pagination-bullet:nth-child(3)::after {
+      height: 0px;
+    }
+    ::v-deep .swiper-pagination-bullet-active {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: #ecb3ac !important;
+    }
+  }
+  .orthodontic_swiper_point {
+    ::v-deep .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: -5px;
+      left: 4px;
+      width: 100%;
+      // top: 161vw;
+    }
 
-  ::v-deep .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,29px);
-    
-}
-::v-deep .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
-    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
-    display: inline-block;
-    border-radius: 50%;
-    background: #EEF5E4;
-    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    ::v-deep
+      .swiper-horizontal
+      > .swiper-pagination-bullets
+      .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+      .swiper-pagination-bullet {
+      margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 29px);
+    }
+    ::v-deep .swiper-pagination-bullet {
+      width: var(
+        --swiper-pagination-bullet-width,
+        var(--swiper-pagination-bullet-size, 10px)
+      );
+      height: var(
+        --swiper-pagination-bullet-height,
+        var(--swiper-pagination-bullet-size, 10px)
+      );
+      display: inline-block;
+      border-radius: 50%;
+      background: #eef5e4;
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+    }
+    ::v-deep .swiper-pagination-bullet:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      top: -11px;
+      left: 8px;
+      width: 60px;
+      height: 2px;
+      background-color: #aace79;
+    }
+    ::v-deep .swiper-pagination-bullet:nth-child(2)::after {
+      height: 0px;
+    }
+    ::v-deep .swiper-pagination-bullet-active {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: #aace79 !important;
+    }
+  }
+  .orthodontic_table_swiper {
+    ::v-deep .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: -5px;
+      left: 4px;
+      width: 100%;
+      // top: 161vw;
+    }
 
-     
-}
-::v-deep .swiper-pagination-bullet:after{
-  content: "";
-    display: inline-block;
-    position: relative;
-    top: -11px;
-    left: 8px;
-    width: 60px;
-    height: 2px;
-    background-color: #AACE79;
-    
-}
-::v-deep .swiper-pagination-bullet:nth-child(3)::after{
-  height: 0px;
-}
-::v-deep .swiper-pagination-bullet-active{
-  opacity: var(--swiper-pagination-bullet-opacity, 1);
-  background: #AACE79 !important;
-}
-}
-@tailwind base
+    ::v-deep
+      .swiper-horizontal
+      > .swiper-pagination-bullets
+      .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+      .swiper-pagination-bullet {
+      margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 29px);
+    }
+    ::v-deep .swiper-pagination-bullet {
+      width: var(
+        --swiper-pagination-bullet-width,
+        var(--swiper-pagination-bullet-size, 10px)
+      );
+      height: var(
+        --swiper-pagination-bullet-height,
+        var(--swiper-pagination-bullet-size, 10px)
+      );
+      display: inline-block;
+      border-radius: 50%;
+      background: #eef5e4;
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+    }
+    ::v-deep .swiper-pagination-bullet:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      top: -11px;
+      left: 8px;
+      width: 60px;
+      height: 2px;
+      background-color: #aace79;
+    }
+    ::v-deep .swiper-pagination-bullet:nth-child(3)::after {
+      height: 0px;
+    }
+    ::v-deep .swiper-pagination-bullet-active {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: #aace79 !important;
+    }
+  }
+  @tailwind base
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-// tailwind
-@layer base {
+  @tailwind components;
+  @tailwind utilities;
+  // tailwind
+  @layer base {
+    .orthodontic_pic .text-center {
+      @apply transition duration-500  ease-in-out transform  hover:scale-105;
+    }
+  }
+
   .orthodontic_pic .text-center {
-    @apply transition duration-500  ease-in-out transform  hover:scale-105;
+    position: relative;
+  }
+  .orthodontic_pic .text-center::before {
+    position: absolute;
+    content: '';
+    width: 165px;
+    height: 55px;
+    background-color: #ecb3ac;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -10px;
+    -webkit-clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      55% 75%,
+      50% 100%,
+      45% 76%,
+      0% 75%
+    );
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      55% 75%,
+      50% 100%,
+      45% 75%,
+      0% 75%
+    );
+  }
+  .orthodontic_pic .text-center::after {
+    position: absolute;
+    color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 99;
+  }
+  .pic-one .text-center:nth-child(1):after {
+    content: '牙齒排列不整齊';
+  }
+  .pic-one .text-center:nth-child(2):after {
+    content: '牙齒變色';
+  }
+  .pic-two .text-center:nth-child(1):after {
+    content: '牙齒出現磨損';
+  }
+  .pic-two .text-center:nth-child(2):after {
+    content: '牙齒縫隙過大';
+  }
+  .pic-three .text-center:nth-child(1):after {
+    content: '四環素牙';
+  }
+  .pic-three .text-center:nth-child(2):after {
+    content: '齒列擠擁';
+  }
+  .pic-four .text-center:nth-child(1):after {
+    content: '牙齒過小';
+  }
+  .pic-four .text-center:nth-child(2):after {
+    content: '四環素牙';
+  }
+  .orthodontic_pic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .orthodontic_pic > div {
+    width: calc((100% - 0px) / 3);
+    margin-bottom: 70px;
+  }
+  .orthodontic_pic > div img {
+    margin: auto;
   }
 }
-
-.orthodontic_pic .text-center {
-  position: relative;
-}
-.orthodontic_pic .text-center::before {
-  position: absolute;
-  content: '';
-  width: 165px;
-  height: 55px;
-  background-color: #ecb3ac;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: -10px;
-  -webkit-clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 75%,
-    55% 75%,
-    50% 100%,
-    45% 76%,
-    0% 75%
-  );
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 75%,
-    55% 75%,
-    50% 100%,
-    45% 75%,
-    0% 75%
-  );
-}
-.orthodontic_pic .text-center::after {
-  position: absolute;
-  color: #fff;
-  top: 0px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 99;
-}
-.pic-one .text-center:nth-child(1):after {
-  content: '牙齒排列不整齊';
-}
-.pic-one .text-center:nth-child(2):after {
-  content: '牙齒變色';
-}
-.pic-two .text-center:nth-child(1):after {
-  content: '牙齒出現磨損';
-}
-.pic-two .text-center:nth-child(2):after {
-  content: '牙齒縫隙過大';
-}
-.pic-three  .text-center:nth-child(1):after {
-  content: '四環素牙';
-}
-.pic-three  .text-center:nth-child(2):after {
-  content: '齒列擠擁';
-}
-.pic-four .text-center:nth-child(1):after {
-  content: '牙齒過小';
-}
-.pic-four .text-center:nth-child(2):after {
-  content: '四環素牙';
-}
-.orthodontic_pic {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-.orthodontic_pic > div {
-  width: calc((100% - 0px) / 3);
-  margin-bottom: 70px;
-}
-.orthodontic_pic > div img {
-  margin: auto;
-}
-}
-@media (min-width:1400px) and (max-width:1600px) {
-  .page_body_header_banner{
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .page_body_header_banner {
     background-size: 100% !important;
   }
-  .page_body_header_banner .head_banner_text{
+  .page_body_header_banner .head_banner_text {
     z-index: -5;
     width: 50%;
     float: right;
@@ -2557,74 +2764,71 @@ background: #AACE79 !important;
     position: absolute;
     right: 117px;
     top: 87px;
-
   }
-//   .header:after{
-//     content: "";
-//     background-image: url(https://img.cmereye.com/i/2022/09/26/63314f0598440.png);
-//     background-repeat: repeat-x;
-//     background-position: center 20px;
-//     height: 96px;
-//     width: 100%;
-//     position: absolute;
-//     z-index: -11;
-//     left: 0px;
-//     bottom: 0px;
-//     animation-name: wave1;
-//     animation-duration: 20s;
-//     animation-timing-function: linear;
-//     animation-iteration-count: infinite;
-//     -webkit-animation-name: wave1;
-//     -webkit-animation-duration: 20s;
-//     -webkit-animation-timing-function: linear;
-//     -webkit-animation-iteration-count: infinite;
-//   }
-//   .header:before {
-//     content: "";
-//     background-image: url(https://img.cmereye.com/i/2022/09/26/63314ea491c4a.png);
-//     background-repeat: repeat-x;
-//     background-position: center 20px;
-//     height: 96px;
-//     width: 100%;
-//     position: absolute;
-//     z-index: -12;
-//     left: 0px;
-//     bottom: 0px;
-//     animation-name: wave2;
-//     animation-duration: 20s;
-//     animation-timing-function: linear;
-//     animation-iteration-count: infinite;
-//     -webkit-animation-name: wave2;
-//     -webkit-animation-duration: 20s;
-//     -webkit-animation-timing-function: linear;
-//     -webkit-animation-iteration-count: infinite;
-// }
+  //   .header:after{
+  //     content: "";
+  //     background-image: url(https://img.cmereye.com/i/2022/09/26/63314f0598440.png);
+  //     background-repeat: repeat-x;
+  //     background-position: center 20px;
+  //     height: 96px;
+  //     width: 100%;
+  //     position: absolute;
+  //     z-index: -11;
+  //     left: 0px;
+  //     bottom: 0px;
+  //     animation-name: wave1;
+  //     animation-duration: 20s;
+  //     animation-timing-function: linear;
+  //     animation-iteration-count: infinite;
+  //     -webkit-animation-name: wave1;
+  //     -webkit-animation-duration: 20s;
+  //     -webkit-animation-timing-function: linear;
+  //     -webkit-animation-iteration-count: infinite;
+  //   }
+  //   .header:before {
+  //     content: "";
+  //     background-image: url(https://img.cmereye.com/i/2022/09/26/63314ea491c4a.png);
+  //     background-repeat: repeat-x;
+  //     background-position: center 20px;
+  //     height: 96px;
+  //     width: 100%;
+  //     position: absolute;
+  //     z-index: -12;
+  //     left: 0px;
+  //     bottom: 0px;
+  //     animation-name: wave2;
+  //     animation-duration: 20s;
+  //     animation-timing-function: linear;
+  //     animation-iteration-count: infinite;
+  //     -webkit-animation-name: wave2;
+  //     -webkit-animation-duration: 20s;
+  //     -webkit-animation-timing-function: linear;
+  //     -webkit-animation-iteration-count: infinite;
+  // }
 }
-@media  only screen and (max-width: 1440px) and (min-width: 800px) {
-  .page_body_header_banner{
+@media only screen and (max-width: 1440px) and (min-width: 800px) {
+  .page_body_header_banner {
     background-size: 78% !important;
   }
-  .page_body_header_banner .head_banner_text{
+  .page_body_header_banner .head_banner_text {
     right: 166px !important;
     height: 75% !important;
     width: 39% !important;
   }
-  .page_body_header_banner .head_banner_text .head_banner_text_p{
+  .page_body_header_banner .head_banner_text .head_banner_text_p {
     font-size: 14px;
   }
-  .page_body_header_banner .head_banner_text .head_banner_text_p p{
+  .page_body_header_banner .head_banner_text .head_banner_text_p p {
     padding: 0 !important;
   }
-  .head_banner_img img{
+  .head_banner_img img {
     max-width: 55% !important;
   }
-  .p-fast{
+  .p-fast {
     height: 86px !important;
     width: 86px !important;
     font-size: 23px !important;
     line-height: 29px !important;
-
   }
 }
 </style>
-  

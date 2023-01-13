@@ -6,12 +6,13 @@ components:
     change_theme: 主題更換
 pages:
   index:
-    title: cmer []nuxt 3[]中港組
-    description: 這是一個模板簡介
+    nav: 主頁
+    title: 主頁
+    description: 這是一個主頁簡介
   404:
     title: 頁面丟失
   about:
-    nav: 關於我們
+    nav: 品牌理念
     title: 模板簡介
     description: 這是一個模板簡介
   treatment:
@@ -19,31 +20,48 @@ pages:
     title: 單頁模板
     description: 這是一個單頁模板
     just_blank_page_with_title: 這是一個單頁模板ma ?
-  invisalign:
-    nav: 隱適美矯齒
-    title: 隱形牙箍矯齒
-    description: 這是一個隱適美矯齒簡介
     submenu:
       nav1:
-       nav: 隱適美
-       title: 隱適美
-       description: 這是一個隱適美簡介
+        nav: 學生
+        title: 學生
+        description: 這是一個學生簡介
       nav2:
-       nav: 隱適美‧易
-       title: 隱適美
-       description: 這是一個隱適美簡介
+        nav: 職場人士
+        title: 職場人士
+        description: 這是一個職場人士簡介
       nav3:
-       nav: 隱適美兒童專線
-       title: 隱適美
-       description: 這是一個隱適美簡介
+        nav: 準新人
+        title: 準新人
+        description: 這是一個準新人簡介
+      nav4:
+        nav: 父母
+        title: 父母
+        description: 這是一個父母簡介
+  invisalign:
+    nav: 隱形牙箍
+    title: 隱形牙箍
+    description: 這是一個隱隱形牙箍簡介
+    submenu:
+      nav1:
+        nav: 隱形牙箍全方位矯齒
+        title: 隱形牙箍全方位矯齒
+        description: 這是一個隱形牙箍全方位矯齒簡介
+      nav2:
+        nav: 隱形牙箍簡易版
+        title: 隱形牙箍簡易版
+        description: 這是一個隱形牙箍簡易版 簡介
+      nav3:
+        nav: 隱形牙箍兒童專線
+        title: 隱形牙箍兒童專線
+        description: 這是一個隱形牙箍兒童專線簡介
   teeth_whitening:
     nav: 牙齒美白
-    title: 模板簡介
-    description: 這是一個模板簡介
+    title: 牙齒美白
+    description: 這是一個牙齒美白簡介
   porcelain_tiles:
-    nav: 瓷貼片
+    nav: 即日瓷貼片
     title: 即日瓷貼片
-    description: 這是一個瓷貼片簡介
+    description: 這是一個即日瓷貼片簡介
   case:
     nav: 個案分享
     title: 隱形牙箍兒童專線
@@ -58,9 +76,9 @@ pages:
     description: 這是一個模板簡介
   contact:
     nav: 聯絡我們
-    title: 模板簡介
-    description: 這是一個模板簡介
-    
+    title: 聯絡我們
+    description: 這是一個聯絡我們簡介
+
   test:
     nav: 內容模塊
     title: 內容模塊
@@ -78,7 +96,7 @@ pages:
   setting:
     nav: 頁面設置
     title: 設置
-    description: 這是一個頁面設置模板 
+    description: 這是一個頁面設置模板
     sections:
       validate_username:
         title: validate github profile
@@ -113,6 +131,7 @@ banners:
   invisalign_desc: 婚禮上助你展露幸福燦爛笑容，留下與她或他最美的回憶！隱形牙箍全方位矯齒療程，可滿足你一般至複雜的牙齒矯正追求，讓我們伴你展開微笑矯齒之旅！
   main_desc_one: 微笑生活有你
   main_desc_two: 希瑪微笑矯齒
+  teeth_whitening: 不想再被牙黃問題困擾？我們提供藍光美白、激光美白、診所美白，以至家居美白套裝等服務，全程由註冊牙醫主理，為你度身設計高效又安全嘅牙齒美白服務，讓你能展現嶄新亮白自信笑容。
   porcelain_desc: 全瓷牙貼片，是許多明星藝人與KOL首選，一種精準快捷的牙齒美容秘密武器，能一次過滿足你對牙齒美白、形狀，甚至微型矯正的追求。還在猶疑？我們助你了解更多！
 others:
   learn_more: 了解更多

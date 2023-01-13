@@ -11,13 +11,11 @@ const showOptions = useState<boolean>('navbar.showOptions', () => false)
 let timer: NodeJS.Timer
 onMounted(() => {
   if (!navbar.value) return
-  const offsetTop = navbar.value.offsetTop
-  
+
   // scroll
-  const { onScroll } = useSticky(navbar.value , offsetTop)
-  console.log(navbar.value);
-  
-  
+  const { onScroll } = useSticky(navbar.value, 1000)
+  console.log(onScroll)
+
   setTimeout(() => onScroll(), 50)
 
   // on show on mobile
@@ -48,21 +46,19 @@ const toggleOptions = (show?: boolean) => {
     showOptions.value = show
   } else {
     showOptions.value = !showOptions.value
-  } 
+  }
 }
 </script>
 
 <template>
   <div
     ref="navbar"
-    class="header ease-in-out backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50   dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-slate-900/[0.5]"
+    class="header ease-in-out backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50 dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-slate-900/[0.5]"
   >
-  <div class="page_container items-center sm:hidden"><div class="items-center mx-4 lg:mx-0"><div class="relative flex items-center"><div class="head_banner_text_p"><div class="head_banner_img"><img class="m-auto" src="https://static.cmereye.com/imgs/2022/11/7447887ded65164a.png" alt="" srcset=""></div></div></div></div></div>
-  
     <div class="page_container">
-      <!-- <div class="py-3   mx-4 lg:mx-0">
+      <div class="py-3 mx-4 lg:mx-0">
         <div class="relative flex items-center">
-
+          <!-- drawer:toggle -->
           <div
             v-if="$slots['drawer']"
             class="lg:hidden flex items-center self-center justify-center mr-2"
@@ -80,29 +76,39 @@ const toggleOptions = (show?: boolean) => {
                 <IconUil:times v-else />
               </span>
             </button>
-          </div> -->
-     
+          </div>
+          <!-- title -->
           <slot name="title">
-
             <NuxtLink
               tag="a"
-              class="head_logo mr-3 flex-none overflow-hidden md:w-auto text-md font-bold text-gray-900 dark:text-gray-200 pcShow"
-              
+              class="head_logo mr-3 flex-none overflow-hidden md:w-auto text-md font-bold text-gray-900 dark:text-gray-200"
+              :to="{ name: 'index' }"
             >
-
-            <img src="https://static.cmereye.com/imgs/2022/11/90ac07fbab954283.png" alt="" srcset="">
+              <img
+                src="https://static.cmereye.com/imgs/2022/11/90ac07fbab954283.png"
+                alt=""
+                srcset="
+                  https://static.cmereye.com/static/lkximg/smilepartner/log.svg 400w,
+                  https://static.cmereye.com/static/lkximg/smilepartner/log.svg 640w,
+                  https://static.cmereye.com/imgs/2022/11/90ac07fbab954283.png
+                "
+              />
               <span class="sr-only">home</span>
-              <!-- <span class="flex items-center text-left md:text-center  justify-center">
-              {{app.name}} <br> {{app.cn_name}}
+              <!-- <span
+                class="flex items-center text-left md:text-center justify-center"
+                style="color: #666"
+              >
+                {{ app.name }} <br />
+                {{ app.cn_name }}
               </span> -->
             </NuxtLink>
           </slot>
-  
-          <!-- <slot name="menu" />
-
+          <!-- menu -->
+          <slot name="menu" />
+          <!-- options:toggle -->
           <div
             v-if="$slots['options']"
-            class="flex-1 flex justify-end lg:hidden"
+            class="flex-1 flex justify-end lg:hidden z-999"
           >
             <button
               class="flex items-center focus:outline-none"
@@ -114,28 +120,30 @@ const toggleOptions = (show?: boolean) => {
                 aria-hidden="true"
                 v-if="showOptions === false"
               >
-          
-                <img src="https://static.cmereye.com/imgs/2022/10/78fc638be0111d35.png" alt="">
+                <!-- <icon-fa-solid:ellipsis-v /> -->
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/78fc638be0111d35.png"
+                  alt=""
+                />
               </span>
               <span
                 class="flex items-center text-gray-600 dark:text-gray-300 text-sm"
                 aria-hidden="true"
                 v-else
               >
-             
-                <img src="https://static.cmereye.com/imgs/2022/10/80601e47a9b8dd5f.png" alt="">
+                <!-- <icon-fa-solid:ellipsis-v /> -->
+                <img
+                  src="https://static.cmereye.com/imgs/2022/10/80601e47a9b8dd5f.png"
+                  alt=""
+                />
               </span>
             </button>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
-
-
-
     <ClientOnly>
       <Teleport to="#app-after">
-        <!-- drawer -->
         <Transition name="slide-fade-from-up" mode="out-in">
           <div
             v-if="showDrawer && $slots['drawer']"
@@ -147,7 +155,6 @@ const toggleOptions = (show?: boolean) => {
           </div>
         </Transition>
 
-        <!-- options -->
         <div v-if="showOptions && $slots['options']">
           <slot
             name="options"
@@ -177,11 +184,18 @@ a.router-link-active {
   font-weight: 400;
 }
 a.router-link-exact-active {
-  color: #AACE79;
+  color: #aace79;
 }
 html.dark {
   a.router-link-exact-active {
     color: theme('colors.white');
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .head_logo img {
+    width: 182px;
+    max-width: 182px;
   }
 }
 </style>

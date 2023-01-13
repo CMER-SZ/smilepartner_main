@@ -11,6 +11,10 @@ const props = defineProps({
   },
   href: {
     type: String,
+    default: '/',
+  },
+  navType: {
+    type: String,
     default: '',
   },
 })
@@ -29,6 +33,14 @@ const to = toRef(props, 'to')
   >
     <slot>{{ text }}</slot>
   </NuxtLink>
+  <a
+    v-else-if="navType === 'fatnav'"
+    :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
+    href="#"
+    onclick="return false"
+  >
+    <slot>{{ text }}</slot>
+  </a>
   <a
     v-else
     :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
