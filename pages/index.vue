@@ -66,7 +66,8 @@ definePageMeta({
   layout: 'page',
 })
 useHead(() => ({
-  title: capitalize(t('pages.index.title')),
+  // title: capitalize(t('pages.index.title')),
+  title: '希瑪微笑矯齒 | 提供各種牙齒美容服務',
   meta: [
     {
       name: 'description',

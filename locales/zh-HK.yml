@@ -7,7 +7,7 @@ components:
 pages:
   index:
     nav: 主頁
-    title: 主頁
+    title: 希瑪微笑矯齒
     description: 這是一個主頁簡介
   404:
     title: 頁面丟失

@@ -3,7 +3,6 @@ import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
-
 declare module '@nuxt/schema' {
   interface NuxtConfig {
     intlify?: IntlifyModuleOptions
@@ -13,7 +12,7 @@ declare module '@nuxt/schema' {
 export default defineNuxtConfig({
   // server side rendering mode
   ssr: true,
-  
+
   // app
   app: {
     head: {
@@ -28,8 +27,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'facebook-domain-verification',
-          content:
-            '7wgcbipiimb8dvy12hml8jne6l9ytx',
+          content: '7wgcbipiimb8dvy12hml8jne6l9ytx',
         },
         {
           hid: 'description',
@@ -40,15 +38,16 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
       noscript: [
         // <noscript>Javascript is required</noscript>
-        { children: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59MMG6F"
+        {
+          children: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59MMG6F"
         height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-        body:true
-       }
+          body: true,
+        },
       ],
       script: [
         {
-          async: "async",
-          src:'https://www.googletagmanager.com/gtag/js?id=G-2G80LM1R8F'
+          async: 'async',
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-2G80LM1R8F',
         },
         {
           children: `
@@ -74,7 +73,7 @@ export default defineNuxtConfig({
           `,
           type: 'text/javascript',
         },
-      ]
+      ],
     },
   },
   // css
@@ -87,7 +86,7 @@ export default defineNuxtConfig({
   ],
 
   // plugins
-  plugins: ['~/plugins/navbar.ts',],
+  plugins: ['~/plugins/navbar.ts'],
 
   // build
   build: {
@@ -125,7 +124,6 @@ export default defineNuxtConfig({
           }),
         ],
       }),
-      
     ],
   },
 
@@ -168,4 +166,3 @@ export default defineNuxtConfig({
     },
   },
 })
-
