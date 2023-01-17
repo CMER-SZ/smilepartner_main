@@ -124,12 +124,12 @@ const meunClick = (i: number) => {
                 v-if="item.type === 'link'"
                 :to="item.route ? item.route : undefined"
                 :href="item.href ? item.href : undefined"
-                class="hover:no-underline text-lg font-normal text-primary hover:text-green hover:dark:text-green capitalize fater-li"
+                class="menu hover:no-underline text-lg font-normal text-primary hover:text-green hover:dark:text-green capitalize fater-li"
                 >{{ item.text }}
               </Anchor>
               <Anchor
                 v-else-if="item.type === 'fatnav'"
-                class="hover:no-underline text-lg font-normal text-primary hover:text-green hover:dark:text-green capitalize fater-li"
+                class="menu hover:no-underline text-lg font-normal text-primary hover:text-green hover:dark:text-green capitalize fater-li"
                 :navType="item.type"
                 :href="undefined"
               >
@@ -138,14 +138,16 @@ const meunClick = (i: number) => {
               <div class="itemMenu">
                 <ul>
                   <li
-                    class="hover:no-underline text-lg font-normal text-primary hover:text-green hover:dark:text-green capitalize"
+                    class="menu hover:no-underline text-lg font-normal text-primary hover:text-green hover:dark:text-green capitalize"
                     style="white-space: pre"
                     v-for="(items, j) in item.submenu"
                     :key="j"
                   >
-                    <NuxtLink :to="items.route ? items.route : undefined">{{
-                      items.text
-                    }}</NuxtLink>
+                    <NuxtLink
+                      :to="items.route ? items.route : undefined"
+                      class="menu"
+                      >{{ items.text }}</NuxtLink
+                    >
                   </li>
                 </ul>
               </div>
@@ -194,12 +196,12 @@ const meunClick = (i: number) => {
                   v-if="item.type === 'link'"
                   :to="item.route ? item.route : undefined"
                   :href="item.href ? item.href : undefined"
-                  class="flex-1 hover:no-underline capitalize"
+                  class="flex-1 hover:no-underline capitalize menu"
                   >{{ item.text }}
                 </Anchor>
                 <Anchor
                   v-else-if="item.type === 'fatnav'"
-                  class="hover:no-underline text-lg font-normal text-primary hover:text-green hover:dark:text-green capitalize fater-li"
+                  class="hover:no-underline text-lg font-normal text-primary hover:text-green hover:dark:text-green capitalize fater-li menu"
                   :navType="item.type"
                   :href="undefined"
                 >
@@ -212,9 +214,11 @@ const meunClick = (i: number) => {
                       v-for="(items, j) in item.submenu"
                       :key="j"
                     >
-                      <NuxtLink :to="items.route ? items.route : undefined">{{
-                        items.text
-                      }}</NuxtLink>
+                      <NuxtLink
+                        :to="items.route ? items.route : undefined"
+                        class="menu"
+                        >{{ items.text }}</NuxtLink
+                      >
                     </li>
                   </ul>
                 </div>
