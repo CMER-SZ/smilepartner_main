@@ -554,7 +554,9 @@ const checkForm = (e) => {
                       class="flex w-full justify-between px-4 py-2 text-left text-lg font-medium focus:outline-none"
                     >
                       <nuxt-link to="/clear-aligners"
-                        ><span :class="open ? 'text-pink' : 'text-primary'"
+                        ><span
+                          :class="open ? 'text-pink' : 'text-primary'"
+                          class="serve"
                           >隱形牙箍全方位矯齒</span
                         ></nuxt-link
                       >
@@ -573,7 +575,9 @@ const checkForm = (e) => {
                       class="flex w-full justify-between px-4 py-2 text-left text-lg font-medium focus:outline-none"
                     >
                       <nuxt-link to="/clear-aligners-lite"
-                        ><span :class="open ? 'text-pink' : 'text-primary'"
+                        ><span
+                          :class="open ? 'text-pink' : 'text-primary'"
+                          class="serve"
                           >隱形牙箍簡易版</span
                         ></nuxt-link
                       >
@@ -593,7 +597,9 @@ const checkForm = (e) => {
                       class="flex w-full justify-between px-4 py-2 text-left text-lg font-medium focus:outline-none"
                     >
                       <nuxt-link to="/clear-aligners-child"
-                        ><span :class="open ? 'text-pink' : 'text-primary'"
+                        ><span
+                          :class="open ? 'text-pink' : 'text-primary'"
+                          class="serve"
                           >隱形牙箍兒童專線</span
                         ></nuxt-link
                       >
@@ -612,7 +618,9 @@ const checkForm = (e) => {
                       class="flex w-full justify-between px-4 py-2 text-left text-lg font-medium focus:outline-none"
                     >
                       <nuxt-link to="/veneer"
-                        ><span :class="open ? 'text-pink' : 'text-primary'"
+                        ><span
+                          :class="open ? 'text-pink' : 'text-primary'"
+                          class="serve"
                           >即日瓷貼片</span
                         ></nuxt-link
                       >
@@ -631,7 +639,9 @@ const checkForm = (e) => {
                       class="flex w-full justify-between px-4 py-2 text-left text-lg font-medium focus:outline-none"
                     >
                       <nuxt-link to="/teeth-whitening"
-                        ><span :class="open ? 'text-pink' : 'text-primary'"
+                        ><span
+                          :class="open ? 'text-pink' : 'text-primary'"
+                          class="serve"
                           >牙齒美白<br />激光、藍光、診所美白、家居牙齒美白套裝</span
                         ></nuxt-link
                       >
