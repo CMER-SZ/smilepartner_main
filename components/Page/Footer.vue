@@ -127,7 +127,7 @@ const setTop = () => {
         <div class="flex justify-center text-center px-3">
           <NuxtLink href="/"
             ><p
-              class="text-white md:mt-4 sm:mt-0 md:text-xl sm:text-lg text-lg"
+              class="text-white md:mt-4 sm:mt-0 md:text-xl sm:text-lg text-lg footer"
             >
               主頁
             </p></NuxtLink
@@ -136,7 +136,7 @@ const setTop = () => {
         <div class="flex justify-center text-center px-3">
           <NuxtLink to="/clear-aligners"
             ><p
-              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg"
+              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg footer"
             >
               隱形牙箍全方位矯齒
             </p></NuxtLink
@@ -145,7 +145,7 @@ const setTop = () => {
         <div class="flex justify-center text-center px-3">
           <NuxtLink to="/clear-aligners-lite"
             ><p
-              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg"
+              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg footer"
             >
               隱形牙箍簡易版
             </p></NuxtLink
@@ -154,7 +154,7 @@ const setTop = () => {
         <div class="flex justify-center text-center px-3">
           <NuxtLink to="/clear-aligners-child"
             ><p
-              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg"
+              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg footer"
             >
               隱形牙箍兒童專線
             </p></NuxtLink
@@ -163,7 +163,7 @@ const setTop = () => {
         <div class="flex justify-center text-center px-3">
           <NuxtLink to="/veneer"
             ><p
-              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg"
+              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg footer"
             >
               即日瓷貼片
             </p></NuxtLink
@@ -172,7 +172,7 @@ const setTop = () => {
         <div class="flex justify-center text-center px-3">
           <NuxtLink to="/teeth-whitening"
             ><p
-              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg"
+              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg footer"
             >
               牙齒美白
             </p></NuxtLink
@@ -181,7 +181,7 @@ const setTop = () => {
         <div class="flex justify-center text-center px-3">
           <NuxtLink to="/contact-us"
             ><p
-              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg"
+              class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg footer"
             >
               聯絡我們
             </p></NuxtLink
@@ -205,6 +205,7 @@ const setTop = () => {
             href="https://www.facebook.com/smilepartner.cmer/?ref=page_internal-"
             target="_blank"
             rel="noopener noreferrer"
+            class="footer-face"
             ><img
               class="mx-3"
               src="https://img.cmereye.com/i/2022/09/27/FB.svg"
@@ -215,6 +216,7 @@ const setTop = () => {
             href="https://www.instagram.com/cmersmilepartner/"
             target="_blank"
             rel="noopener noreferrer"
+            class="footer-IG"
           >
             <img
               class="mx-3"
@@ -226,6 +228,7 @@ const setTop = () => {
             href="https://www.youtube.com/@smilepartner_hk"
             target="_blank"
             rel="noopener noreferrer"
+            class="footer-YT"
           >
             <img
               class="mx-3"
@@ -235,7 +238,7 @@ const setTop = () => {
           /></a>
         </div>
         <div class="foot_logo_xima">
-          <NuxtLink href="https://cmermedical.com/">
+          <NuxtLink href="https://cmermedical.com/" class="foot_xima">
             <img
               src="https://static.cmereye.com/imgs/2022/12/8ba2b5c7d916332f.png"
               alt=""
@@ -282,21 +285,35 @@ const setTop = () => {
             class="flex flex-col md:flex-row space-x-2 items-center md:float-right"
           >
             <span class="text-center md:text-right flex md:ml-32 md:mr-72">
-              <a href="http://" target="_blank" rel="noopener noreferrer"
+              <a
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-face"
                 ><img
                   class="mr-4"
                   src="https://img.cmereye.com/i/2022/09/27/FB.svg"
                   alt=""
                   srcset=""
               /></a>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+              <a
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-IG"
+              >
                 <img
                   class="mr-4"
                   src="https://img.cmereye.com/i/2022/09/27/IG.svg"
                   alt=""
                   srcset=""
               /></a>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+              <a
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-YT"
+              >
                 <img
                   src="https://img.cmereye.com/i/2022/09/27/YT.svg"
                   alt=""
