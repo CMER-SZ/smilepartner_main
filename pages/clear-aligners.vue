@@ -148,7 +148,7 @@ const clearInfo = () => {
               <a
                 href="https://api.whatsapp.com/send?phone=85295128192"
                 target="_blank"
-                class="text-pink text-center flex items-center md:flex-col flex-col justify-center mb-4"
+                class="text-pink text-center flex items-center md:flex-col flex-col justify-center mb-4 more-liao"
               >
                 <img
                   src="https://static.cmereye.com/imgs/2022/12/d1e933d739057daa.png"
