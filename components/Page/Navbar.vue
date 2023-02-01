@@ -14,33 +14,37 @@ const app = useState<IApp>('app')
 const menus = computed((): any[] => [
   { type: 'link', text: t('pages.index.nav'), route: '/' },
   // { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
-  // {
-  //   type: 'fatnav',
-  //   text: t('pages.treatment.nav'),
-  //   // route: { name: 'treatment' },
-  //   submenu: [
-  //     {
-  //       type: 'link',
-  //       text: t('pages.treatment.submenu.nav1.nav'),
-  //       route: { name: 'invisalign' },
-  //     },
-  //     {
-  //       type: 'link',
-  //       text: t('pages.treatment.submenu.nav2.nav'),
-  //       route: { name: 'invisalign' },
-  //     },
-  //     {
-  //       type: 'link',
-  //       text: t('pages.treatment.submenu.nav3.nav'),
-  //       route: { name: 'invisalign' },
-  //     },
-  //     {
-  //       type: 'link',
-  //       text: t('pages.treatment.submenu.nav4.nav'),
-  //       route: { name: 'invisalign' },
-  //     },
-  //   ],
-  // },
+  {
+    type: 'fatnav',
+    text: t('pages.treatment.nav'),
+    // route: { name: 'treatment' },
+    submenu: [
+      {
+        type: 'link',
+        text: t('pages.treatment.submenu.nav1.nav'),
+        route: { name: 'the-best-for-you' },
+        params: '#student',
+      },
+      {
+        type: 'link',
+        text: t('pages.treatment.submenu.nav2.nav'),
+        route: { name: 'the-best-for-you' },
+        params: '#work',
+      },
+      {
+        type: 'link',
+        text: t('pages.treatment.submenu.nav3.nav'),
+        route: { name: 'the-best-for-you', params: '#new' },
+        params: '#new',
+      },
+      {
+        type: 'link',
+        text: t('pages.treatment.submenu.nav4.nav'),
+        route: { name: 'the-best-for-you', params: '#parent' },
+        params: '#parent',
+      },
+    ],
+  },
   {
     type: 'fatnav',
     text: t('pages.invisalign.nav'),
@@ -80,7 +84,15 @@ const menus = computed((): any[] => [
 ])
 
 const data = reactive({ isShow: 0 })
-
+const meunChildClick = (params: string) => {
+  const result = window.location.href
+  // console.log('res====', result.indexOf('treatment'))
+  if (result.indexOf('the-best-for-you') > -1) {
+    if (params) {
+      window.location.hash = params
+    }
+  }
+}
 const meunClick = (i: number) => {
   if (i === 1) {
     if (data.isShow === 1) {
@@ -88,6 +100,14 @@ const meunClick = (i: number) => {
     } else {
       data.isShow = 1
     }
+  } else if (i === 2) {
+    if (data.isShow === 2) {
+      data.isShow = 0
+    } else {
+      data.isShow = 2
+    }
+  } else {
+    data.isShow = 0
   }
 }
 </script>
@@ -144,8 +164,12 @@ const meunClick = (i: number) => {
                     :key="j"
                   >
                     <NuxtLink
-                      :to="items.route ? items.route : undefined"
-                      class="menu"
+                      @click="meunChildClick(items.params)"
+                      :to="
+                        items.params
+                          ? items.route.name + items?.params
+                          : items.route.name
+                      "
                       >{{ items.text }}</NuxtLink
                     >
                   </li>
@@ -190,7 +214,7 @@ const meunClick = (i: number) => {
                 :key="i"
                 class="flex pb-2 mb-2 border-b border-gray-900/10"
                 @click="meunClick(i)"
-                :class="[i === 1 ? 'clickSan' : '']"
+                :class="[i === 1 || i === 2 ? 'clickSan' : '']"
               >
                 <Anchor
                   v-if="item.type === 'link'"
@@ -215,8 +239,12 @@ const meunClick = (i: number) => {
                       :key="j"
                     >
                       <NuxtLink
-                        :to="items.route ? items.route : undefined"
-                        class="menu"
+                        @click="meunChildClick(items.params)"
+                        :to="
+                          items.params
+                            ? items.route.name + items?.params
+                            : items.route.name
+                        "
                         >{{ items.text }}</NuxtLink
                       >
                     </li>
