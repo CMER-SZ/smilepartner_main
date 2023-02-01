@@ -29,13 +29,16 @@ const menus = computed((): any[] => [
         type: 'link',
         text: t('pages.treatment.submenu.nav2.nav'),
         route: { name: 'the-best-for-you' },
-        params: '#work',
+        params: '#office-worker',
       },
       {
         type: 'link',
         text: t('pages.treatment.submenu.nav3.nav'),
-        route: { name: 'the-best-for-you', params: '#new' },
-        params: '#new',
+        route: {
+          name: 'the-best-for-you',
+          params: '#the-engaged-and-newly-weds',
+        },
+        params: '#the-engaged-and-newly-weds',
       },
       {
         type: 'link',

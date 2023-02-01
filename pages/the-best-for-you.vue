@@ -38,10 +38,10 @@ function GetRequest() {
     console.log('========document', document.getElementById('student'))
     document.getElementById('student')?.scrollIntoView(true)
     // document.getElementById('student').scrollIntoView(true)
-  } else if (result === 'work') {
-    document.getElementById('work')?.scrollIntoView(true)
-  } else if (result === 'new') {
-    document.getElementById('new')?.scrollIntoView(true)
+  } else if (result === 'office-worker') {
+    document.getElementById('office-worker')?.scrollIntoView(true)
+  } else if (result === 'the-engaged-and-newly-weds') {
+    document.getElementById('the-engaged-and-newly-weds')?.scrollIntoView(true)
   } else if (result === 'parent') {
     document.getElementById('parent')?.scrollIntoView(true)
   }
@@ -274,7 +274,7 @@ const clearInfo = () => {
             </a>
           </div>
           <div class="type_box">
-            <a href="#work">
+            <a href="#office-worker">
               <img
                 src="https://static.cmereye.com/imgs/2023/01/d2be299e4dd6d2bf.png"
                 alt=""
@@ -285,7 +285,7 @@ const clearInfo = () => {
             </a>
           </div>
           <div class="type_box">
-            <a href="#new">
+            <a href="#the-engaged-and-newly-weds">
               <img
                 src="https://static.cmereye.com/static/lkximg/smilepartner/clear03.avif"
                 alt=""
@@ -337,7 +337,7 @@ const clearInfo = () => {
               </swiper-slide>
               <swiper-slide>
                 <div class="type_box">
-                  <a href="#work">
+                  <a href="#office-worker">
                     <img
                       src="https://static.cmereye.com/imgs/2023/01/d2be299e4dd6d2bf.png"
                       alt=""
@@ -351,7 +351,7 @@ const clearInfo = () => {
               </swiper-slide>
               <swiper-slide>
                 <div class="type_box">
-                  <a href="#new">
+                  <a href="#the-engaged-and-newly-weds">
                     <img
                       src="https://static.cmereye.com/static/lkximg/smilepartner/clear03.avif"
                       alt=""
@@ -458,7 +458,7 @@ const clearInfo = () => {
               </div>
             </div>
           </div>
-          <div class="page_container" id="work">
+          <div class="page_container" id="office-worker">
             <div class="orthodontic_title mb-20 z-10 md:mt-28">
               <h2
                 class="text-primary font-normal text-xl md:text-2xl inline-block relative"
@@ -552,7 +552,7 @@ const clearInfo = () => {
             </div>
           </div>
 
-          <div class="page_container" id="new">
+          <div class="page_container" id="the-engaged-and-newly-weds">
             <div class="orthodontic_title mb-20 z-10 mt-28">
               <h2
                 class="text-primary font-normal text-xl md:text-2xl inline-block relative"
