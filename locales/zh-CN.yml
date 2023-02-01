@@ -7,7 +7,7 @@ components:
 pages:
   index:
     nav: 主頁
-    title: 主頁
+    title: 希瑪微笑矯齒
     description: 這是一個主頁簡介
   404:
     title: 頁面丟失
@@ -15,11 +15,12 @@ pages:
     nav: 品牌理念
     title: 模板簡介
     description: 這是一個模板簡介
+
   treatment:
     nav: 切合你生活的療程
-    title: 單頁模板
-    description: 這是一個單頁模板
-    just_blank_page_with_title: 這是一個單頁模板ma ?
+    title: 切合你生活的療程
+    description: 這是一個切合你生活的療程页面
+    just_blank_page_with_title: 這是一個切合你生活的療程
     submenu:
       nav1:
         nav: 學生

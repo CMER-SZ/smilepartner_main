@@ -111,11 +111,11 @@ definePageMeta({
   layout: 'page',
 })
 useHead(() => ({
-  title: capitalize(t('pages.contact.title')),
+  title: capitalize(t('pages.treatment.title')),
   meta: [
     {
       name: 'description',
-      content: t('pages.contact.description'),
+      content: t('pages.treatment.description'),
     },
   ],
 }))
