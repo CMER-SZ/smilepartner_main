@@ -401,19 +401,19 @@ const meunClick = (i: number) => {
       padding-top: 10px;
     }
   }
-  // .header nav li:nth-child(4) .fater-li::after {
-  //   content: '';
-  //   width: 0px;
-  //   height: 0px;
-  //   border-top: 8px solid #ecb3ac;
-  //   border-left: 6px solid transparent;
-  //   border-right: 6px solid transparent;
-  //   position: absolute !important;
-  //   margin: auto;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: -13px;
-  // }
+  .header nav li:nth-child(3) .fater-li::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid #ecb3ac;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute !important;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -13px;
+  }
   .header nav li:nth-child(2) .fater-li::after {
     content: '';
     width: 0px;
