@@ -446,7 +446,7 @@ const clearInfo = () => {
             <div class="work_z_person_box work_z_person_box_mb">
               <div class="work_z_person">
                 <img
-                  src="https://static.cmereye.com/static/lkximg/smilepartner/work_z_person.avif"
+                  src="https://static.cmereye.com/static/lkximg/cmerdental_backup/Mask%20group%20(1).avif"
                   alt=""
                 />
               </div>
