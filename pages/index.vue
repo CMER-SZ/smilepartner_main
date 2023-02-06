@@ -191,11 +191,11 @@ const checkForm = (e) => {
                     <div class="text-center">
                       <nuxt-link href="https://smilepartner.hk/clear-aligners">
                         <img
-                          src="https://static.cmereye.com/imgs/2023/01/759ee2d2643dab62.jpg"
+                          src="https://static.cmereye.com/imgs/2023/02/99eb95d3b1820d7d.jpg"
                           srcset="
-                            https://static.cmereye.com/imgs/2023/01/4630d1c3a38ff1a3.jpg 400w,
-                            https://static.cmereye.com/imgs/2023/01/4630d1c3a38ff1a3.jpg 640w,
-                            https://static.cmereye.com/imgs/2023/01/759ee2d2643dab62.jpg
+                            https://static.cmereye.com/imgs/2023/02/9a04ed8a477d3184.jpg 400w,
+                            https://static.cmereye.com/imgs/2023/02/9a04ed8a477d3184.jpg 640w,
+                            https://static.cmereye.com/imgs/2023/02/99eb95d3b1820d7d.jpg
                           "
                           alt=""
                         />
