@@ -60,7 +60,7 @@ definePageMeta({
   layout: 'page',
 })
 useHead(() => ({
-  title: capitalize(t('pages.clear-aligners.title')),
+  title: capitalize(t('pages.invisalign.submenu.nav1.title')),
   meta: [
     {
       name: 'description',
@@ -74,7 +74,7 @@ let reForm = reactive({
   Tel: '',
   Email: '',
   smilepartner_select:
-    '經系統分析,該表單來自準新人·隱形牙箍體驗價頁面,来源地址：https://smilepartner.hk/clear-aligners',
+    '經系統分析,該表單來隱形牙箍全方位矯齒頁面,来源地址：https://smilepartner.hk/clear-aligners',
 })
 
 const checkForm = (e) => {
@@ -116,8 +116,8 @@ const clearInfo = () => {
           class="page_body_header_banner_img sm:invisible"
           src="https://img.cmereye.com/i/2022/09/27/633271306fae1.jpg"
           srcset="
-            https://static.cmereye.com/imgs/2022/12/10f1809e26d4d6b7.png 400w,
-            https://static.cmereye.com/imgs/2022/12/10f1809e26d4d6b7.png 640w,
+            https://static.cmereye.com/imgs/2023/02/bdfe78077cdb48df.png 400w,
+            https://static.cmereye.com/imgs/2023/02/bdfe78077cdb48df.png 640w,
             https://img.cmereye.com/i/2022/09/22/632c2c39558fe.jpg
           "
         />
@@ -158,30 +158,28 @@ const clearInfo = () => {
                 <!-- <img src="https://static.cmereye.com/imgs/2022/12/e939bd7a893a0bec.png" alt=""> -->
                 <div class="flex flex-col items-center pcShow">
                   <img
-                    src="https://static.cmereye.com/imgs/2022/12/7750b2b02630f4eb.png"
+                    src="https://static.cmereye.com/imgs/2023/02/e939bd7a893a0bec.png"
                     alt=""
-                    style="width: 90%"
                   />
-                  <img
+                  <!-- <img
                     src="https://static.cmereye.com/imgs/2022/12/fd2d9929abdbdd22.png"
                     alt=""
                     style="width: 60%; margin-top: 22px; margin-bottom: 20px"
-                  />
+                  /> -->
                 </div>
                 <div class="flex flex-col items-center mbShow">
                   <img
-                    src="https://static.cmereye.com/imgs/2022/12/7750b2b02630f4eb.png"
+                    src="https://static.cmereye.com/imgs/2023/02/e939bd7a893a0bec.png"
                     alt=""
-                    style="width: 100%"
                   />
-                  <img
+                  <!-- <img
                     src="https://static.cmereye.com/imgs/2022/12/fd2d9929abdbdd22.png"
                     alt=""
                     style="width: 80%; margin-top: 22px"
-                  />
+                  /> -->
                 </div>
               </a>
-              <p>{{ $t('banners.invisalign_desc') }}</p>
+              <p>{{ $t('banners.invisalign_descs') }}</p>
               <div
                 class="text-center mbShow"
                 style="margin-top: 52vw; display: flex; flex-direction: column"
@@ -1183,7 +1181,7 @@ const clearInfo = () => {
     margin: 0 auto;
   }
   .page_body_header_banner {
-    background-image: url(https://static.cmereye.com/imgs/2022/12/2d1078f9193dfde7.jpg);
+    background-image: url(https://static.cmereye.com/imgs/2023/02/1f777f9e1a38ab96.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top;
