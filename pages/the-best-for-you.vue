@@ -412,7 +412,7 @@ const clearInfo = () => {
                   href="https://smilepartner.hk/clear-aligners-lite"
                   class="btn"
                 >
-                  <div class="flex items-center btn-t justify-center;">
+                  <div class="flex items-center btn-t student justify-center;">
                     <span class="pr-2 text-grap"> 隱形牙箍簡易版 </span>
                     <img
                       src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -433,7 +433,7 @@ const clearInfo = () => {
                   如飲食、運動、吹樂器？
                 </p>
                 <a href="https://smilepartner.hk/clear-aligners" class="btn">
-                  <div class="flex items-center btn-t justify-center;">
+                  <div class="flex items-center btn-t student justify-center;">
                     <span class="pr-2 text-grap"> 隱形牙箍全方位矯齒 </span>
                     <img
                       src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -476,7 +476,7 @@ const clearInfo = () => {
                   <p>言談間露出整齊的牙齒，</p>
                   <span class="text-green-light">展現自信體面笑容？</span>
                   <a href="https://smilepartner.hk/clear-aligners" class="btn">
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t zhic justify-center;">
                       <span class="pr-2 text-grap"> 隱形牙箍全方位矯齒 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -488,7 +488,7 @@ const clearInfo = () => {
                     href="https://smilepartner.hk/clear-aligners-lite"
                     class="btn"
                   >
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t zhic justify-center;">
                       <span class="pr-2 text-grap"> 隱形牙箍簡易版 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -508,7 +508,7 @@ const clearInfo = () => {
                     <span class="text-green-light">想快速令牙齒變得亮白？</span>
                   </p>
                   <a href="https://smilepartner.hk/teeth-whitening" class="btn">
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t zhic justify-center;">
                       <span class="pr-2 text-grap"> 牙齒美白 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -525,7 +525,7 @@ const clearInfo = () => {
                     >
                   </p>
                   <a href="https://smilepartner.hk/veneer" class="btn">
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t zhic justify-center;">
                       <span class="pr-2 text-grap"> 即日瓷貼片 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -577,7 +577,7 @@ const clearInfo = () => {
                     </span>
                   </p>
                   <a href="https://smilepartner.hk/clear-aligners" class="btn">
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t newr justify-center;">
                       <span class="pr-2 text-grap"> 隱形牙箍全方位矯齒 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -595,7 +595,7 @@ const clearInfo = () => {
                     href="https://smilepartner.hk/clear-aligners-lite"
                     class="btn"
                   >
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t newr justify-center;">
                       <span class="pr-2 text-grap"> 隱形牙箍簡易版 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -615,7 +615,7 @@ const clearInfo = () => {
                     >
                   </p>
                   <a href="https://smilepartner.hk/teeth-whitening" class="btn">
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t newr justify-center;">
                       <span class="pr-2 text-grap"> 牙齒美白 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -638,7 +638,7 @@ const clearInfo = () => {
                   </p>
                   <p>成為全場曯目的焦點？</p>
                   <a href="https://smilepartner.hk/veneer" class="btn">
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t newr justify-center;">
                       <span class="pr-2 text-grap"> 即日瓷貼片 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
@@ -710,7 +710,7 @@ const clearInfo = () => {
                     href="https://smilepartner.hk/clear-aligners-child"
                     class="btn"
                   >
-                    <div class="flex items-center btn-t justify-center;">
+                    <div class="flex items-center btn-t child justify-center;">
                       <span class="pr-2 text-grap"> 隱形牙箍兒童專線 </span>
                       <img
                         src="https://static.cmereye.com/imgs/2023/01/268c25be03de5682.png"
