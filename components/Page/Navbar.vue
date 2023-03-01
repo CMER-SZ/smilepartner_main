@@ -13,7 +13,7 @@ const { t } = useLang()
 const app = useState<IApp>('app')
 const menus = computed((): any[] => [
   { type: 'link', text: t('pages.index.nav'), route: '/' },
-  // { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
+  { type: 'link', text: t('pages.about.nav'), route: { name: 'about-us' } },
   {
     type: 'fatnav',
     text: t('pages.treatment.nav'),
@@ -81,7 +81,7 @@ const menus = computed((): any[] => [
     route: { name: 'teeth-whitening' },
   },
 
-  // { type: 'link', text: t('pages.case.nav'), route: { name: 'test' } },
+  { type: 'link', text: t('pages.case.nav'), route: { name: 'case-sharing' } },
   // { type: 'link', text: t('pages.fees.nav'), route: { name: 'fees' } },
   { type: 'link', text: t('pages.contact.nav'), route: { name: 'contact-us' } },
 ])
@@ -387,7 +387,7 @@ const meunClick = (i: number) => {
 }
 @media screen and(min-width:768px) {
   .menu_pc {
-    margin: 0 auto;
+    // margin: 0 auto;
   }
   .menu-ul li:nth-child(3) .itemMenu ul {
     li {
@@ -417,7 +417,7 @@ const meunClick = (i: number) => {
     right: 0;
     bottom: -13px;
   }
-  .header nav li:nth-child(2) .fater-li::after {
+  .header nav li:nth-child(4) .fater-li::after {
     content: '';
     width: 0px;
     height: 0px;
