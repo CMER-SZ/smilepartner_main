@@ -13,9 +13,16 @@ pages:
     title: 頁面丟失
   about:
     nav: 品牌理念
-    title: 模板簡介
-    description: 這是一個模板簡介
-
+    title: 品牌理念 | 希瑪微笑矯齒
+    description: 這是一個品牌理念 | 希瑪微笑矯齒
+  orthodontics:
+    nav: 箍牙資訊日
+    title: 箍牙資訊日 | 希瑪微笑矯齒
+    description: 這是一個箍牙資訊日 | 希瑪微笑矯齒
+  share:
+    nav: 個案分享
+    title: 個案分享 | 希瑪微笑矯齒
+    description: 這是一個 個案分享 | 希瑪微笑矯齒
   treatment:
     nav: 切合你生活的療程
     title: 切合你生活的療程
