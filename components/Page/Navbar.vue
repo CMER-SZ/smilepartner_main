@@ -97,17 +97,17 @@ const meunChildClick = (params: string) => {
   }
 }
 const meunClick = (i: number) => {
-  if (i === 1) {
-    if (data.isShow === 1) {
-      data.isShow = 0
-    } else {
-      data.isShow = 1
-    }
-  } else if (i === 2) {
+  if (i === 2) {
     if (data.isShow === 2) {
       data.isShow = 0
     } else {
       data.isShow = 2
+    }
+  } else if (i === 3) {
+    if (data.isShow === 3) {
+      data.isShow = 0
+    } else {
+      data.isShow = 3
     }
   } else {
     data.isShow = 0
@@ -217,7 +217,7 @@ const meunClick = (i: number) => {
                 :key="i"
                 class="flex pb-2 mb-2 border-b border-gray-900/10"
                 @click="meunClick(i)"
-                :class="[i === 1 || i === 2 ? 'clickSan' : '']"
+                :class="[i === 2 || i === 3 ? 'clickSan' : '']"
               >
                 <Anchor
                   v-if="item.type === 'link'"
