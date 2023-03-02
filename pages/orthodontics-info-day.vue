@@ -220,7 +220,7 @@ const clearInfo = () => {
                 </div>
                 <div class="banner-text">
                   <span>
-                    牙齒不齊或有咬合問題？箍牙療程或可幫你解決！箍牙資訊日當天會有3大焦點活動，包括專人分享箍牙資訊、為參加者即場提供口腔掃描檢查，以及一對一醫生諮詢，為你解答疑問。有意開始矯齒療程的你，即刻填表參加啦！名額有限，先到先得。
+                    牙齒不齊或有咬合問題？箍牙療程或可幫你解決！箍牙資訊日當天會有3大焦點活動，包括專人分享箍牙資訊、為參加者即場提供口腔掃描檢查，以及一對一諮詢，為你解答疑問。有意開始矯齒療程的你，即刻填表參加啦！名額有限，先到先得。
                   </span>
                 </div>
               </div>
@@ -304,9 +304,7 @@ const clearInfo = () => {
                     />
                     <div class="step-text">
                       <p>
-                        前往牙科診療室，<span class="light-pink"
-                          >牙醫會為你檢查口腔</span
-                        >
+                        前往牙科診療室，<span class="light-pink">檢查口腔</span>
                       </p>
                     </div>
                   </div>
@@ -317,9 +315,7 @@ const clearInfo = () => {
                     />
                     <div class="step-text">
                       <p>
-                        <span class="light-pink"
-                          >牙醫會為你解說及分析檢查結果，</span
-                        >
+                        <span class="light-pink">解說及分析檢查結果，</span>
                       </p>
                       <p>並了解你的療程期望等，再作出初步療程建議</p>
                     </div>
@@ -829,7 +825,7 @@ const clearInfo = () => {
   }
   .steo-box:nth-child(2) .step-text {
     position: absolute;
-    right: 40px;
+    right: 98px;
     top: -16px;
   }
   .steo-box:nth-child(2) img {
