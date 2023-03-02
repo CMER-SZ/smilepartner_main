@@ -434,7 +434,7 @@ const clearInfo = () => {
                     <div class="step-text">
                       <p>
                         前往牙科診療室，<br /><span class="light-pink"
-                          >牙醫會為你檢查口腔</span
+                          >檢查口腔</span
                         >
                       </p>
                     </div>
@@ -450,8 +450,7 @@ const clearInfo = () => {
                     />
                     <div class="step-text pt-10">
                       <p>
-                        <span class="light-pink"
-                          >牙醫會為你解說及分析檢查結果，</span
+                        <span class="light-pink">解說及分析檢查結果，</span
                         >並了解你的療程期望等，再作出初步療程建議
                       </p>
                     </div>
