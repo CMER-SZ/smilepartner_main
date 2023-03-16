@@ -557,6 +557,9 @@ const clearInfo = () => {
 </template>
 
 <style lang="scss" scoped>
+footer .fixed_button {
+  display: none !important;
+}
 .light-pink {
   color: #e59297;
   font-weight: 550;

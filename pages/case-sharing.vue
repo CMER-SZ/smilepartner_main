@@ -292,6 +292,56 @@ const clearInfo = () => {
                 </div>
               </div>
             </div>
+            <div class="share-video-box box_2 mt_share">
+              <div class="iframe2">
+                <iframe
+                  class="pcShow"
+                  width="695"
+                  height="391.68"
+                  src="https://www.youtube.com/embed/n0rCzW3nqh4"
+                  title="【#SmilePartner隱形牙箍】上鏡、食嘢、運動零煩惱！靚女Model分享揀箍牙療程貼士"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <iframe
+                  class="mbShow"
+                  width="335"
+                  height="188.79"
+                  src="https://www.youtube.com/embed/n0rCzW3nqh4"
+                  title="【#SmilePartner隱形牙箍】上鏡、食嘢、運動零煩惱！靚女Model分享揀箍牙療程貼士"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="share-detail-box share-top">
+                <div class="name2">
+                  <p class="myname2">張敏潔 Kit</p>
+                  <p class="pro2">隱適美全方位矯齒療程</p>
+                </div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2023/01/86a836934d935861.png"
+                    alt=""
+                    class="img-start2"
+                  />
+                  <p>牙醫全程跟進, 箍得又靚又安心</p>
+                  <span
+                    >度身訂造箍牙療程, 根據我嘅工作需要, 幫我調整附件粒粒,
+                    令到我笑嘅時候更自然, 好貼心！</span
+                  >
+                  <div class="end">
+                    <img
+                      src="https://static.cmereye.com/imgs/2023/01/4a2c9fbebd4ccca9.png"
+                      alt=""
+                      class="img-end"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="share-person-box">
               <div style="position: relative" class="shares">
                 <div class="share-head-person">
@@ -913,6 +963,84 @@ const clearInfo = () => {
 }
 
 @media screen and(min-width:768px) {
+  .myname2::before {
+    content: '';
+    border: 1px solid #ecb3ac;
+    transform: rotate(90deg);
+    margin-right: 11px;
+  }
+  .share-video-box {
+    .img-start2 {
+      position: absolute;
+      width: 50px;
+
+      top: 654px;
+
+      /* left: 132px; */
+      right: 369px;
+    }
+    .share-detail-box .name2 .myname2 {
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      /* identical to box height */
+
+      color: #666666;
+    }
+
+    .share-detail-box .name2 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 250px;
+      top: 517px;
+      align-items: flex-start;
+    }
+    .share-detail-box .name2 .pro2 {
+      position: absolute;
+      white-space: pre;
+      top: 44px;
+      right: -172px;
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 35px;
+      /* identical to box height */
+
+      /* green */
+
+      color: #aace79;
+    }
+  }
+  .box_2 {
+    margin-top: 100px;
+  }
+  .iframe2 {
+    position: absolute;
+    top: 500px;
+    left: 0px;
+    box-shadow: 0px 1px 16px 14px #e9f5fa;
+  }
+  .share-detail-box2 {
+    padding-left: 100px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    opacity: 1;
+    height: 265px;
+    margin: 0 10px;
+    margin-top: 153px;
+    margin-left: 620px;
+    padding-bottom: 10px;
+    padding: 45px 35px 23px 35px;
+    p {
+      white-space: pre;
+    }
+  }
   .shares:nth-child(4) .share-detail-box {
     padding-bottom: 5px !important;
   }
@@ -988,7 +1116,7 @@ const clearInfo = () => {
   .share-box {
     background: url('https://static.cmereye.com/imgs/2023/01/bcde67659fe5e0a2.png')
       no-repeat;
-    background-size: 100% 100%;
+    background-size: 109% 213%;
     background-position: center;
     position: relative;
     z-index: 9;
@@ -1220,14 +1348,88 @@ const clearInfo = () => {
   }
 }
 @media screen and(max-width:768px) {
-  .iframe {
+  .img-start2 {
+    width: 37px;
+    position: absolute;
+    top: -12px;
+  }
+  .share-video-box {
+    position: relative;
+  }
+  .mt_share {
+    margin-top: 230px;
+    position: relative;
+  }
+  .iframe2 {
     position: absolute;
     right: 0;
-    top: 81vw;
+    bottom: -171px;
     left: 0;
     display: flex;
     z-index: 15;
     justify-content: center;
+  }
+  .iframe {
+    position: absolute;
+    right: 0;
+    bottom: -172px;
+
+    left: 0;
+    display: flex;
+    z-index: 15;
+    justify-content: center;
+  }
+  .share-detail-box .name2 .pro2 {
+    font-family: 'Songti TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 5px 42px 0px 42px;
+    position: absolute;
+    top: 40px;
+    right: -123px;
+    color: #aace79;
+    white-space: pre;
+  }
+  .name2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: -95px;
+    margin-left: 15px;
+    /* right: 9px; */
+    left: -41px;
+    .myname2 {
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 35px;
+      /* identical to box height */
+      padding: 5px 42px 0px 42px;
+      color: #666666;
+    }
+    .pro2 {
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      padding: 5px 42px 0px 42px;
+      position: absolute;
+      top: 40px;
+      right: -56px;
+      color: #aace79;
+      white-space: pre;
+    }
+    .myname2::before {
+      content: '';
+      border: 1px solid #ecb3ac;
+      transform: rotate(90deg);
+      margin-right: 11px;
+    }
   }
   .share-video-box {
     .share-detail-box .name .pro {
