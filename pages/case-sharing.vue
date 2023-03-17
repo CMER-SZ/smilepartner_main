@@ -1069,7 +1069,7 @@ const clearInfo = () => {
       position: absolute;
       top: 48px;
 
-      right: 250px;
+      right: 256px;
 
       align-items: flex-start;
     }

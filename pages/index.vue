@@ -1140,7 +1140,7 @@ const checkForm = (e) => {
       position: absolute;
       top: 48px;
 
-      right: 250px;
+      right: 256px;
 
       align-items: flex-start;
     }
@@ -2010,7 +2010,7 @@ const checkForm = (e) => {
   .share-box {
     background: url('https://static.cmereye.com/imgs/2023/01/bcde67659fe5e0a2.png')
       no-repeat;
-    background-size: 220% 230%;
+    background-size: 376% 230%;
     background-position: center;
     position: relative;
     z-index: 9;
