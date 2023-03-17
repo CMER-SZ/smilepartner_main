@@ -313,20 +313,7 @@ const checkForm = (e) => {
                   我們提供高品質及多元化的牙齒美容服務，包括隱形牙箍矯齒、即日瓷貼片、美白牙齒服務(如激光美白、藍光美白、診所漂牙、家居牙齒美白套裝)，為你度身設計合適的療程，致力滿足你生活上遇到的各種專屬牙齒外觀追求。
                 </p>
               </div>
-              <!-- <div class="compete_four">
-                <img
-                  src="https://static.cmereye.com/imgs/2022/10/b3524555988cee46.png"
-                  alt=""
-                />
-                <p class="">
-                  <span class="text-pink"
-                    >生活中各種重要時刻，都有不同的牙齒外觀追求，</span
-                  ><br />
-                  希瑪美容牙科中心致力滿足你在人生各階段的不同需求，<br />
-                  提供高品質及多元化的貼心美容牙科服務，<br />
-                  包括矯齒、瓷貼片及美白牙齒服務，致力陪伴你尋找專屬自信笑容。
-                </p>
-              </div> -->
+
               <div class="compete_bac_box">
                 <img
                   src="https://static.cmereye.com/imgs/2022/10/621597fce2389c32.jpg"
@@ -340,85 +327,7 @@ const checkForm = (e) => {
                 />
               </div>
             </div>
-            <!-- <div class="mt-5 mbShow">
-              <swiper
-                ref="mySwiper"
-                :modules="modules"
-                :options="swiperOption"
-                :pagination="{ clickable: true }"
-                :loop="true"
-                :slides-per-view="1"
-                :space-between="50"
-                navigation
-                :scrollbar="{ draggable: true }"
-              >
-                <img
-                  src="https://static.cmereye.com/imgs/2022/10/6b55d7c2d34414c5.jpg"
-                  alt=""
-                />
-                <swiper-slide>
-                  <div class="orthodontic_compete_pic">
-                    <div class="text-center">
-                      <img
-                        src="https://static.cmereye.com/imgs/2022/10/12403c3c5397b595.png"
-                        alt=""
-                        class="compete_num"
-                      />
-                      <p class="mt-7">
-                        <span class="text-pink">上市公司旗下中心</span><br />
 
-                        「希瑪微笑矯齒」屬上市公司<br />
-                        「香港希瑪眼科集團」旗下的牙齒美容品牌，<br />
-                        絕無隱藏收費、不硬銷。
-                      </p>
-                    </div>
-                  </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div class="orthodontic_compete_pic">
-                    <div class="text-center">
-                      <img
-                        src="https://static.cmereye.com/imgs/2022/10/fc164c87854c5a6f.png"
-                        alt=""
-                        class="compete_num"
-                      />
-                      <p class="mt-7">
-                        <span class="text-pink"
-                          >註冊牙醫主理！療程更高效、安心</span
-                        ><br />
-
-                        本中心所有療程均由註冊牙醫主理，
-                        開始療程前會先為你全面檢查口腔及牙齦狀況，
-                        了解你的需要，同時亦會解釋相關療程風險，
-                        令你可以安心享受高效又安全的牙齒美容服務。
-                      </p>
-                    </div>
-                  </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div class="orthodontic_compete_pic">
-                    <div class="text-center">
-                      <img
-                        src="https://static.cmereye.com/imgs/2022/10/b882ae46d0f992d1.png"
-                        alt=""
-                        class="compete_num"
-                      />
-                      <p class="mt-7">
-                        <span class="text-pink"
-                          >致力滿足你生活上<br />各種專屬牙齒外觀追求</span
-                        ><br />
-
-                        我們提供高品質及多元化的牙齒美容服務，
-                        包括隱形牙箍矯齒、即日瓷貼片、美白牙齒服務
-                        (如激光美白、藍光美白、診所漂牙、家居牙齒美白套裝)，
-                        為你度身設計合適的療程，致力滿足你生活上遇到嘅各種專屬牙齒外觀追求。
-                      </p>
-                    </div>
-                  </div>
-                </swiper-slide>
-                
-              </swiper>
-            </div> -->
             <div
               class="mt-5 mbShow"
               style="display: flex; justify-content: center"
@@ -791,6 +700,57 @@ const checkForm = (e) => {
                   </div>
                 </div>
               </div>
+
+              <div class="share-video-box">
+                <div class="iframe2">
+                  <iframe
+                    class="pcShow"
+                    width="695"
+                    height="391.68"
+                    src="https://www.youtube.com/embed/n0rCzW3nqh4"
+                    title="【#SmilePartner隱形牙箍】上鏡、食嘢、運動零煩惱！靚女Model分享揀箍牙療程貼士"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                  <iframe
+                    class="mbShow"
+                    width="335"
+                    height="188.79"
+                    src="https://www.youtube.com/embed/n0rCzW3nqh4"
+                    title="【#SmilePartner隱形牙箍】上鏡、食嘢、運動零煩惱！靚女Model分享揀箍牙療程貼士"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+
+                <div class="share-detail-box share-top mt_10">
+                  <div class="name2">
+                    <p class="myname2">張敏潔 Kit</p>
+                    <p class="pro2">隱適美全方位矯齒療程</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://static.cmereye.com/imgs/2023/01/86a836934d935861.png"
+                      alt=""
+                      class="img-start2"
+                    />
+                    <p>牙醫全程跟進, 箍得又靚又安心</p>
+                    <span
+                      >度身訂造箍牙療程, 根據我嘅工作需要, 幫我調整附件粒粒,
+                      令到我笑嘅時候更自然, 好貼心！</span
+                    >
+                    <div class="end">
+                      <img
+                        src="https://static.cmereye.com/imgs/2023/01/4a2c9fbebd4ccca9.png"
+                        alt=""
+                        class="img-end"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="share-person-box">
                 <div style="position: relative" class="shares">
                   <div class="share-head-person">
@@ -1071,6 +1031,78 @@ const checkForm = (e) => {
 }
 
 @media screen and(min-width:768px) {
+  .mt_10 {
+    margin-top: 300px !important;
+  }
+  .share-video-box {
+    .img-start2 {
+      position: absolute;
+      width: 50px;
+      top: 699px;
+      /* left: 132px; */
+      right: 369px;
+    }
+    .share-detail-box .name2 .myname2 {
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      /* identical to box height */
+
+      color: #666666;
+    }
+    .share-detail-box .name2 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 580px;
+
+      right: 250px;
+
+      align-items: flex-start;
+    }
+    .share-detail-box .name2 .pro2 {
+      position: absolute;
+      white-space: pre;
+      top: 44px;
+      right: -172px;
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 35px;
+      /* identical to box height */
+
+      /* green */
+
+      color: #aace79;
+    }
+    .share-detail-box {
+      padding-left: 100px !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #fff;
+      opacity: 1;
+      height: 265px;
+      margin: 0 10px;
+      margin-top: 153px;
+      margin-left: 620px;
+      padding-bottom: 10px;
+      padding: 45px 35px 23px 35px;
+      p {
+        white-space: pre;
+      }
+    }
+  }
+  .iframe2 {
+    position: absolute;
+    top: 516px;
+    left: 0px;
+    box-shadow: 0px 1px 16px 14px #e9f5fa;
+  }
+
   .orthodontic_faq_list .border-pink::before,
   .orthodontic_faq_list .py-6:hover::before {
     width: 30px;
@@ -1250,6 +1282,12 @@ const checkForm = (e) => {
         transform: rotate(90deg);
         margin-right: 11px;
       }
+    }
+    .myname2::before {
+      content: '';
+      border: 1px solid #ecb3ac;
+      transform: rotate(90deg);
+      margin-right: 11px;
     }
     .end {
       display: flex;
@@ -1902,17 +1940,47 @@ const checkForm = (e) => {
   }
 }
 @media screen and(max-width:768px) {
+  .share-video-box {
+    position: relative;
+  }
+  .mt_10 {
+    margin-top: 331px !important;
+  }
   .mborthodontic_title {
     margin-left: 15px;
   }
   .iframe {
     position: absolute;
     right: 0;
-    top: 74vw;
+    bottom: -173px;
     left: 0;
     display: flex;
     z-index: 15;
     justify-content: center;
+  }
+  .iframe2 {
+    position: absolute;
+    right: 0;
+    bottom: -173px;
+    left: 0;
+    display: flex;
+    z-index: 15;
+    justify-content: center;
+  }
+  .share-video-box {
+    .share-detail-box .name2 .pro2 {
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      padding: 5px 42px 0px 42px;
+      position: absolute;
+      top: 40px;
+      right: -123px;
+      color: #aace79;
+      white-space: pre;
+    }
   }
   .share-video-box {
     .share-detail-box .name .pro {
@@ -1988,6 +2056,50 @@ const checkForm = (e) => {
     margin-right: 51px;
   }
 
+  .img-start2 {
+    width: 37px;
+    position: absolute;
+    top: -12px;
+  }
+  .name2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: -95px;
+    margin-left: 15px;
+    /* right: 9px; */
+    left: -41px;
+    .myname2 {
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 35px;
+      /* identical to box height */
+      padding: 5px 42px 0px 42px;
+      color: #666666;
+    }
+    .pro2 {
+      font-family: 'Songti TC';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      padding: 5px 42px 0px 42px;
+      position: absolute;
+      top: 40px;
+      right: -56px;
+      color: #aace79;
+      white-space: pre;
+    }
+    .myname2::before {
+      content: '';
+      border: 1px solid #ecb3ac;
+      transform: rotate(90deg);
+      margin-right: 11px;
+    }
+  }
   .share-detail-box {
     display: flex;
     flex-direction: column;
