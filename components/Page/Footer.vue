@@ -383,6 +383,19 @@ const setTop = () => {
         </div>
       </a>
       <a
+        class="goForm bg-white fixed_button_info items-center justify-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"
+      >
+        <div class="fixed_img wechat">
+          <img
+            src="https://static.cmereye.com/imgs/2023/09/95b767bee9bbc060.png"
+            alt="WeChat"
+          />
+        </div>
+        <div class="fixed_text flex-col">
+          <p class="text-primary text-md leading-none">WeChat</p>
+        </div>
+      </a>
+      <a
         @click="setTop()"
         class="mt-12 bg-white fixed_button_info items-center justify-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md set-top"
       >
@@ -442,6 +455,19 @@ const setTop = () => {
           <p class="text-primary text-md leading-none">填表預約</p>
         </div>
       </a>
+      <a
+        class="goForm bg-white fixed_button_info items-center justify-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"
+      >
+        <div class="fixed_img wechat">
+          <img
+            src="https://static.cmereye.com/imgs/2023/09/46339a50e805dedf.png"
+            alt="WeChat"
+          />
+        </div>
+        <div class="fixed_text flex-col">
+          <p class="text-primary text-md leading-none">WeChat</p>
+        </div>
+      </a>
     </div>
     <div
       class="fixed_button sm:flex mbShow"
@@ -466,6 +492,9 @@ const setTop = () => {
 </template>
 <style lang="scss" scoped>
 @media screen and(min-width:768px) {
+  .wechat {
+    padding: 10px;
+  }
   .foot_logo {
     height: 510px;
     justify-content: flex-start;
@@ -529,9 +558,19 @@ const setTop = () => {
     /* margin: 0; */
     box-shadow: 1px 0px 10px -4px;
     a {
+      flex: 1;
       padding: 5px 14px;
       display: flex;
       flex-direction: column;
+      &>div:nth-child(2){
+        p{
+          font-size: 14px;
+          min-height: 30px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+      }
     }
   }
   ::v-deep .swiper-pagination {

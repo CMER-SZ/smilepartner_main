@@ -672,7 +672,7 @@ const checkForm = (e) => {
 
                 <div class="share-detail-box share-top">
                   <div class="name">
-                    <p class="myname">賀邦 Bron</p>
+                    <p class="myname">全民造星5 賀邦 Bron</p>
                     <p class="pro">隱適美全方位矯齒療程</p>
                   </div>
                   <div>
@@ -725,7 +725,7 @@ const checkForm = (e) => {
 
                 <div class="share-detail-box share-top mt_10">
                   <div class="name2">
-                    <p class="myname2">張敏潔 Kit</p>
+                    <p class="myname2">演員兼廣告女神 張敏潔 Kit</p>
                     <p class="pro2">隱適美全方位矯齒療程</p>
                   </div>
                   <div>
@@ -1056,7 +1056,7 @@ const checkForm = (e) => {
       position: absolute;
       top: 580px;
 
-      right: 250px;
+      right: 0;
 
       align-items: flex-start;
     }
@@ -1064,7 +1064,7 @@ const checkForm = (e) => {
       position: absolute;
       white-space: pre;
       top: 44px;
-      right: -172px;
+      right: 0;
       font-family: 'Songti TC';
       font-style: normal;
       font-weight: 700;
@@ -1138,7 +1138,7 @@ const checkForm = (e) => {
       position: absolute;
       top: 48px;
 
-      right: 256px;
+      right: 80px;
 
       align-items: flex-start;
     }
@@ -1146,7 +1146,7 @@ const checkForm = (e) => {
       position: absolute;
       white-space: pre;
       top: 44px;
-      right: -172px;
+      right: 0;
       font-family: 'Songti TC';
       font-style: normal;
       font-weight: 700;

@@ -411,10 +411,7 @@ useHead(() => ({
           allowfullscreen
         ></iframe>
       </div>
-
-      <div class="orthodontic_condition1" style="padding-top: 0; margin-top: 0">
-        <component :is="form" :smilepartner_from="fromhere"></component>
-      </div>
+      
       <div class="page_container">
         <div
           class="orthodontic_title step_title text-center sm:text-center mt-5 py-14 z-10"
@@ -487,27 +484,56 @@ useHead(() => ({
               成功個案分享
             </h2>
           </div>
-          <iframe
-            class="pcShow"
-            width="999"
-            height="563"
-            src="https://www.youtube.com/embed/ljaszj7v-rM"
-            title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            class="mbShow"
-            width="100%"
-            height="220"
-            src="https://www.youtube.com/embed/ljaszj7v-rM"
-            title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <div class="video_margin">
+            <div>
+              <iframe
+                class="pcShow"
+                width="999"
+                height="563"
+                src="https://www.youtube.com/embed/n0rCzW3nqh4"
+                title="【#SmilePartner隱形牙箍】上鏡、食嘢、運動零煩惱！靚女Model分享揀箍牙療程貼士"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                class="mbShow"
+                width="100%"
+                height="220"
+                src="https://www.youtube.com/embed/n0rCzW3nqh4"
+                title="【#SmilePartner隱形牙箍】上鏡、食嘢、運動零煩惱！靚女Model分享揀箍牙療程貼士"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                class="pcShow"
+                width="999"
+                height="563"
+                src="https://www.youtube.com/embed/ljaszj7v-rM"
+                title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                class="mbShow"
+                width="100%"
+                height="220"
+                src="https://www.youtube.com/embed/ljaszj7v-rM"
+                title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="orthodontic_condition1" style="padding-top: 0; margin-top: 0">
+        <component :is="form" :smilepartner_from="fromhere"></component>
       </div>
 
       <div class="orthodontic_faq pb-20">
@@ -873,7 +899,11 @@ useHead(() => ({
 }
 @media screen and(min-width:768px) {
   // 处理点点
-
+  .video_margin {
+    div {
+      margin: 80px 0;
+    }
+  }
   // 小朋友牙齒不齊非小事
   .page_orthodontic {
     .compete_one {
@@ -1053,6 +1083,11 @@ useHead(() => ({
   }
 }
 @media screen and(max-width:768px) {
+  .video_margin {
+    div {
+      margin: 40px 0;
+    }
+  }
   // 处理点点
   .orthodontic_compete {
     ::v-deep

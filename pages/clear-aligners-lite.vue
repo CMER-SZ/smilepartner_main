@@ -353,7 +353,6 @@ useHead(() => ({
           </div>
         </div>
       </div>
-      <component :is="form" :smilepartner_from="fromhere"></component>
       <div class="orthodontic_share">
         <div class="page_container_show">
           <div
@@ -365,28 +364,55 @@ useHead(() => ({
               成功個案分享
             </h2>
           </div>
-          <iframe
-            class="pcShow"
-            width="999"
-            height="563"
-            src="https://www.youtube.com/embed/ljaszj7v-rM"
-            title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            class="mbShow"
-            width="100%"
-            height="220"
-            src="https://www.youtube.com/embed/ljaszj7v-rM"
-            title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <div class="video_margin">
+            <div>
+              <iframe
+                class="pcShow"
+                width="999"
+                height="563"
+                src="https://www.youtube.com/embed/n0rCzW3nqh4"
+                title="【#SmilePartner隱形牙箍】上鏡、食嘢、運動零煩惱！靚女Model分享揀箍牙療程貼士"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                class="mbShow"
+                width="100%"
+                height="220"
+                src="https://www.youtube.com/embed/n0rCzW3nqh4"
+                title="【#SmilePartner隱形牙箍】上鏡、食嘢、運動零煩惱！靚女Model分享揀箍牙療程貼士"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                class="pcShow"
+                width="999"
+                height="563"
+                src="https://www.youtube.com/embed/ljaszj7v-rM"
+                title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                class="mbShow"
+                width="100%"
+                height="220"
+                src="https://www.youtube.com/embed/ljaszj7v-rM"
+                title="#我希望我嘅牙齒變得… | Invisalign 隱適美 | 個案分享 X 陽光型男Model 賀邦Bron👦🏻"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
+      <component :is="form" :smilepartner_from="fromhere"></component>
       <div class="orthodontic_compete pb-12">
         <div class="page_container">
           <div
@@ -836,6 +862,11 @@ useHead(() => ({
   content: 'Step 3';
 }
 @media screen and(min-width:768px) {
+  .video_margin {
+    div {
+      margin: 80px 0;
+    }
+  }
   .orthodontic_share {
     background-image: url(https://static.cmereye.com/imgs/2022/11/adb8a15c4a48e57b.jpg);
     background-size: 100% 100%;
@@ -918,6 +949,11 @@ useHead(() => ({
   }
 }
 @media screen and(max-width:768px) {
+  .video_margin {
+    div {
+      margin: 40px 0;
+    }
+  }
   .orthodontic_share {
     background-image: url(https://static.cmereye.com/imgs/2022/11/683d18bbf920d3ee.png);
     background-size: 100% 100%;
