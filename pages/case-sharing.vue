@@ -186,6 +186,7 @@ const clearInfo = () => {
             <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
           </div>
           <!-- <video src="https://static.cmereye.com/static/smile-yake/Invisalign-Bron.mp4" autoplay class="pcShow"></video> -->
+          <!-- <video src="https://static.cmereye.com/static/smile-yake/SmilePartner-Model.mp4" autoplay class="pcShow"></video> -->
           <div class="head_banner_text justify-self-center">
             <div class="head_banner_text_p">
               <div class="head_banner_img" style="display: block">
