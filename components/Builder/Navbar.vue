@@ -6,7 +6,7 @@ const app = useState<IApp>('app')
 const navbar = ref(null)
 const showDrawer = useState<boolean>('navbar.showDrawer', () => false)
 const showOptions = useState<boolean>('navbar.showOptions', () => false)
-
+const route = useRoute()
 // lifecycle
 let timer: NodeJS.Timer
 onMounted(() => {
@@ -55,6 +55,9 @@ const toggleOptions = (show?: boolean) => {
     ref="navbar"
     class="header ease-in-out backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50 dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-slate-900/[0.5]"
   >
+    <div  :class="[ route.path =='/case-sharing' ? 'sharing_pc_style pcShow':'all_pc_style' ]">
+      <img src="https://static.cmereye.com/imgs/2023/02/f7e516891a98ed6c.png" alt="">
+    </div>
     <div class="page_container">
       <div class="py-3 mx-4 lg:mx-0">
         <div class="relative flex items-center">
@@ -191,7 +194,16 @@ html.dark {
     color: theme('colors.white');
   }
 }
-
+@media screen and (min-width:768px) {
+  .sharing_pc_style{
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+  }
+  .all_pc_style{
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .header .head_logo img {
     width: 182px;
