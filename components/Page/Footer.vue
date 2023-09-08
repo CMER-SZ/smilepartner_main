@@ -354,6 +354,7 @@ const setTop = () => {
       </a>
       <a
         href="https://api.whatsapp.com/send?phone=85295128192"
+        id="goWhatsApp"
         target="_blank"
         class="WhatsApp pcShow bg-white fixed_button_info justify-end items-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"
       >

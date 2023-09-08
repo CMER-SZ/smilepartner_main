@@ -267,6 +267,7 @@ const clearInfo = () => {
 
               <div class="share-detail-box share-top">
                 <div class="name">
+                  <p class="mytitle">陽光型男Model</p>
                   <p class="myname">賀邦 Bron</p>
                   <p class="pro">隱適美全方位矯齒療程</p>
                 </div>
@@ -319,6 +320,7 @@ const clearInfo = () => {
 
               <div class="share-detail-box share-top">
                 <div class="name2">
+                  <p class="mytitle2">演員兼廣告女神</p>
                   <p class="myname2">張敏潔 Kit</p>
                   <p class="pro2">隱適美全方位矯齒療程</p>
                 </div>
@@ -996,7 +998,7 @@ const clearInfo = () => {
       flex-direction: column;
       position: absolute;
       right: 250px;
-      top: 517px;
+      top: 550px;
       align-items: flex-start;
     }
     .share-detail-box .name2 .pro2 {
@@ -1064,6 +1066,19 @@ const clearInfo = () => {
 
       color: #666666;
     }
+    .share-detail-box .name .mytitle {
+      background: #ecb3ac;
+      color: #fff;
+      font-family: 'Songti TC';
+      font-size: 21.228px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: -72%;
+      right: 10%;
+      padding: 5px 10px;
+    }
     .share-detail-box .name {
       display: flex;
       flex-direction: column;
@@ -1106,6 +1121,19 @@ const clearInfo = () => {
       p {
         white-space: pre;
       }
+    }
+    .mytitle2 {
+      background: #ecb3ac;
+      color: #fff;
+      font-family: 'Songti TC';
+      font-size: 21.228px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: -72%;
+      right: 10.4%;
+      padding: 5px 10px;
     }
   }
   .iframe {
@@ -1380,6 +1408,7 @@ const clearInfo = () => {
     z-index: 15;
     justify-content: center;
   }
+
   .share-detail-box .name2 .pro2 {
     font-family: 'Songti TC';
     font-style: normal;

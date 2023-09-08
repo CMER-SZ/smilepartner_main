@@ -110,13 +110,14 @@ const checkForm = (e) => {
     <!-- Google tag (gtag.js) -->
     <div class="page_body_header z-0">
       <div class="page_body_header_banner">
+        <!-- 移动端图暂时未更换，因为设计不上班 2023.9.8 -->
         <img
           class="page_body_header_banner_img sm:invisible"
-          src="https://static.cmereye.com/imgs/2022/10/94cb3184ca4a7749.jpg"
+          src="https://static.cmereye.com/imgs/2023/09/977f661d1787e16c.jpg"
           srcset="
             https://static.cmereye.com/imgs/2022/10/9a8bcdd28d81b4c1.jpg 400w,
             https://static.cmereye.com/imgs/2022/10/9a8bcdd28d81b4c1.jpg 640w,
-            https://static.cmereye.com/imgs/2022/10/94cb3184ca4a7749.jpg
+            https://static.cmereye.com/imgs/2023/09/977f661d1787e16c.jpg
           "
         />
         <div class="page_body_header_fixed">
