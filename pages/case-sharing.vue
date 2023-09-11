@@ -83,7 +83,7 @@ let currentIndex = reactive({
   Index: 0,
 })
 // let currentIndex:number =ww
-function titelclick(index) {
+function titelclick(index:any) {
   currentIndex.Index = index
   // console.log(this.currentIndex);
 }
@@ -129,7 +129,7 @@ let reForm = reactive({
   smilepartner_select: '',
 })
 
-const checkForm = (e) => {
+const checkForm = (e:any) => {
   if (
     reForm.smilepartnerName === '' ||
     reForm.sex === '' ||
