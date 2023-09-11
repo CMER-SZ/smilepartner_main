@@ -83,7 +83,7 @@ let currentIndex = reactive({
   Index: 0,
 })
 // let currentIndex:number =ww
-function titelclick(index:any) {
+function titelclick(index: any) {
   currentIndex.Index = index
   // console.log(this.currentIndex);
 }
@@ -129,7 +129,7 @@ let reForm = reactive({
   smilepartner_select: '',
 })
 
-const checkForm = (e:any) => {
+const checkForm = (e: any) => {
   if (
     reForm.smilepartnerName === '' ||
     reForm.sex === '' ||
@@ -163,8 +163,15 @@ const clearInfo = () => {
       </slot>
     </div>
     <div class="page_body_header z-0">
+      <!-- <video src="https://static.cmereye.com/static/smile-yake/SmilePartner-Model.mp4" autoplay></video> -->
+      <video
+      class="pcShow"
+        style="margin: auto; width: 100%;"
+        src="https://static.cmereye.com/static/smile-yake/Invisalign-Bron.mp4"
+        autoplay
+      ></video>
       <div class="page_body_header_banner">
-        <img
+        <!-- <img
           class="page_body_header_banner_img sm:invisible"
           src="https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif"
           srcset="
@@ -172,7 +179,7 @@ const clearInfo = () => {
             https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 640w,
             https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif
           "
-        />
+        /> -->
         <div class="page_body_header_fixed">
           <div class="head_booking inline-block float-right text-center">
             <a :href="$t('banners.booking')" target="_blank" class="head_button"
@@ -190,7 +197,7 @@ const clearInfo = () => {
           <div class="head_banner_text justify-self-center">
             <div class="head_banner_text_p">
               <div class="head_banner_img" style="display: block">
-                <p>個案分享</p>
+                <p class="mbShow">個案分享</p>
                 <img
                   class="m-auto mbShow"
                   src="https://static.cmereye.com/imgs/2023/02/f7e516891a98ed6c.png"

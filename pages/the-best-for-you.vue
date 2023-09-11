@@ -446,13 +446,13 @@ const clearInfo = () => {
             <div class="work_z_person_box work_z_person_box_mb">
               <div class="work_z_person">
                 <img
-                  src="https://static.cmereye.com/static/lkximg/cmerdental_backup/Mask%20group%20(1).avif"
+                  src="https://static.cmereye.com/imgs/2023/09/3ab46e67df8e2ef3.png"
                   alt=""
                 />
               </div>
               <div class="run_z_person">
                 <img
-                  src="https://static.cmereye.com/static/lkximg/smilepartner/run_z_person.avif"
+                  src="https://static.cmereye.com/imgs/2023/09/fd724c1175aef294.png"
                   alt=""
                 />
               </div>
@@ -538,7 +538,7 @@ const clearInfo = () => {
               <div class="work_z_person_box mb_person_box">
                 <div class="work_z_person w_person_left">
                   <img
-                    src="https://static.cmereye.com/static/lkximg/smilepartner/work_person1.avif"
+                    src="https://static.cmereye.com/imgs/2023/09/a7d711670d138b89.png"
                     alt=""
                   />
                 </div>
@@ -651,7 +651,7 @@ const clearInfo = () => {
               <div class="work_z_person_box new_mb_box">
                 <div class="work_z_person">
                   <img
-                    src="https://static.cmereye.com/static/lkximg/smilepartner/new_person.avif"
+                    src="https://static.cmereye.com/imgs/2023/09/7645ea09dd01c96c.png"
                     alt=""
                   />
                 </div>
@@ -1145,30 +1145,30 @@ const clearInfo = () => {
         z-index: 11;
         position: relative;
         img {
-          width: 50%;
+          width: 100%;
         }
       }
-      .w_person_left {
-        img {
-          width: 70% !important;
-        }
-      }
+      // .w_person_left {
+      //   img {
+      //     width: 70% !important;
+      //   }
+      // }
       .w_coff_left {
         position: absolute;
-        bottom: 100px !important;
-        right: -15px !important;
+        bottom: 20px !important;
+        right: -25px !important;
         z-index: 10;
         img {
           width: 90% !important;
         }
       }
       .new_flower {
-        bottom: 208px !important;
-        right: -15px !important;
+        bottom: 88px !important;
+        right: -95px !important;
       }
       .run_z_person {
         position: absolute;
-        bottom: -29px;
+        bottom: -80px;
         right: -26px;
         z-index: 10;
         img {

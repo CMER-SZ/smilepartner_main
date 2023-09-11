@@ -209,5 +209,8 @@ html.dark {
     width: 182px;
     max-width: 182px;
   }
+  .all_pc_style{
+    display: none;
+  }
 }
 </style>
