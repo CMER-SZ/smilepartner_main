@@ -115,8 +115,8 @@ const checkForm = (e) => {
           class="page_body_header_banner_img sm:invisible"
           src="https://static.cmereye.com/imgs/2023/09/977f661d1787e16c.jpg"
           srcset="
-            https://static.cmereye.com/imgs/2022/10/9a8bcdd28d81b4c1.jpg 400w,
-            https://static.cmereye.com/imgs/2022/10/9a8bcdd28d81b4c1.jpg 640w,
+            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 400w,
+            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 640w,
             https://static.cmereye.com/imgs/2023/09/977f661d1787e16c.jpg
           "
         />
@@ -190,7 +190,10 @@ const checkForm = (e) => {
                 <swiper-slide>
                   <div class="orthodontic_pic">
                     <div class="text-center">
-                      <nuxt-link href="https://smilepartner.hk/clear-aligners" class="banner_home_page">
+                      <nuxt-link
+                        href="https://smilepartner.hk/clear-aligners"
+                        class="banner_home_page"
+                      >
                         <img
                           src="https://static.cmereye.com/imgs/2023/04/abfb54e9371283ac.jpg"
                           class="banner_home_page"
@@ -1871,7 +1874,7 @@ const checkForm = (e) => {
   }
 
   .page_body_header_banner {
-    background-image: url(https://static.cmereye.com/imgs/2022/10/795ca2cded733df7.png);
+    background-image: url(https://static.cmereye.com/imgs/2023/09/977f661d1787e16c.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 100%;
@@ -1940,6 +1943,17 @@ const checkForm = (e) => {
   }
 }
 @media screen and(max-width:768px) {
+  .page_body_header_fixed {
+    padding: 30px 50px;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9;
+  }
   .share-video-box {
     position: relative;
   }
@@ -2237,7 +2251,7 @@ const checkForm = (e) => {
   }
   //头部
   .page_body_header_banner {
-    padding-bottom: 158px;
+    // padding-bottom: 158px;
     .head_banner_img {
       display: block;
       margin: 33px 0 0 -32px;
