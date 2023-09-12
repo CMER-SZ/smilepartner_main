@@ -190,9 +190,10 @@ const checkForm = (e) => {
                 <swiper-slide>
                   <div class="orthodontic_pic">
                     <div class="text-center">
-                      <nuxt-link href="https://smilepartner.hk/clear-aligners">
+                      <nuxt-link href="https://smilepartner.hk/clear-aligners" class="banner_home_page">
                         <img
                           src="https://static.cmereye.com/imgs/2023/04/abfb54e9371283ac.jpg"
+                          class="banner_home_page"
                           srcset="
                             https://static.cmereye.com/imgs/2023/03/d2069aab52930dc3.jpg 400w,
                             https://static.cmereye.com/imgs/2023/03/d2069aab52930dc3.jpg 640w,
