@@ -358,15 +358,16 @@ const setTop = () => {
         target="_blank"
         class="WhatsApp pcShow bg-white fixed_button_info justify-end items-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"
       >
-        <div class="fixed_img">
+        <div class="fixed_img WhatsApp">
           <img
             src="https://img.cmereye.com/i/2022/09/28/633407e1049ed.png"
             alt="WhatsApp"
+            class="WhatsApp"
           />
         </div>
-        <div class="fixed_text flex-row">
-          <p class="leading-none text-primary text-2xl text-green">WhatsApp</p>
-          <span class="text-primary text-md">&nbsp;預約</span>
+        <div class="fixed_text flex-row WhatsApp">
+          <p class="WhatsApp leading-none text-primary text-2xl text-green">WhatsApp</p>
+          <span class="WhatsApp text-primary text-md">&nbsp;預約</span>
         </div>
       </a>
       <a
@@ -432,14 +433,15 @@ const setTop = () => {
         target="_blank"
         class="WhatsApp bg-white fixed_button_info justify-end items-center"
       >
-        <div class="fixed_img pt-1">
+        <div class="WhatsApp fixed_img pt-1">
           <img
             src="https://static.cmereye.com/imgs/2022/11/4f6f2c4e1008ef29.png"
+            class="WhatsApp"
             alt="WhatsApp"
           />
         </div>
-        <div class="fixed_text flex-row pt-1">
-          <p class="text-primary text-md">WhatsApp預約</p>
+        <div class="fixed_text WhatsApp flex-row pt-1">
+          <p class="text-primary WhatsApp text-md">WhatsApp預約</p>
         </div>
       </a>
       <a
