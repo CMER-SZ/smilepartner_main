@@ -2691,7 +2691,7 @@ const checkForm = (e) => {
   }
   .orthodontic_pic > div {
     width: calc((100% - 0px) / 3);
-    margin-bottom: 70px;
+    margin-bottom: 0px;
   }
   .orthodontic_pic > div img {
     width: 100%;
