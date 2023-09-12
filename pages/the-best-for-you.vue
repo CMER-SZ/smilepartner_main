@@ -446,13 +446,13 @@ const clearInfo = () => {
             <div class="work_z_person_box work_z_person_box_mb">
               <div class="work_z_person">
                 <img
-                  src="https://static.cmereye.com/imgs/2023/09/3ab46e67df8e2ef3.png"
+                  src="https://static.cmereye.com/imgs/2023/09/835b0d52fff13306.png"
                   alt=""
                 />
               </div>
               <div class="run_z_person">
                 <img
-                  src="https://static.cmereye.com/imgs/2023/09/fd724c1175aef294.png"
+                  src="https://static.cmereye.com/imgs/2023/09/94a0198506bb89f5.png"
                   alt=""
                 />
               </div>
@@ -538,7 +538,7 @@ const clearInfo = () => {
               <div class="work_z_person_box mb_person_box">
                 <div class="work_z_person w_person_left">
                   <img
-                    src="https://static.cmereye.com/imgs/2023/09/a7d711670d138b89.png"
+                    src="https://static.cmereye.com/imgs/2023/09/160e9eb3619b4631.png"
                     alt=""
                   />
                 </div>
@@ -651,7 +651,7 @@ const clearInfo = () => {
               <div class="work_z_person_box new_mb_box">
                 <div class="work_z_person">
                   <img
-                    src="https://static.cmereye.com/imgs/2023/09/7645ea09dd01c96c.png"
+                    src="https://static.cmereye.com/imgs/2023/09/8137fab164e2a11d.png"
                     alt=""
                   />
                 </div>
@@ -1114,7 +1114,7 @@ const clearInfo = () => {
     }
   }
   .back-img {
-    background-image: url(https://static.cmereye.com/imgs/2023/01/caf59b333cf9e3e8.png);
+    background-image: url(https://static.cmereye.com/imgs/2023/09/7b3f5227910a45a7.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top;
@@ -1725,7 +1725,7 @@ const clearInfo = () => {
     }
   }
   .back-img {
-    background-image: url(https://static.cmereye.com/imgs/2023/01/caf59b333cf9e3e8.png);
+    background-image: url(https://static.cmereye.com/imgs/2023/09/7b3f5227910a45a7.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top;

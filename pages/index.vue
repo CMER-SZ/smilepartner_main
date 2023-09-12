@@ -677,7 +677,8 @@ const checkForm = (e) => {
 
                 <div class="share-detail-box share-top">
                   <div class="name">
-                    <p class="myname">全民造星5 賀邦 Bron</p>
+                    <p class="title_pc_style">陽光型男Model</p>
+                    <p class="myname">賀邦 Bron</p>
                     <p class="pro">隱適美全方位矯齒療程</p>
                   </div>
                   <div>
@@ -730,7 +731,8 @@ const checkForm = (e) => {
 
                 <div class="share-detail-box share-top mt_10">
                   <div class="name2">
-                    <p class="myname2">演員兼廣告女神 張敏潔 Kit</p>
+                    <p class="title_pc_style">演員兼廣告女神</p>
+                    <p class="myname2">張敏潔 Kit</p>
                     <p class="pro2">隱適美全方位矯齒療程</p>
                   </div>
                   <div>
@@ -1045,41 +1047,44 @@ const checkForm = (e) => {
       /* left: 132px; */
       right: 369px;
     }
-    .share-detail-box .name2 .myname2 {
-      font-family: 'Songti TC';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 30px;
-      line-height: 42px;
-      /* identical to box height */
 
-      color: #666666;
-    }
-    .share-detail-box .name2 {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 580px;
-
-      right: 0;
-
-      align-items: flex-start;
-    }
-    .share-detail-box .name2 .pro2 {
-      position: absolute;
-      white-space: pre;
-      top: 44px;
-      right: 0;
-      font-family: 'Songti TC';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 25px;
-      line-height: 35px;
-      /* identical to box height */
-
-      /* green */
-
-      color: #aace79;
+    .share-detail-box {
+      .name2 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 540px;
+        right: 6%;
+        align-items: flex-start;
+        .title_pc_style {
+          background: #ecb3ac;
+          color: #fff;
+          font-family: 'Songti TC';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 42px;
+          padding: 5px 30px;
+        }
+        .myname2 {
+          font-family: 'Songti TC';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 42px;
+          color: #666666;
+          padding-left: 0;
+        }
+        .pro2 {
+          white-space: pre;
+          font-family: 'Songti TC';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 35px;
+          color: #aace79;
+        }
+      }
     }
     .share-detail-box {
       padding-left: 100px !important;
@@ -1124,44 +1129,45 @@ const checkForm = (e) => {
       position: absolute;
       width: 50px;
       top: 134px;
-      /* left: 132px; */
       right: 369px;
     }
-    .share-detail-box .name .myname {
-      font-family: 'Songti TC';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 30px;
-      line-height: 42px;
-      /* identical to box height */
-
-      color: #666666;
-    }
-    .share-detail-box .name {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 48px;
-
-      right: 80px;
-
-      align-items: flex-start;
-    }
-    .share-detail-box .name .pro {
-      position: absolute;
-      white-space: pre;
-      top: 44px;
-      right: 0;
-      font-family: 'Songti TC';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 25px;
-      line-height: 35px;
-      /* identical to box height */
-
-      /* green */
-
-      color: #aace79;
+    .share-detail-box {
+      .name {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 70px;
+        align-items: flex-start;
+        .title_pc_style {
+          color: #fff;
+          background: #ecb3ac;
+          font-family: 'Songti TC';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 35px;
+          padding: 5px 30px;
+        }
+        .myname {
+          font-family: 'Songti TC';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 42px;
+          color: #666666;
+          padding-left: 0;
+        }
+        .pro {
+          white-space: pre;
+          font-family: 'Songti TC';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 35px;
+          color: #aace79;
+        }
+      }
     }
     .share-detail-box {
       padding-left: 100px !important;
@@ -1982,18 +1988,20 @@ const checkForm = (e) => {
     justify-content: center;
   }
   .share-video-box {
-    .share-detail-box .name2 .pro2 {
-      font-family: 'Songti TC';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 28px;
-      padding: 5px 42px 0px 42px;
-      position: absolute;
-      top: 40px;
-      right: 0;
-      color: #aace79;
-      white-space: pre;
+    .share-detail-box .name2 {
+      .pro2 {
+        font-family: 'Songti TC';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        padding: 5px 42px 0px 42px;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        color: #aace79;
+        white-space: pre;
+      }
     }
   }
   .share-video-box {
