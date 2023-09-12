@@ -13,10 +13,19 @@ onMounted(() => {
   if (!navbar.value) return
 
   // scroll
-  const { onScroll } = useSticky(navbar.value, 1000)
-  console.log(onScroll)
+  if (route.path == '/case-sharing') {
+    let { onScroll } = useSticky(navbar.value, 1400)
+    console.log(onScroll)
+    setTimeout(() => onScroll(), 50)
+  } else {
+    let { onScroll } = useSticky(navbar.value, 1000)
+    console.log(onScroll)
+    setTimeout(() => onScroll(), 50)
+  }
 
-  setTimeout(() => onScroll(), 50)
+  // console.log(onScroll)
+
+  // setTimeout(() => onScroll(), 50)
 
   // on show on mobile
   setInterval(() => {
@@ -55,8 +64,17 @@ const toggleOptions = (show?: boolean) => {
     ref="navbar"
     class="header ease-in-out backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50 dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-slate-900/[0.5]"
   >
-    <div  :class="[ route.path =='/case-sharing' ? 'sharing_pc_style pcShow':'all_pc_style' ]">
-      <img src="https://static.cmereye.com/imgs/2023/02/f7e516891a98ed6c.png" alt="">
+    <div
+      :class="[
+        route.path == '/case-sharing'
+          ? 'sharing_pc_style pcShow'
+          : 'all_pc_style',
+      ]"
+    >
+      <img
+        src="https://static.cmereye.com/imgs/2023/02/f7e516891a98ed6c.png"
+        alt=""
+      />
     </div>
     <div class="page_container">
       <div class="py-3 mx-4 lg:mx-0">
@@ -194,13 +212,13 @@ html.dark {
     color: theme('colors.white');
   }
 }
-@media screen and (min-width:768px) {
-  .sharing_pc_style{
+@media screen and (min-width: 768px) {
+  .sharing_pc_style {
     position: absolute;
     bottom: 140%;
     left: 50%;
   }
-  .all_pc_style{
+  .all_pc_style {
     display: none;
   }
 }
@@ -209,7 +227,7 @@ html.dark {
     width: 182px;
     max-width: 182px;
   }
-  .all_pc_style{
+  .all_pc_style {
     display: none;
   }
 }

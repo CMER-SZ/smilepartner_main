@@ -1976,7 +1976,7 @@ const checkForm = (e) => {
       padding: 5px 42px 0px 42px;
       position: absolute;
       top: 40px;
-      right: -123px;
+      right: 0;
       color: #aace79;
       white-space: pre;
     }
@@ -1991,7 +1991,7 @@ const checkForm = (e) => {
       padding: 5px 42px 0px 42px;
       position: absolute;
       top: 40px;
-      right: -123px;
+      right: 0;
       color: #aace79;
       white-space: pre;
     }
@@ -2052,7 +2052,7 @@ const checkForm = (e) => {
     }
   }
   .share-top {
-    margin-right: 51px;
+    margin-right: 20px;
   }
 
   .img-start2 {

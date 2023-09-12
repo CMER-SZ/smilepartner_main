@@ -1773,12 +1773,7 @@ const clearInfo = () => {
         z-index: 11;
         position: relative;
         img {
-          width: 55%;
-        }
-      }
-      .w_person_left {
-        img {
-          width: 70% !important;
+          width: 100%;
         }
       }
       .w_coff_left {

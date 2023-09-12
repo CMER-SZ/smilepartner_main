@@ -539,7 +539,7 @@ const setTop = () => {
   .foot_logo_xima {
     display: flex;
     justify-content: center;
-    padding: 64px;
+    padding: 72px 64px;
   }
   .foot_logo p::before {
     height: 0;

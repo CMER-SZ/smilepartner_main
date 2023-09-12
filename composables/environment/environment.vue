@@ -715,5 +715,131 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
   ::v-deep .swiper-button-next:after {
     display: none;
   }
+  .address-two,
+  .address-one {
+    .address-title {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 10px;
+      }
+    }
+    .adress-p {
+      color: #666;
+      display: flex;
+      font-family: 'Songti TC';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      justify-content: center;
+      letter-spacing: 0.2em;
+      line-height: 22px;
+      padding-bottom: 30px;
+      padding-top: 15px;
+    }
+    .address-button {
+      display: flex;
+      justify-content: space-around;
+      button {
+        border: 1px solid #cdcdcd;
+        padding: 9px;
+        text-align: center;
+        width: 160px;
+      }
+      .address-time {
+        display: flex;
+        margin-top: 50px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+      }
+    }
+    .address-time {
+      display: flex;
+      align-items: center;
+      margin: 30px 0;
+      padding: 0 8px;
+    }
+    .address-md-time {
+      flex: 1;
+      border-right: 1px solid #cdcdcd;
+      display: flex;
+      flex-direction: column;
+      padding-right: 10px;
+      p {
+        color: #666;
+        font-family: Songti TC;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 22px;
+      }
+    }
+    .time {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-family: Songti TC;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      line-height: 22px;
+    }
+    .tel {
+      .tel-num {
+        align-items: center;
+        display: flex;
+        padding: 19px 10px 17px;
+        p {
+          color: #666;
+          font-family: 'Songti TC';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          letter-spacing: 0.2em;
+          line-height: 22px;
+          -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+        }
+        span {
+          color: #aace79;
+          font-family: 'Songti SC';
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 42px;
+          padding-left: 11px;
+        }
+      }
+    }
+  }
+  .address-two {
+    .address-img {
+      margin-bottom: 15px;
+    }
+    .address {
+      text-align: center;
+    }
+    .address-button {
+      margin-top: 10px;
+    }
+    .address-time-box {
+      margin: 30px 0;
+      display: flex;
+      .address-time {
+        margin: 0;
+        flex-direction: column;
+        flex: 1;
+        border-right: 1px solid #ddd;
+        padding: 0;
+      }
+      & > div:nth-child(2) {
+        display: flex;
+        flex: 1;
+      }
+    }
+  }
 }
 </style>

@@ -1271,7 +1271,7 @@ const clearInfo = () => {
     background-size: 100% 100%;
     background-position: top;
     background-repeat: no-repeat;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
     iframe {
       margin: 0 auto;
       position: relative !important;

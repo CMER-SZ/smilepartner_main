@@ -3,6 +3,7 @@ import { capitalize } from '~/utils/str'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import form from '../composables/newform/form.vue'
 import environmentVue from '~~/composables/environment/environment.vue'
+import YouTubePlayer from 'youtube-player'
 import 'swiper/css'
 import type { Ref } from 'vue'
 // import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
@@ -22,11 +23,12 @@ const thumbsSwiper = ref<SwiperClass>()
 const setThumbsSwiper = (swiper: SwiperClass) => {
   thumbsSwiper.value = swiper
 }
+
 onMounted(() => {
   console.log('312')
-
   setTop()
 })
+
 const setTop = () => {
   let s = document.documentElement.scrollTop
   // 定时器 每10ms执行一次
@@ -52,41 +54,14 @@ const swiperOption = {
     prevEl: '.swiper-button-prev',
   },
 }
-const swiperOptionRew = {
-  // 显示分页
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true, // 允许分页点击跳转
-  },
-  // 设置点击箭头
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-}
-const tableswiperOption = {
-  slidesPerView: '1.1',
-  // 显示分页
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true, // 允许分页点击跳转
-  },
-  // 设置点击箭头
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+const onSlideChange = (e: any) => {
+  console.log(e.activeIndex, 'activeIndexactiveIndexactiveIndexactiveIndex')
 }
 // composable
 const { t } = useLang()
 let currentIndex = reactive({
   Index: 0,
 })
-// let currentIndex:number =ww
-function titelclick(index: any) {
-  currentIndex.Index = index
-  // console.log(this.currentIndex);
-}
 // compiler macro
 definePageMeta({
   layout: 'page',
@@ -100,27 +75,7 @@ useHead(() => ({
     },
   ],
 }))
-let bigimgsrc = reactive([
-  'https://static.cmereye.com/imgs/2022/11/4470dc6cbeede80f.jpg',
-  'https://static.cmereye.com/imgs/2022/11/9b3e381f7d2d3ca4.jpg',
-  'https://static.cmereye.com/imgs/2022/11/516557a11c87b513.jpg',
-])
-let imgsrc = reactive([
-  'https://static.cmereye.com/imgs/2022/11/f743d8dbbdf29778.jpg',
-  'https://static.cmereye.com/imgs/2022/11/d822c1644e615863.jpg',
-  'https://static.cmereye.com/imgs/2022/11/ef651d3ee55bc6b7.jpg',
-])
-let bigimgsrc2 = reactive([
-  'https://static.cmereye.com/imgs/2022/11/eb3fd5b84863b0b6.jpg',
-  'https://static.cmereye.com/imgs/2022/11/3291fce5d036fa37.jpg',
-  'https://static.cmereye.com/imgs/2022/11/1b8d3a6d24f6f372.jpg',
-])
-let imgsrc2 = reactive([
-  'https://static.cmereye.com/imgs/2022/11/ac292df57993961d.jpg',
-  'https://static.cmereye.com/imgs/2022/11/89d022005e8b03e6.jpg',
-  'https://static.cmereye.com/imgs/2022/11/d4e4b782e854920e.jpg',
-])
-let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
+
 let reForm = reactive({
   smilepartnerName: '',
   sex: '',
@@ -163,25 +118,83 @@ const clearInfo = () => {
       </slot>
     </div>
     <div class="page_body_header z-0">
-      <!-- <video src="https://static.cmereye.com/static/smile-yake/SmilePartner-Model.mp4" autoplay></video> -->
-      <video
-      class="pcShow"
-        style="margin: auto; width: 100%;"
-        src="https://static.cmereye.com/static/smile-yake/Invisalign-Bron.mp4"
-        autoplay
-      ></video>
+      <div class="banner_video pcShow">
+        <swiper
+          :style="{
+            '--swiper-navigation-color': 'pink',
+            '--swiper-pagination-color': 'pink',
+          }"
+          :options="swiperOption"
+          :modules="modules"
+          :space-between="10"
+          :navigation="true"
+          :scrollbar="{ draggable: true }"
+          @slideChange="onSlideChange"
+        >
+          <swiper-slide>
+            <div class="video_style" ref="banner_video1">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/n0rCzW3nqh4?si=IeEEJeJ2mQK_aGMi&amp;controls=0&amp;autoplay=1&amp;rel=0"
+                title="   "
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div class="pcShow banner_iframe1">
+                <div class="head_booking inline-block float-right text-center">
+                  <a
+                    :href="$t('banners.booking')"
+                    target="_blank"
+                    class="head_button"
+                    ><p class="md:pt-1 text-primary">
+                      {{ $t('banners.invisalign_text') }}
+                    </p>
+                    <span class="text-green md:text-3xl sm:ml-3">
+                      {{ $t('banners.number') }}
+                    </span>
+                  </a>
+                  <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="video_style">
+              <iframe
+                id="banner_video2"
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/ljaszj7v-rM?si=HI-jqGhFyZW-5sob&amp;controls=0&amp;rel=0"
+                title="   "
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div class="pcShow banner_iframe2">
+                <div class="head_booking inline-block float-right text-center">
+                  <a
+                    :href="$t('banners.booking')"
+                    target="_blank"
+                    class="head_button"
+                    ><p class="md:pt-1 text-primary">
+                      {{ $t('banners.invisalign_text') }}
+                    </p>
+                    <span class="text-green md:text-3xl sm:ml-3">
+                      {{ $t('banners.number') }}
+                    </span>
+                  </a>
+                  <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </div>
       <div class="page_body_header_banner">
-        <!-- <img
-          class="page_body_header_banner_img sm:invisible"
-          src="https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif"
-          srcset="
-            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 400w,
-            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 640w,
-            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif
-          "
-        /> -->
         <div class="page_body_header_fixed">
-          <div class="head_booking inline-block float-right text-center">
+          <!-- <div class="head_booking inline-block float-right text-center">
             <a :href="$t('banners.booking')" target="_blank" class="head_button"
               ><p class="md:pt-1 text-primary">
                 {{ $t('banners.invisalign_text') }}
@@ -191,9 +204,7 @@ const clearInfo = () => {
               </span>
             </a>
             <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
-          </div>
-          <!-- <video src="https://static.cmereye.com/static/smile-yake/Invisalign-Bron.mp4" autoplay class="pcShow"></video> -->
-          <!-- <video src="https://static.cmereye.com/static/smile-yake/SmilePartner-Model.mp4" autoplay class="pcShow"></video> -->
+          </div> -->
           <div class="head_banner_text justify-self-center">
             <div class="head_banner_text_p">
               <div class="head_banner_img" style="display: block">
@@ -973,6 +984,46 @@ const clearInfo = () => {
 }
 
 @media screen and(min-width:768px) {
+  .video_style {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    margin-bottom: 60px;
+  }
+  .banner_video {
+    :deep(.swiper-button-next) {
+      display: block !important;
+      right: 80px;
+      font-weight: bold;
+    }
+    :deep(.swiper-button-prev) {
+      left: 80px;
+      font-weight: bold;
+    }
+  }
+  .banner_iframe1 .head_booking {
+    position: absolute;
+    z-index: 555;
+    top: 5%;
+    left: auto;
+    right: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+  .banner_iframe2 .head_booking {
+    position: absolute;
+    z-index: 555;
+    top: 8%;
+    left: auto;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
   .myname2::before {
     content: '';
     border: 1px solid #ecb3ac;
