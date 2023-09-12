@@ -55,7 +55,7 @@ const swiperOption = {
   },
 }
 const onSlideChange = (e: any) => {
-  console.log(e.activeIndex, 'activeIndexactiveIndexactiveIndexactiveIndex')
+  // console.log(e.activeIndex, 'activeIndexactiveIndexactiveIndexactiveIndex')
 }
 // composable
 const { t } = useLang()
@@ -193,6 +193,17 @@ const clearInfo = () => {
         </swiper>
       </div>
       <div class="page_body_header_banner">
+        <div class="mbShow mb_banner_style">
+          <img
+          class="page_body_header_banner_img sm:invisible"
+          src="https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif"
+          srcset="
+            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 400w,
+            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 640w,
+            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif
+          "
+        />
+        </div>
         <div class="page_body_header_fixed">
           <!-- <div class="head_booking inline-block float-right text-center">
             <a :href="$t('banners.booking')" target="_blank" class="head_button"
@@ -1435,6 +1446,9 @@ const clearInfo = () => {
   }
 }
 @media screen and(max-width:768px) {
+  .mb_banner_style{
+    margin-top:-65px;
+  }
   .img-start2 {
     width: 37px;
     position: absolute;
@@ -1475,7 +1489,7 @@ const clearInfo = () => {
     line-height: 28px;
     padding: 5px 42px 0px 42px;
     position: absolute;
-    top: 40px;
+    top: 60px;
     right: -123px;
     color: #aace79;
     white-space: pre;
@@ -1485,10 +1499,10 @@ const clearInfo = () => {
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: -95px;
+    top: -110px;
     margin-left: 15px;
     /* right: 9px; */
-    left: -41px;
+    left: 0;
     .myname2 {
       font-family: 'Songti TC';
       font-style: normal;
@@ -1507,7 +1521,7 @@ const clearInfo = () => {
       line-height: 28px;
       padding: 5px 42px 0px 42px;
       position: absolute;
-      top: 40px;
+      top: 60px;
       right: -56px;
       color: #aace79;
       white-space: pre;
@@ -1528,7 +1542,7 @@ const clearInfo = () => {
       line-height: 28px;
       padding: 5px 42px 0px 42px;
       position: absolute;
-      top: 40px;
+      top: 60px;
       right: -123px;
       color: #aace79;
       white-space: pre;
@@ -1617,10 +1631,10 @@ const clearInfo = () => {
       flex-direction: column;
       align-items: flex-start;
       position: absolute;
-      top: -95px;
+      top: -105px;
       margin-left: 15px;
       /* right: 9px; */
-      left: -41px;
+      left: 0;
       .myname {
         font-family: 'Songti TC';
         font-style: normal;
@@ -1639,7 +1653,7 @@ const clearInfo = () => {
         line-height: 28px;
         padding: 5px 42px 0px 42px;
         position: absolute;
-        top: 40px;
+        top: 60px;
         right: -56px;
         color: #aace79;
         white-space: pre;
