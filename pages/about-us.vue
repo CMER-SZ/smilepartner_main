@@ -1139,7 +1139,7 @@ const clearInfo = () => {
   .page_body_header_banner {
     height: 135vw;
     .page_body_header_banner_img {
-      margin-top: -33px !important;
+      margin-top: -70px !important;
     }
   }
 

@@ -383,7 +383,7 @@ const setTop = () => {
           <p class="text-primary text-md leading-none">填表預約</p>
         </div>
       </a>
-      <a
+      <!-- <a
         class="goForm bg-white fixed_button_info items-center justify-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"
       >
         <div class="fixed_img wechat">
@@ -395,7 +395,7 @@ const setTop = () => {
         <div class="fixed_text flex-col">
           <p class="text-primary text-md leading-none">WeChat</p>
         </div>
-      </a>
+      </a> -->
       <a
         @click="setTop()"
         class="mt-12 bg-white fixed_button_info items-center justify-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md set-top"
@@ -456,7 +456,7 @@ const setTop = () => {
           <p class="text-primary text-md leading-none">填表預約</p>
         </div>
       </a>
-      <a
+      <!-- <a
         class="goForm bg-white fixed_button_info items-center justify-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-md"
       >
         <div class="fixed_img wechat">
@@ -468,7 +468,7 @@ const setTop = () => {
         <div class="fixed_text flex-col">
           <p class="text-primary text-md leading-none">WeChat</p>
         </div>
-      </a>
+      </a> -->
     </div>
     <div
       class="fixed_button sm:flex mbShow"
@@ -493,9 +493,9 @@ const setTop = () => {
 </template>
 <style lang="scss" scoped>
 @media screen and(min-width:768px) {
-  .wechat {
-    padding: 10px;
-  }
+  // .wechat {
+  //   padding: 10px;
+  // }
   .foot_logo {
     height: 510px;
     justify-content: flex-start;

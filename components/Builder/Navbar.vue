@@ -74,6 +74,7 @@ const toggleOptions = (show?: boolean) => {
       <img
         src="https://static.cmereye.com/imgs/2023/02/f7e516891a98ed6c.png"
         alt=""
+        class="pcShow"
       />
     </div>
     <div class="page_container">
