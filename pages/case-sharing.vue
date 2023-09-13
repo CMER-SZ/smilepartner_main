@@ -27,37 +27,55 @@ const setThumbsSwiper = (swiper: SwiperClass) => {
 const onSlideChange = (e: any) => {
   setTimeout(() => {
     if (e.activeIndex == 0) {
-    player.playVideo()
-    playerTwo.pauseVideo()
-    return
-  }
-  if (e.activeIndex == 1) {
-    player.pauseVideo()
-    playerTwo.playVideo()
-    return
-  }
-  }, 500);
+      player.playVideo()
+      playerTwo.pauseVideo()
+      return
+    }
+    if (e.activeIndex == 1) {
+      player.pauseVideo()
+      playerTwo.playVideo()
+      return
+    }
+  }, 500)
 }
+onMounted(() => {
+  onYouTubeIframeAPIReady()
+  onYouTubeIframeAPIReady1()
+  setTop()
+})
+
+onBeforeMount(()=>{
+  let isReload = sessionStorage.getItem('isReload') == null ? 'true': 'false'
+  sessionStorage.setItem('isReload',isReload)
+  if ( sessionStorage.getItem('isReload') == 'true') {
+    router.go(0)
+    isReload = 'false'
+    sessionStorage.setItem('isReload',isReload)
+  } 
+})
+onUnmounted(()=>{
+  sessionStorage.clear()
+})
 var player: any = ref('')
 const onYouTubeIframeAPIReady = () => {
-  window.YT.ready(function () {
-    setTimeout(() => {
+  setTimeout(() => {
+    window.YT.ready(function () {
       player = new window.YT.Player('banner_video1', {
-      height: '100%',
-      width: '100%',
-      videoId: 'n0rCzW3nqh4',
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        rel: 0,
-        enablejsapi: 1,
-        modestbranding: 1,
-      },
-      events: {
-        onReady: onPlayerReady,
-      },
-    })
-    }, 300);
+        height: '100%',
+        width: '100%',
+        videoId: 'n0rCzW3nqh4',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          rel: 0,
+          enablejsapi: 1,
+          modestbranding: 1,
+        },
+        events: {
+          onReady: onPlayerReady,
+        },
+      })
+    }, 300)
   })
 }
 const onPlayerReady = (event: any) => {
@@ -66,36 +84,29 @@ const onPlayerReady = (event: any) => {
 
 var playerTwo: any = ref('')
 const onYouTubeIframeAPIReady1 = () => {
-  window.YT.ready(function () {
-    setTimeout(() => {
+  setTimeout(() => {
+    window.YT.ready(function () {
       playerTwo = new window.YT.Player('banner_video2', {
-      height: '100%',
-      width: '100%',
-      videoId: 'ljaszj7v-rM',
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        rel: 0,
-        enablejsapi: 1,
-        modestbranding: 1,
-      },
-      events: {
-        onReady: onPlayerReady2,
-      },
-    })
-    }, 300);
+        height: '100%',
+        width: '100%',
+        videoId: 'ljaszj7v-rM',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          rel: 0,
+          enablejsapi: 1,
+          modestbranding: 1,
+        },
+        events: {
+          onReady: onPlayerReady2,
+        },
+      })
+    }, 300)
   })
 }
 const onPlayerReady2 = (event: any) => {
   event.target.pauseVideo()
 }
-
-onMounted(() => {
-  
-  onYouTubeIframeAPIReady()
-  onYouTubeIframeAPIReady1()
-  setTop()
-})
 
 const setTop = () => {
   let s = document.documentElement.scrollTop
@@ -122,6 +133,7 @@ const swiperOption = {
     prevEl: '.swiper-button-prev',
   },
 }
+
 // composable
 const { t } = useLang()
 let currentIndex = reactive({

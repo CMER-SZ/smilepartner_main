@@ -81,7 +81,11 @@ const menus = computed((): any[] => [
     route: { name: 'teeth-whitening' },
   },
 
-  { type: 'link', text: t('pages.case.nav'), route: { name: 'case-sharing' } },
+  {
+    type: 'link',
+    text: t('pages.case.nav'),
+    route: { name: 'case-sharing' },
+  },
   // { type: 'link', text: t('pages.fees.nav'), route: { name: 'fees' } },
   { type: 'link', text: t('pages.contact.nav'), route: { name: 'contact-us' } },
 ])

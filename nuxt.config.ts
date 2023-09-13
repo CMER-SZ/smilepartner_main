@@ -50,7 +50,6 @@ export default defineNuxtConfig({
           src: 'https://www.googletagmanager.com/gtag/js?id=G-2G80LM1R8F',
         },
         {
-          async: 'async',
           src:'https://www.youtube.com/iframe_api',
         },
         {
