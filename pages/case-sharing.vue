@@ -23,22 +23,24 @@ const setThumbsSwiper = (swiper: SwiperClass) => {
   thumbsSwiper.value = swiper
 }
 const onSlideChange = (e: any) => {
-  if (e.activeIndex == 0) {
-    playerTwo.pauseVideo()
+  console.log(e, '1eeeee44444')
+  if (e.activeIndex == 0 && player.value !== '') {
     player.playVideo()
+    playerTwo.pauseVideo()
     return
   }
   if (e.activeIndex == 1) {
     player.pauseVideo()
-    if (playerTwo.value == '') {
-      onYouTubeIframeAPIReady1()
+    playerTwo.playVideo()
+    
+    if (playerTwo.id == '') {
     } else {
       playerTwo.playVideo()
     }
     return
   }
 }
-let player = ref('')
+var player: any
 const onYouTubeIframeAPIReady = () => {
   window.YT.ready(function () {
     player = new window.YT.Player('banner_video1', {
@@ -52,10 +54,17 @@ const onYouTubeIframeAPIReady = () => {
         enablejsapi: 1,
         modestbranding: 1,
       },
+      events: {
+        onReady: onPlayerReady,
+      },
     })
   })
 }
-let playerTwo = ref('')
+const onPlayerReady = (event:any) => {
+  event.target.playVideo()
+}
+
+var playerTwo: any
 const onYouTubeIframeAPIReady1 = () => {
   window.YT.ready(function () {
     playerTwo = new window.YT.Player('banner_video2', {
@@ -69,13 +78,20 @@ const onYouTubeIframeAPIReady1 = () => {
         enablejsapi: 1,
         modestbranding: 1,
       },
+      events: {
+        onReady: onPlayerReady2,
+      }
     })
   })
+}
+const onPlayerReady2 = (event:any) => {
+  event.target.pauseVideo()
 }
 
 onMounted(() => {
   setTop()
   onYouTubeIframeAPIReady()
+  onYouTubeIframeAPIReady1()
 })
 
 const setTop = () => {
@@ -178,7 +194,7 @@ const clearInfo = () => {
           @slideChange="onSlideChange"
         >
           <swiper-slide>
-            <div class="video_style" ref="banner_video1">
+            <div class="video_style">
               <div id="banner_video1"></div>
               <div class="pcShow banner_iframe1">
                 <div class="head_booking inline-block float-right text-center">
