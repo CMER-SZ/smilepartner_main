@@ -23,7 +23,6 @@ const setThumbsSwiper = (swiper: SwiperClass) => {
   thumbsSwiper.value = swiper
 }
 const onSlideChange = (e: any) => {
-  console.log(e, '1eeeee44444')
   if (e.activeIndex == 0 && player.value !== '') {
     player.playVideo()
     playerTwo.pauseVideo()
@@ -32,11 +31,6 @@ const onSlideChange = (e: any) => {
   if (e.activeIndex == 1) {
     player.pauseVideo()
     playerTwo.playVideo()
-    
-    if (playerTwo.id == '') {
-    } else {
-      playerTwo.playVideo()
-    }
     return
   }
 }
