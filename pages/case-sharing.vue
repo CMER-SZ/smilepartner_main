@@ -3,7 +3,6 @@ import { capitalize } from '~/utils/str'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import form from '../composables/newform/form.vue'
 import environmentVue from '~~/composables/environment/environment.vue'
-import YouTubePlayer from 'youtube-player'
 import 'swiper/css'
 import type { Ref } from 'vue'
 // import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
@@ -23,10 +22,60 @@ const thumbsSwiper = ref<SwiperClass>()
 const setThumbsSwiper = (swiper: SwiperClass) => {
   thumbsSwiper.value = swiper
 }
+const onSlideChange = (e: any) => {
+  if (e.activeIndex == 0) {
+    playerTwo.pauseVideo()
+    player.playVideo()
+    return
+  }
+  if (e.activeIndex == 1) {
+    player.pauseVideo()
+    if (playerTwo.value == '') {
+      onYouTubeIframeAPIReady1()
+    } else {
+      playerTwo.playVideo()
+    }
+    return
+  }
+}
+let player = ref('')
+const onYouTubeIframeAPIReady = () => {
+  window.YT.ready(function () {
+    player = new window.YT.Player('banner_video1', {
+      height: '100%',
+      width: '100%',
+      videoId: 'n0rCzW3nqh4',
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        rel: 0,
+        enablejsapi: 1,
+        modestbranding: 1,
+      },
+    })
+  })
+}
+let playerTwo = ref('')
+const onYouTubeIframeAPIReady1 = () => {
+  window.YT.ready(function () {
+    playerTwo = new window.YT.Player('banner_video2', {
+      height: '100%',
+      width: '100%',
+      videoId: 'ljaszj7v-rM',
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        rel: 0,
+        enablejsapi: 1,
+        modestbranding: 1,
+      },
+    })
+  })
+}
 
 onMounted(() => {
-  console.log('312')
   setTop()
+  onYouTubeIframeAPIReady()
 })
 
 const setTop = () => {
@@ -53,9 +102,6 @@ const swiperOption = {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-}
-const onSlideChange = (e: any) => {
-  // console.log(e.activeIndex, 'activeIndexactiveIndexactiveIndexactiveIndex')
 }
 // composable
 const { t } = useLang()
@@ -133,15 +179,7 @@ const clearInfo = () => {
         >
           <swiper-slide>
             <div class="video_style" ref="banner_video1">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/n0rCzW3nqh4?si=IeEEJeJ2mQK_aGMi&amp;controls=0&amp;autoplay=1&amp;rel=0"
-                title="   "
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+              <div id="banner_video1"></div>
               <div class="pcShow banner_iframe1">
                 <div class="head_booking inline-block float-right text-center">
                   <a
@@ -162,16 +200,7 @@ const clearInfo = () => {
           </swiper-slide>
           <swiper-slide>
             <div class="video_style">
-              <iframe
-                id="banner_video2"
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/ljaszj7v-rM?si=HI-jqGhFyZW-5sob&amp;controls=0&amp;rel=0"
-                title="   "
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+              <div id="banner_video2"></div>
               <div class="pcShow banner_iframe2">
                 <div class="head_booking inline-block float-right text-center">
                   <a
@@ -195,14 +224,14 @@ const clearInfo = () => {
       <div class="page_body_header_banner">
         <div class="mbShow mb_banner_style">
           <img
-          class="page_body_header_banner_img sm:invisible"
-          src="https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif"
-          srcset="
-            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 400w,
-            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 640w,
-            https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif
-          "
-        />
+            class="page_body_header_banner_img sm:invisible"
+            src="https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif"
+            srcset="
+              https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 400w,
+              https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 640w,
+              https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20329.avif
+            "
+          />
         </div>
         <div class="page_body_header_fixed">
           <!-- <div class="head_booking inline-block float-right text-center">
@@ -1446,8 +1475,8 @@ const clearInfo = () => {
   }
 }
 @media screen and(max-width:768px) {
-  .mb_banner_style{
-    margin-top:-65px;
+  .mb_banner_style {
+    margin-top: -65px;
   }
   .img-start2 {
     width: 37px;

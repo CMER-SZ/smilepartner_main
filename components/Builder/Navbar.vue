@@ -15,11 +15,11 @@ onMounted(() => {
   // scroll
   if (route.path == '/case-sharing') {
     let { onScroll } = useSticky(navbar.value, 1400)
-    console.log(onScroll)
+    // console.log(onScroll)  
     setTimeout(() => onScroll(), 50)
   } else {
     let { onScroll } = useSticky(navbar.value, 1000)
-    console.log(onScroll)
+    // console.log(onScroll)  
     setTimeout(() => onScroll(), 50)
   }
 
