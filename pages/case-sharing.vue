@@ -3,6 +3,7 @@ import { capitalize } from '~/utils/str'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import form from '../composables/newform/form.vue'
 import environmentVue from '~~/composables/environment/environment.vue'
+const router = useRouter()
 import 'swiper/css'
 import type { Ref } from 'vue'
 // import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
@@ -22,8 +23,10 @@ const thumbsSwiper = ref<SwiperClass>()
 const setThumbsSwiper = (swiper: SwiperClass) => {
   thumbsSwiper.value = swiper
 }
+
 const onSlideChange = (e: any) => {
-  if (e.activeIndex == 0 && player.value !== '') {
+  setTimeout(() => {
+    if (e.activeIndex == 0) {
     player.playVideo()
     playerTwo.pauseVideo()
     return
@@ -33,11 +36,13 @@ const onSlideChange = (e: any) => {
     playerTwo.playVideo()
     return
   }
+  }, 500);
 }
-var player: any
+var player: any = ref('')
 const onYouTubeIframeAPIReady = () => {
   window.YT.ready(function () {
-    player = new window.YT.Player('banner_video1', {
+    setTimeout(() => {
+      player = new window.YT.Player('banner_video1', {
       height: '100%',
       width: '100%',
       videoId: 'n0rCzW3nqh4',
@@ -52,16 +57,18 @@ const onYouTubeIframeAPIReady = () => {
         onReady: onPlayerReady,
       },
     })
+    }, 300);
   })
 }
-const onPlayerReady = (event:any) => {
+const onPlayerReady = (event: any) => {
   event.target.playVideo()
 }
 
-var playerTwo: any
+var playerTwo: any = ref('')
 const onYouTubeIframeAPIReady1 = () => {
   window.YT.ready(function () {
-    playerTwo = new window.YT.Player('banner_video2', {
+    setTimeout(() => {
+      playerTwo = new window.YT.Player('banner_video2', {
       height: '100%',
       width: '100%',
       videoId: 'ljaszj7v-rM',
@@ -74,18 +81,20 @@ const onYouTubeIframeAPIReady1 = () => {
       },
       events: {
         onReady: onPlayerReady2,
-      }
+      },
     })
+    }, 300);
   })
 }
-const onPlayerReady2 = (event:any) => {
+const onPlayerReady2 = (event: any) => {
   event.target.pauseVideo()
 }
 
 onMounted(() => {
-  setTop()
+  
   onYouTubeIframeAPIReady()
   onYouTubeIframeAPIReady1()
+  setTop()
 })
 
 const setTop = () => {
