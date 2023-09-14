@@ -438,6 +438,9 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
         text-align: center;
         margin: 0 5px;
       }
+      button:nth-child(2) {
+        background: #cdcdcd;
+      }
     }
     .address-time {
       position: relative;
@@ -560,6 +563,9 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
           color: #666666;
         }
       }
+      button:nth-child(2) {
+        background: #cdcdcd;
+      }
     }
     .address-time-box {
       padding-bottom: 10px;
@@ -658,6 +664,9 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
             color: #666666;
           }
         }
+        button:nth-child(2) {
+          background: #cdcdcd;
+        }
       }
     }
   }
@@ -746,6 +755,9 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
         padding: 9px;
         text-align: center;
         width: 160px;
+      }
+      button:nth-child(2) {
+        background: #CDCDCD;
       }
       .address-time {
         display: flex;
