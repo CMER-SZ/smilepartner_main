@@ -44,16 +44,16 @@ onMounted(() => {
   setTop()
 })
 
-onBeforeMount(()=>{
-  let isReload = sessionStorage.getItem('isReload') == null ? 'true': 'false'
-  sessionStorage.setItem('isReload',isReload)
-  if ( sessionStorage.getItem('isReload') == 'true') {
+onBeforeMount(() => {
+  let isReload = sessionStorage.getItem('isReload') == null ? 'true' : 'false'
+  sessionStorage.setItem('isReload', isReload)
+  if (sessionStorage.getItem('isReload') == 'true') {
     router.go(0)
     isReload = 'false'
-    sessionStorage.setItem('isReload',isReload)
-  } 
+    sessionStorage.setItem('isReload', isReload)
+  }
 })
-onUnmounted(()=>{
+onUnmounted(() => {
   sessionStorage.clear()
 })
 var player: any = ref('')
@@ -444,7 +444,7 @@ const clearInfo = () => {
                 </div>
 
                 <div class="share-detail-box">
-                  <div class="name">
+                  <div class="name names">
                     <p class="myname">陳瀅 Jeannie</p>
                     <p class="pro">牙齒美白療程</p>
                   </div>
@@ -474,7 +474,7 @@ const clearInfo = () => {
                 </div>
 
                 <div class="share-detail-box">
-                  <div class="name">
+                  <div class="name names">
                     <p class="myname">馮凱淇 Cherry</p>
                     <p class="pro">牙齒美白療程</p>
                   </div>
@@ -505,7 +505,7 @@ const clearInfo = () => {
                 </div>
 
                 <div class="share-detail-box">
-                  <div class="name">
+                  <div class="name names">
                     <p class="myname">張嘉珮 Luciana</p>
                     <p class="pro">牙齒美白療程</p>
                   </div>
@@ -536,7 +536,7 @@ const clearInfo = () => {
                 </div>
 
                 <div class="share-detail-box teshu-box">
-                  <div class="name">
+                  <div class="name names">
                     <p class="myname">Szeci</p>
                     <p class="pro">牙齒美白療程</p>
                   </div>
@@ -567,7 +567,7 @@ const clearInfo = () => {
                 </div>
 
                 <div class="share-detail-box">
-                  <div class="name">
+                  <div class="name names">
                     <p class="myname">Bird</p>
                     <p class="pro">牙齒美白療程</p>
                   </div>
@@ -596,7 +596,7 @@ const clearInfo = () => {
                 </div>
 
                 <div class="share-detail-box">
-                  <div class="name">
+                  <div class="name names">
                     <p class="myname">區文詩 Angela</p>
                     <p class="pro">牙齒美白療程</p>
                   </div>
@@ -1105,9 +1105,7 @@ const clearInfo = () => {
     .img-start2 {
       position: absolute;
       width: 50px;
-
-      top: 654px;
-
+      top: 690px;
       /* left: 132px; */
       right: 369px;
     }
@@ -1120,21 +1118,22 @@ const clearInfo = () => {
       /* identical to box height */
 
       color: #666666;
+      padding: 3px 0;
     }
 
     .share-detail-box .name2 {
       display: flex;
       flex-direction: column;
       position: absolute;
-      right: 250px;
-      top: 550px;
+      right: 280px;
+      top: 580px;
       align-items: flex-start;
     }
     .share-detail-box .name2 .pro2 {
       position: absolute;
       white-space: pre;
-      top: 44px;
-      right: -172px;
+      top: 42px;
+      right: -140px;
       font-family: 'Songti TC';
       font-style: normal;
       font-weight: 700;
@@ -1163,12 +1162,12 @@ const clearInfo = () => {
     justify-content: center;
     background: #fff;
     opacity: 1;
-    height: 265px;
+    height: 153px;
     margin: 0 10px;
     margin-top: 153px;
     margin-left: 620px;
     padding-bottom: 10px;
-    padding: 45px 35px 23px 35px;
+    padding: 35px 35px 13px 35px;
     p {
       white-space: pre;
     }
@@ -1180,7 +1179,7 @@ const clearInfo = () => {
     .img-start {
       position: absolute;
       width: 50px;
-      top: 134px;
+      top: 175px;
       /* left: 132px; */
       right: 369px;
     }
@@ -1204,34 +1203,29 @@ const clearInfo = () => {
       font-weight: 700;
       line-height: normal;
       position: absolute;
-      top: -72%;
-      right: 10%;
-      padding: 5px 10px;
+      top: -68%;
+      right: -14%;
+      padding: 3px 10px;
     }
     .share-detail-box .name {
       display: flex;
       flex-direction: column;
       position: absolute;
       top: 48px;
-
-      right: 256px;
-
+      right: 280px;
       align-items: flex-start;
+      padding: 3px 0;
     }
     .share-detail-box .name .pro {
       position: absolute;
       white-space: pre;
-      top: 44px;
-      right: -172px;
+      top: 37px;
+      right: -154px;
       font-family: 'Songti TC';
       font-style: normal;
       font-weight: 700;
       font-size: 25px;
       line-height: 35px;
-      /* identical to box height */
-
-      /* green */
-
       color: #aace79;
     }
     .share-detail-box {
@@ -1241,9 +1235,9 @@ const clearInfo = () => {
       justify-content: center;
       background: #fff;
       opacity: 1;
-      height: 265px;
+      height: 220px;
       margin: 0 10px;
-      margin-top: 153px;
+      margin-top: 195px;
       margin-left: 620px;
       padding-bottom: 10px;
       padding: 45px 35px 23px 35px;
@@ -1260,9 +1254,9 @@ const clearInfo = () => {
       font-weight: 700;
       line-height: normal;
       position: absolute;
-      top: -72%;
-      right: 10.4%;
-      padding: 5px 10px;
+      top: -68%;
+      right: -11.4%;
+      padding: 3px 10px;
     }
   }
   .iframe {
@@ -1358,9 +1352,6 @@ const clearInfo = () => {
         font-size: 20px;
         line-height: 28px;
         /* identical to box height */
-
-        /* green */
-
         color: #aace79;
       }
       .myname::before {
@@ -1368,6 +1359,15 @@ const clearInfo = () => {
         border: 1px solid #ecb3ac;
         transform: rotate(90deg);
         margin-right: 11px;
+      }
+    }
+    .names {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      right: 40px;
+      .pro {
+        margin-left: 20px;
       }
     }
     .end {
@@ -1384,7 +1384,7 @@ const clearInfo = () => {
       /* identical to box height */
 
       /* pink */
-      padding: 5px 42px 0px 42px;
+      // padding: 5px 42px 0px 42px;
       color: #ecb3ac;
     }
     .tesgy {
@@ -1398,7 +1398,7 @@ const clearInfo = () => {
       line-height: 26px;
       /* or 194% */
       text-align: justify;
-      padding: 5px 42px;
+      padding: 0;
       color: #666666;
     }
   }
