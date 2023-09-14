@@ -62,6 +62,17 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
       </div>
       <div class="">
         <div class="thumb-example">
+          <div class="tab-control">
+            <div
+              class="tab-control-item"
+              v-for="(item, index) in title"
+              :key="item"
+              :class="{ active: currentIndex.Index === index }"
+              @click="titelclick(index)"
+            >
+              <span>{{ item }}</span>
+            </div>
+          </div>
           <swiper
             class="top-swiper"
             :style="{
@@ -90,17 +101,7 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
               <img :src="index" />
             </swiper-slide>
           </swiper>
-          <div class="tab-control">
-            <div
-              class="tab-control-item"
-              v-for="(item, index) in title"
-              :key="item"
-              :class="{ active: currentIndex.Index === index }"
-              @click="titelclick(index)"
-            >
-              <span>{{ item }}</span>
-            </div>
-          </div>
+          
           <swiper
             class="thumbs-swiper"
             :modules="modules"
@@ -398,7 +399,7 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
   }
   .address-one {
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     .address-text-box {
       flex: 1;
     }
@@ -512,7 +513,7 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
   }
   .address-two {
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 10px;
     .address-text-box {
       flex: 1;
