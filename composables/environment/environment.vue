@@ -56,7 +56,7 @@ let title = reactive(['中環中建大廈', '尖沙咀K11 ATELIER'])
         <h2
           class="text-primary font-normal text-xl md:text-2xl inline-block relative"
         >
-          診所環境
+          診所地點
           <!--  -->
         </h2>
       </div>
