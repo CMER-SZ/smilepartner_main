@@ -183,7 +183,7 @@ const clearInfo = () => {
                 {{ $t('banners.number') }}
               </span>
             </a>
-            <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
+            <!-- <span class="mt-1 xinyongka">指定信用卡可享免息分期</span> -->
           </div>
 
           <div class="head_banner_text justify-self-center">
@@ -220,7 +220,7 @@ const clearInfo = () => {
                     {{ $t('banners.number') }}
                   </span>
                 </a>
-                <span class="pt-4 xinyongka">指定信用卡可享免息分期</span>
+                <!-- <span class="pt-4 xinyongka">指定信用卡可享免息分期</span> -->
               </div>
             </div>
           </div>

@@ -130,7 +130,7 @@ const checkForm = (e) => {
                 {{ $t('banners.number') }}
               </span>
             </a>
-            <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
+            <!-- <span class="mt-1 xinyongka">指定信用卡可享免息分期</span> -->
           </div>
 
           <div class="head_banner_text justify-self-center">
@@ -687,8 +687,7 @@ const checkForm = (e) => {
                       alt=""
                       class="img-start"
                     />
-                    <p>
-                      度身訂造、較美觀、<br class="mbShow" />
+                    <p>度身訂造、較美觀、<br class="mbShow" />
                       唔影響做運動
                     </p>
                     <span
@@ -1037,13 +1036,13 @@ const checkForm = (e) => {
 
 @media screen and(min-width:768px) {
   .mt_10 {
-    margin-top: 300px !important;
+    margin-top: 315px !important;
   }
   .share-video-box {
     .img-start2 {
       position: absolute;
       width: 50px;
-      top: 699px;
+      top: 715px;
       /* left: 132px; */
       right: 369px;
     }
@@ -1053,8 +1052,8 @@ const checkForm = (e) => {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 540px;
-        right: 6%;
+        top: 560px;
+        right: 15%;
         align-items: flex-start;
         .title_pc_style {
           background: #ecb3ac;
@@ -1064,7 +1063,7 @@ const checkForm = (e) => {
           font-weight: 700;
           font-size: 30px;
           line-height: 42px;
-          padding: 5px 30px;
+          padding: 3px 10px;
         }
         .myname2 {
           font-family: 'Songti TC';
@@ -1083,6 +1082,8 @@ const checkForm = (e) => {
           font-size: 25px;
           line-height: 35px;
           color: #aace79;
+          position: relative;
+          left: 45px;
         }
       }
     }
@@ -1093,14 +1094,18 @@ const checkForm = (e) => {
       justify-content: center;
       background: #fff;
       opacity: 1;
-      height: 265px;
+      height: 220px;
       margin: 0 10px;
-      margin-top: 153px;
+      margin-top: 200px;
       margin-left: 620px;
       padding-bottom: 10px;
       padding: 45px 35px 23px 35px;
       p {
         white-space: pre;
+        padding: 0;
+      }
+      span {
+        padding: 0;
       }
     }
   }
@@ -1128,7 +1133,7 @@ const checkForm = (e) => {
     .img-start {
       position: absolute;
       width: 50px;
-      top: 134px;
+      top: 180px;
       right: 369px;
     }
     .share-detail-box {
@@ -1136,8 +1141,8 @@ const checkForm = (e) => {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 0;
-        right: 70px;
+        top: 20px;
+        right: 15%;
         align-items: flex-start;
         .title_pc_style {
           color: #fff;
@@ -1147,7 +1152,7 @@ const checkForm = (e) => {
           font-weight: 700;
           font-size: 25px;
           line-height: 35px;
-          padding: 5px 30px;
+          padding: 3px 10px;
         }
         .myname {
           font-family: 'Songti TC';
@@ -1166,6 +1171,8 @@ const checkForm = (e) => {
           font-size: 25px;
           line-height: 35px;
           color: #aace79;
+          position: relative;
+          left: 45px; 
         }
       }
     }
@@ -1176,9 +1183,9 @@ const checkForm = (e) => {
       justify-content: center;
       background: #fff;
       opacity: 1;
-      height: 265px;
+      height: 220px;
       margin: 0 10px;
-      margin-top: 153px;
+      margin-top: 200px;
       margin-left: 620px;
       padding-bottom: 10px;
       padding: 45px 35px 23px 35px;
@@ -2902,7 +2909,7 @@ const checkForm = (e) => {
   .share-video-box .img-start {
     position: absolute;
     width: 50px;
-    top: 134px;
+    top: 180px;
     right: 306px;
   }
   .share-detail-box .name .myname {

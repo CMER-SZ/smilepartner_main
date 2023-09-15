@@ -79,7 +79,7 @@ const onYouTubeIframeAPIReady = () => {
   })
 }
 const onPlayerReady = (event: any) => {
-  event.target.playVideo()
+  event.target.stopVideo()
 }
 
 var playerTwo: any = ref('')
@@ -224,7 +224,7 @@ const clearInfo = () => {
                       {{ $t('banners.number') }}
                     </span>
                   </a>
-                  <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
+                  <!-- <span class="mt-1 xinyongka">指定信用卡可享免息分期</span> -->
                 </div>
               </div>
             </div>
@@ -245,7 +245,7 @@ const clearInfo = () => {
                       {{ $t('banners.number') }}
                     </span>
                   </a>
-                  <span class="mt-1 xinyongka">指定信用卡可享免息分期</span>
+                  <!-- <span class="mt-1 xinyongka">指定信用卡可享免息分期</span> -->
                 </div>
               </div>
             </div>
@@ -310,7 +310,7 @@ const clearInfo = () => {
                     {{ $t('banners.number') }}
                   </span>
                 </a>
-                <span class="pt-4 xinyongka">指定信用卡可享免息分期</span>
+                <!-- <span class="pt-4 xinyongka">指定信用卡可享免息分期</span> -->
               </div>
             </div>
           </div>
@@ -1055,6 +1055,9 @@ const clearInfo = () => {
 }
 
 @media screen and(min-width:768px) {
+  .xinyongka {
+    display: none;
+  }
   .video_style {
     width: 100%;
     height: 100vh;
@@ -1094,6 +1097,11 @@ const clearInfo = () => {
     align-items: center;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .head_button {
+    &>p:nth-child(1){
+      color: #cdcdcd;
+    }
   }
   .myname2::before {
     content: '';
@@ -1204,7 +1212,7 @@ const clearInfo = () => {
       line-height: normal;
       position: absolute;
       top: -68%;
-      right: -14%;
+      right: -13%;
       padding: 3px 10px;
     }
     .share-detail-box .name {
@@ -1506,6 +1514,9 @@ const clearInfo = () => {
   }
 }
 @media screen and(max-width:768px) {
+  .xinyongka {
+    display: none;
+  }
   .mb_banner_style {
     margin-top: -65px;
   }
