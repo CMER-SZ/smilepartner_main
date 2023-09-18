@@ -687,7 +687,8 @@ const checkForm = (e) => {
                       alt=""
                       class="img-start"
                     />
-                    <p>度身訂造、較美觀、<br class="mbShow" />
+                    <p>
+                      度身訂造、較美觀、<br class="mbShow" />
                       唔影響做運動
                     </p>
                     <span
@@ -1058,12 +1059,12 @@ const checkForm = (e) => {
         .title_pc_style {
           background: #ecb3ac;
           color: #fff;
+          padding: 3px 10px;
           font-family: 'Songti TC';
+          font-size: 21.228px;
           font-style: normal;
           font-weight: 700;
-          font-size: 30px;
-          line-height: 42px;
-          padding: 3px 10px;
+          line-height: normal;
         }
         .myname2 {
           font-family: 'Songti TC';
@@ -1148,10 +1149,10 @@ const checkForm = (e) => {
           color: #fff;
           background: #ecb3ac;
           font-family: 'Songti TC';
+          font-size: 21.228px;
           font-style: normal;
           font-weight: 700;
-          font-size: 25px;
-          line-height: 35px;
+          line-height: normal;
           padding: 3px 10px;
         }
         .myname {
@@ -1172,7 +1173,7 @@ const checkForm = (e) => {
           line-height: 35px;
           color: #aace79;
           position: relative;
-          left: 45px; 
+          left: 45px;
         }
       }
     }
