@@ -166,11 +166,11 @@ const clearInfo = () => {
       <div class="page_body_header_banner">
         <img
           class="page_body_header_banner_img sm:invisible"
-          src="https://static.cmereye.com/imgs/2022/11/ea7549556b5ed67d.jpg"
+          src="https://static.cmereye.com/imgs/2023/09/2b30f810b6cb3d94.png"
           srcset="
             https://static.cmereye.com/imgs/2022/11/251ee3578eb999a7.png 400w,
             https://static.cmereye.com/imgs/2022/11/251ee3578eb999a7.png 640w,
-            https://static.cmereye.com/imgs/2022/11/ea7549556b5ed67d.jpg
+            https://static.cmereye.com/imgs/2023/09/2b30f810b6cb3d94.png
           "
         />
         <div class="page_body_header_fixed">

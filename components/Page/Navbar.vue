@@ -15,9 +15,9 @@ const menus = computed((): any[] => [
   { type: 'link', text: t('pages.index.nav'), route: '/' },
   { type: 'link', text: t('pages.about.nav'), route: { name: 'about-us' } },
   {
-    type: 'fatnav',
+    type: 'link',
     text: t('pages.treatment.nav'),
-    // route: { name: 'treatment' },
+    route: { name: 'the-best-for-you' },
     submenu: [
       {
         type: 'link',

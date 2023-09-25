@@ -113,11 +113,11 @@ const checkForm = (e) => {
         <!-- 移动端图暂时未更换，因为设计不上班 2023.9.8 -->
         <img
           class="page_body_header_banner_img sm:invisible"
-          src="https://static.cmereye.com/imgs/2023/09/977f661d1787e16c.jpg"
+          src="https://static.cmereye.com/imgs/2023/09/277d8f64075b0289.png"
           srcset="
             https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 400w,
             https://static.cmereye.com/static/lkximg/cmerdental_backup/sharing/Group%20322.avif 640w,
-            https://static.cmereye.com/imgs/2023/09/977f661d1787e16c.jpg
+            https://static.cmereye.com/imgs/2023/09/277d8f64075b0289.png
           "
         />
         <div class="page_body_header_fixed">
@@ -1888,7 +1888,7 @@ const checkForm = (e) => {
   }
 
   .page_body_header_banner {
-    background-image: url(https://static.cmereye.com/imgs/2023/09/977f661d1787e16c.jpg);
+    background-image: url(https://static.cmereye.com/imgs/2023/09/277d8f64075b0289.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 100%;
@@ -1923,7 +1923,7 @@ const checkForm = (e) => {
       .head_banner_text_p {
         position: absolute;
         z-index: -20;
-        left: 10%;
+        left: 8%;
         max-width: 720px;
         font-family: 'Songti TC';
         font-style: normal;
