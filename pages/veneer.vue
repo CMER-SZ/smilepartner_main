@@ -2088,6 +2088,7 @@ const clearInfo = () => {
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
+    background-size: 100% auto;
     width: 100%;
     .page_body_header_fixed {
       padding: 70px 130px;
