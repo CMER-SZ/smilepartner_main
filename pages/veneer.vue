@@ -2084,7 +2084,7 @@ const clearInfo = () => {
     width: 100%;
   }
   .page_body_header_banner {
-    background-image: url(https://static.cmereye.com/imgs/2022/11/8b566367bafbbf32.png);
+    background-image: url(https://static.cmereye.com/imgs/2023/09/2b30f810b6cb3d94.png);
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
