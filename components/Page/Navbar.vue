@@ -17,7 +17,7 @@ const menus = computed((): any[] => [
   {
     type: 'link',
     text: t('pages.treatment.nav'),
-    route: { name: 'the-best-for-you' },
+    route: { name: 'the-best-for-you', hash:'#youAre' },
     submenu: [
       {
         type: 'link',

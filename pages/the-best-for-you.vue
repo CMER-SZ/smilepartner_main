@@ -44,6 +44,8 @@ function GetRequest() {
     document.getElementById('the-engaged-and-newly-weds')?.scrollIntoView(true)
   } else if (result === 'parent') {
     document.getElementById('parent')?.scrollIntoView(true)
+  } else if (result === 'youAre') {
+    document.getElementById('youAre')?.scrollIntoView(true)
   }
 }
 const setTop = () => {
@@ -256,10 +258,12 @@ const clearInfo = () => {
     <div class="swiper-box">
       <div class="page_container">
         <div class="title">
-          <img
-            src="https://static.cmereye.com/imgs/2023/01/46421c979cd43756.png"
-            alt=""
-          />
+          <a id="youAre" href="#youAre">
+            <img
+              src="https://static.cmereye.com/imgs/2023/01/46421c979cd43756.png"
+              alt=""
+            />
+          </a>
         </div>
         <div class="pcShow flex pt-10 justify-center">
           <div class="type_box">
@@ -1211,7 +1215,7 @@ const clearInfo = () => {
       width: 100%;
       height: 87%;
       top: 8px;
-      left: 8px;
+      left: 9px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1235,7 +1239,7 @@ const clearInfo = () => {
       width: 100%;
       height: 87%;
       top: 8px;
-      left: 8px;
+      left: 9px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1259,7 +1263,7 @@ const clearInfo = () => {
       width: 100%;
       height: 87%;
       top: 8px;
-      left: 8px;
+      left: 9px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1283,7 +1287,7 @@ const clearInfo = () => {
       width: 100%;
       height: 87%;
       top: 8px;
-      left: 8px;
+      left: 9px;
       display: flex;
       justify-content: center;
       align-items: center;
