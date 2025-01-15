@@ -1,38 +1,59 @@
 <script setup lang="ts">
 import 'swiper/css'
 
-let reForm = reactive({
+let reForm = ref({
   smilepartnerName: '',
   sex: '',
   Tel: '',
   Email: '',
   smilepartner_select: '',
 })
-
-const checkForm = (e) => {
+const getUrl = () => {
+  let url = window.location.href
+  return url
+}
+const checkForm = (e: any) => {
   if (
-    reForm.smilepartnerName === '' ||
-    reForm.sex === '' ||
-    reForm.Tel === '' ||
-    reForm.Email === '' ||
-    reForm.smilepartner_select === ''
+    reForm.value.smilepartnerName === '' ||
+    reForm.value.sex === '' ||
+    reForm.value.Tel === '' ||
+    reForm.value.Email === '' ||
+    reForm.value.smilepartner_select === ''
   ) {
     alert('請完善信息！')
     e.preventDefault()
   } else {
-    alert('提交成功！')
-    setTimeout(() => {
-      clearInfo()
-    }, 500)
+    let dataList = new FormData()
+    dataList.append('form_name', reForm.value.smilepartnerName),
+      dataList.append('form_region', reForm.value.sex),
+      dataList.append('form_phone', `${reForm.value.Tel}`),
+      dataList.append('form_email', reForm.value.Email),
+      dataList.append('form_serve', reForm.value.smilepartner_select),
+      dataList.append('form_source', 'https://www.smilepartner.hk/'),
+      dataList.append('form_page', getUrl()),
+      dataList.append('form_radio', '頁面無選項'),
+      dataList.append('form_radio1', '頁面無選項'),
+      dataList.append('form_radio2', '頁面無選項')
+    fetch('https://forms.cmerdental.com/api.php/cms/addmsg', {
+      method: 'POST',
+      body: dataList,
+    }).then((response) => {
+      if (response.status == 200) {
+        alert('提交成功！')
+        clearInfo()
+      } else {
+        alert('提交失敗，請稍候重試！')
+      }
+    })
     return true
   }
 }
 const clearInfo = () => {
-  reForm.smilepartnerName = ''
-  reForm.sex = ''
-  reForm.Tel = ''
-  reForm.Email = ''
-  reForm.smilepartner_select = ''
+  reForm.value.smilepartnerName = ''
+  reForm.value.sex = ''
+  reForm.value.Tel = ''
+  reForm.value.Email = ''
+  reForm.value.smilepartner_select = ''
 }
 </script>
 
@@ -47,12 +68,7 @@ const clearInfo = () => {
       展開專屬牙齒美容旅程！
     </h4>
     <iframe id="my" name="my" style="display: none"></iframe>
-    <form
-      action="https://send.pageclip.co/oLDloEgenkRMGb9ZYDIO4wlarrwjxsBu/SmilepartnerForm"
-      method="POST"
-      @submit="checkForm"
-      target="my"
-    >
+    <form>
       <div class="overflow-hidden sm:rounded-md">
         <div class="px-4 py-5 sm:p-6 max-w-5xl">
           <div class="grid grid-cols-6 gap-10">
@@ -251,12 +267,12 @@ const clearInfo = () => {
           </div>
         </div>
         <div class="px-4 sm:mt-20 text-center sm:px-6">
-          <button
-            type="submit"
+          <div
+            @click="checkForm($event)"
             class="inline-flex justify-center border text-pink py-2 px-30 text-xl font-medium border-gray-300 hover:bg-pink hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 submitBut"
           >
             提 交
-          </button>
+          </div>
         </div>
       </div>
     </form>
