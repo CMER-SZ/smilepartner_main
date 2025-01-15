@@ -87,7 +87,8 @@ const menus = computed((): any[] => [
     route: { name: 'case-sharing' },
   },
   // { type: 'link', text: t('pages.fees.nav'), route: { name: 'fees' } },
-  { type: 'link', text: t('pages.contact.nav'), route: { name: 'contact-us' } },
+  // { type: 'link', text: t('pages.contact.nav'), route: { name: 'contact-us' } },
+  { type: 'link', text: t('pages.contact.nav'), route: { name: 'index' } },
 ])
 
 const data = reactive({ isShow: 0 })

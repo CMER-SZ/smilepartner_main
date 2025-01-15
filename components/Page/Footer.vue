@@ -179,7 +179,7 @@ const setTop = () => {
           >
         </div>
         <div class="flex justify-center text-center px-3">
-          <NuxtLink to="/contact-us"
+          <NuxtLink to="/"
             ><p
               class="text-white md:mt-4 mt-8 sm:mt-0 md:text-xl sm:text-lg text-lg footer"
             >

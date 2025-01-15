@@ -962,7 +962,7 @@ const clearInfo = () => {
           </div>
         </div>
       </div>
-      <component :is="environmentVue"></component>
+      <!-- <component :is="environmentVue"></component> -->
     </div>
   </div>
 </template>
